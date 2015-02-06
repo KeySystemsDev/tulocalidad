@@ -5,17 +5,28 @@
 .list-empresa{
 	list-style:none;
 	font-size: 20px;
+	padding: 0px;
+}
+.list-empresa p{
+	font-size: 12px;
+	margin-right: 50px;
 }
 .list-empresa i{
 	font-size: 40px;
 }
-
-.list-empresa ul{
-	padding-top: 10px;
-}
-.lst-empresa li > ul > p {
-	margin-right: 50px;
-}
 .tamano{
 	width: 100%;
+}
+.right{
+	text-align: right;
+}
+.local{
+	font-size: 45px;
+	/*border: 1px solid #ddd;*/
+	width: 32px;
+	height: 60px;
+	text-align: center;
+}
+.box-list-empresa{
+	border: 1px solid #ddd;
 }
