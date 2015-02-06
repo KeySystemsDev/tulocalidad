@@ -1,1 +1,18 @@
 /* Empty. Add your own CSS if you like */
+.box-content{
+	text-align: center;
+}
+.list-empresa{
+	list-style:none;
+	font-size: 20px;
+}
+.list-empresa i{
+	font-size: 40px;
+}
+
+.list-empresa ul{
+	padding-top: 10px;
+}
+.lst-empresa li > ul > p {
+	margin-right: 50px;
+}
