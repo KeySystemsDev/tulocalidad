@@ -1,30 +1,13 @@
-<ion-view view-title="Empresas">
+<ion-view view-title="{{categoria.categoria}}">
 	<ion-content>
 		<ion-list>
-            <ion-item class="item-remove-animate item-avatar item-icon-right" type="item-text-wrap" href="#/empresas-detalle">
-                <img ng-src="img/ionic.png">
-                <h2>Empresa</h2>
-                <p>Tel: 0212 - 329 00 87</p>
-                <i class="icon ion-chevron-right icon-accessory"></i>
-            </ion-item>
-            <ion-item class="item-remove-animate item-avatar item-icon-right" type="item-text-wrap" href="#/empresas-detalle">
-                <img ng-src="img/ionic.png">
-                <h2>Empresa</h2>
-                <p>Tel: 0212 - 329 00 87</p>
-                <i class="icon ion-chevron-right icon-accessory"></i>
-            </ion-item>
-            <ion-item class="item-remove-animate item-avatar item-icon-right" type="item-text-wrap" href="#/empresas-detalle">
-                <img ng-src="img/ionic.png">
-                <h2>Empresa</h2>
-                <p>Tel: 0212 - 329 00 87</p>
-                <i class="icon ion-chevron-right icon-accessory"></i>
-            </ion-item>
-            <ion-item class="item-remove-animate item-avatar item-icon-right" type="item-text-wrap" href="#/empresas-detalle">
-                <img ng-src="img/ionic.png">
-                <h2>Empresa</h2>
-                <p>Tel: 0212 - 329 00 87</p>
+            <ion-item class="item-remove-animate item-avatar item-icon-right" ng-repeat="empresa in categoria.empresas" type="item-text-wrap" href="#/empresas-detalle">
+                <img ng-src="{{empresa.icon}}">
+                <h2>{{empresa.nombre}}</h2>
+                <p>Tel: {{empresa.tel}}</p>
                 <i class="icon ion-chevron-right icon-accessory"></i>
             </ion-item>
         </ion-list>
+        <h1 ></h1>
 	</ion-content>
 </ion-view>

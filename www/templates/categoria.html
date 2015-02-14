@@ -1,27 +1,9 @@
 <ion-view view-title="Categoría">
 	<ion-content>
         <ion-list>
-            <ion-item class="item-remove-animate item-avatar item-icon-right" type="item-text-wrap" href="#/empresas">
+            <ion-item class="item-remove-animate item-avatar item-icon-right" ng-repeat="categoria in categorias" type="item-text-wrap" href="#/empresas/{{categoria.id}}">
                 <img ng-src="img/ionic.png">
-                <h2>Categoría</h2>
-                <p></p>
-                <i class="icon ion-chevron-right icon-accessory"></i>
-            </ion-item>
-            <ion-item class="item-remove-animate item-avatar item-icon-right" type="item-text-wrap" href="#/empresas">
-                <img ng-src="img/ionic.png">
-                <h2>Categoría</h2>
-                <p></p>
-                <i class="icon ion-chevron-right icon-accessory"></i>
-            </ion-item>
-            <ion-item class="item-remove-animate item-avatar item-icon-right" type="item-text-wrap" href="#/empresas">
-                <img ng-src="img/ionic.png">
-                <h2>Categoría</h2>
-                <p></p>
-                <i class="icon ion-chevron-right icon-accessory"></i>
-            </ion-item>
-            <ion-item class="item-remove-animate item-avatar item-icon-right" type="item-text-wrap" href="#/empresas">
-                <img ng-src="img/ionic.png">
-                <h2>Categoría</h2>
+                <h2>{{categoria.categoria}}</h2>
                 <p></p>
                 <i class="icon ion-chevron-right icon-accessory"></i>
             </ion-item>

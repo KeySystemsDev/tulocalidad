@@ -4,6 +4,10 @@ angular.module('starter.controllers', [])
     console.log('InitKey');
 })
 
-.controller('SectionsCtrl', function($scope, Sections) {
-    $scope.sections = Sections.all();
+.controller('CategoriasCtrl', function($scope, Categorias) {
+    $scope.categorias = Categorias.all();
+})
+
+.controller('EmpresaCtrl', function($scope, $stateParams, Categorias) {
+    $scope.categoria = Categorias.get($stateParams.categoriaId);
 });

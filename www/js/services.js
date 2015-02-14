@@ -56,5 +56,61 @@ angular.module('starter.services', [])
       return null;
     }
   }
+})
+
+.factory('Categorias', function() {
+  // Might use a resource here that returns a JSON array
+
+  // Some fake testing data
+  var categorias = [{
+    id: 0,
+    categoria: 'Informatica',
+    icon: 'img/ionic.png',
+    empresas:[
+        {
+            id         :  0,
+            nombre     :  'key Systems',
+            icon       :  'img/ionic.png',
+            tel        :  '0212 - 329 00 87',
+            direccion  :  'En en el fin del mundo',
+            correo     :  'key@io.com'
+        },
+        {
+            id         :  1,
+            nombre     :  'ArepaSotf',
+            icon       :  'img/ionic.png',
+            tel        :  '0212 - 329 00 87',
+            direccion  :  'En en el fin del mundo',
+            correo     :  'Arepa@io.com' 
+        }
+    ]
+  }, {
+    id: 1,
+    categoria: 'Pintura',
+    icon: 'img/ionic.png'
+  }, {
+    id: 2,
+    categoria: 'Ropa',
+    icon: 'img/ionic.png'
+  }, {
+    id: 3,
+    categoria: 'Hogar',
+    icon: 'img/ionic.png'
+  }, {
+    id: 4,
+    categoria: 'Festejo',
+    icon: 'img/ionic.png'
+  }];
+
+
+  return {
+    all: function() {
+      return categorias;
+    },
+    get: function(categoriaId) {
+      // Simple index lookup
+      return categorias[categoriaId];
+    }
+  }
 });
 
