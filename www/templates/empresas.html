@@ -1,10 +1,11 @@
 <ion-view view-title="{{categoria.categoria}}">
 	<ion-content>
 		<ion-list>
-            <ion-item class="item-remove-animate item-avatar item-icon-right" ng-repeat="empresa in categoria.empresas" type="item-text-wrap" href="#/empresas-detalle">
+            <ion-item class="item-remove-animate item-avatar item-icon-right" ng-repeat="empresa in categoria.empresas" type="item-text-wrap" href="#/empresas-detalle/{{empresa.id}}">
                 <img ng-src="{{empresa.icon}}">
                 <h2>{{empresa.nombre}}</h2>
                 <p>Tel: {{empresa.tel}}</p>
+                <p>Tel: {{empresa.id}}</p>
                 <i class="icon ion-chevron-right icon-accessory"></i>
             </ion-item>
         </ion-list>

@@ -69,7 +69,7 @@ angular.module('starter.services', [])
     empresas:[
         {
             id         :  0,
-            nombre     :  'key Systems',
+            nombre     :  'key Systems1',
             icon       :  'img/ionic.png',
             tel        :  '0212 - 329 00 87',
             direccion  :  'En en el fin del mundo',
@@ -77,7 +77,7 @@ angular.module('starter.services', [])
         },
         {
             id         :  1,
-            nombre     :  'ArepaSotf',
+            nombre     :  'ArepaSotf1',
             icon       :  'img/ionic.png',
             tel        :  '0212 - 329 00 87',
             direccion  :  'En en el fin del mundo',
@@ -87,7 +87,25 @@ angular.module('starter.services', [])
   }, {
     id: 1,
     categoria: 'Pintura',
-    icon: 'img/ionic.png'
+    icon: 'img/ionic.png',
+    empresas:[
+        {
+            id         :  0,
+            nombre     :  'key Systems2',
+            icon       :  'img/ionic.png',
+            tel        :  '0212 - 329 00 87',
+            direccion  :  'En en el fin del mundo',
+            correo     :  'key@io.com'
+        },
+        {
+            id         :  1,
+            nombre     :  'ArepaSotf2',
+            icon       :  'img/ionic.png',
+            tel        :  '0212 - 329 00 87',
+            direccion  :  'En en el fin del mundo',
+            correo     :  'Arepa@io.com' 
+        }
+    ]
   }, {
     id: 2,
     categoria: 'Ropa',
@@ -102,7 +120,7 @@ angular.module('starter.services', [])
     icon: 'img/ionic.png'
   }];
 
-
+  //console.log(categorias[0].empresas[0]);
   return {
     all: function() {
       return categorias;
@@ -110,6 +128,10 @@ angular.module('starter.services', [])
     get: function(categoriaId) {
       // Simple index lookup
       return categorias[categoriaId];
+    },
+    detalai: function(empresaId) {
+      // Simple index lookup
+      return categorias[empresaId].empresas[empresaId];
     }
   }
 });
