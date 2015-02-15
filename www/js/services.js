@@ -62,63 +62,87 @@ angular.module('starter.services', [])
   // Might use a resource here that returns a JSON array
 
   // Some fake testing data
-  var categorias = [{
-    id: 0,
-    categoria: 'Informatica',
-    icon: 'img/ionic.png',
-    empresas:[
-        {
-            id         :  0,
-            nombre     :  'key Systems1',
-            icon       :  'img/ionic.png',
-            tel        :  '0212 - 329 00 87',
-            direccion  :  'En en el fin del mundo',
-            correo     :  'key@io.com'
-        },
-        {
-            id         :  1,
-            nombre     :  'ArepaSotf1',
-            icon       :  'img/ionic.png',
-            tel        :  '0212 - 329 00 87',
-            direccion  :  'En en el fin del mundo',
-            correo     :  'Arepa@io.com' 
-        }
-    ]
-  }, {
-    id: 1,
-    categoria: 'Pintura',
-    icon: 'img/ionic.png',
-    empresas:[
-        {
-            id         :  0,
-            nombre     :  'key Systems2',
-            icon       :  'img/ionic.png',
-            tel        :  '0212 - 329 00 87',
-            direccion  :  'En en el fin del mundo',
-            correo     :  'key@io.com'
-        },
-        {
-            id         :  1,
-            nombre     :  'ArepaSotf2',
-            icon       :  'img/ionic.png',
-            tel        :  '0212 - 329 00 87',
-            direccion  :  'En en el fin del mundo',
-            correo     :  'Arepa@io.com' 
-        }
-    ]
-  }, {
-    id: 2,
-    categoria: 'Ropa',
-    icon: 'img/ionic.png'
-  }, {
-    id: 3,
-    categoria: 'Hogar',
-    icon: 'img/ionic.png'
-  }, {
-    id: 4,
-    categoria: 'Festejo',
-    icon: 'img/ionic.png'
-  }];
+    var categorias = [{
+        id: 0,
+        categoria: 'Informatica',
+        icon: 'img/ionic.png',
+        empresas:[
+            {
+                categoriaId:  0,
+                empresaId  :  0,
+                nombre     :  'key Systems1',
+                icon       :  'img/ionic.png',
+                tel        :  '0212 - 329 00 87',
+                direccion  :  'En en el fin del mundo',
+                correo     :  'key@io.com'
+            },
+            {
+                categoriaId:  0,
+                empresaId  :  1,
+                nombre     :  'ArepaSotf1',
+                icon       :  'img/ionic.png',
+                tel        :  '0212 - 329 00 87',
+                direccion  :  'En en el fin del mundo',
+                correo     :  'Arepa@io.com' 
+            }
+        ]
+    }, {
+        id: 1,
+        categoria: 'Pintura',
+        icon: 'img/ionic.png',
+        empresas:[
+            {
+                categoriaId:  1,
+                empresaId  :  0,                
+                nombre     :  'key Systems2',
+                icon       :  'img/ionic.png',
+                tel        :  '0212 - 329 00 87',
+                direccion  :  'En en el fin del mundo',
+                correo     :  'key@io.com'
+            },
+            {
+                categoriaId:  1,
+                empresaId  :  1,
+                nombre     :  'ArepaSotf2',
+                icon       :  'img/ionic.png',
+                tel        :  '0212 - 329 00 87',
+                direccion  :  'En en el fin del mundo',
+                correo     :  'Arepa@io.com' 
+            }
+        ]
+    }, {
+        id: 2,
+        categoria: 'Ropa',
+        icon: 'img/ionic.png',
+        empresas:[
+            {
+                categoriaId:  2,
+                empresaId  :  0,
+                nombre     :  'key Systems3',
+                icon       :  'img/ionic.png',
+                tel        :  '0212 - 329 00 87',
+                direccion  :  'En en el fin del mundo',
+                correo     :  'key@io.com'
+            },
+            {
+                categoriaId:  2,
+                empresaId  :  1,
+                nombre     :  'ArepaSotf3',
+                icon       :  'img/ionic.png',
+                tel        :  '0212 - 329 00 87',
+                direccion  :  'En en el fin del mundo',
+                correo     :  'Arepa@io.com' 
+            }
+        ]
+    }, {
+        id: 3,
+        categoria: 'Hogar',
+        icon: 'img/ionic.png'
+    }, {
+        id: 4,
+        categoria: 'Festejo',
+        icon: 'img/ionic.png'
+    }];
 
   //console.log(categorias[0].empresas[0]);
   return {
@@ -129,9 +153,9 @@ angular.module('starter.services', [])
       // Simple index lookup
       return categorias[categoriaId];
     },
-    detalai: function(empresaId) {
+    detalle: function(categoriaId, empresaId) {
       // Simple index lookup
-      return categorias[empresaId].empresas[empresaId];
+      return categorias[categoriaId].empresas[empresaId];
     }
   }
 });

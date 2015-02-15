@@ -14,7 +14,6 @@ angular.module('starter.controllers', [])
 })
 
 .controller('EmpresaDetalleCtrl', function($scope, $stateParams, Categorias) {
-    $scope.empresa = Categorias.detalai($stateParams.empresaId);
-    console.log('$scope.empresa')
-    console.log($scope.empresa);
+    $scope.empresa = Categorias.detalle($stateParams.categoriaId, $stateParams.empresaId);
+    console.log($stateParams.categoriaId);
 });

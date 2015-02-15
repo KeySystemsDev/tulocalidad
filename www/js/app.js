@@ -48,7 +48,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
   })
 
   .state('empresas-detalle', {
-       url: "/empresas-detalle/:empresaId",
+       url: "/empresas-detalle/:categoriaId/:empresaId",
        templateUrl: "templates/empresas-detalle.html",
        controller: 'EmpresaDetalleCtrl'
   });
