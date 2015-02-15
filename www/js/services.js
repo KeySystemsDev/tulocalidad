@@ -8,80 +8,17 @@ angular.module('starter.services', [])
         id: 0,
         categoria: 'Informatica',
         icon: 'img/ionic.png',
-        empresas:[
-            {
-                categoriaId:  0,
-                empresaId  :  0,
-                nombre     :  'key Systems1',
-                icon       :  'img/ionic.png',
-                tel        :  '0212 - 329 00 87',
-                direccion  :  'En en el fin del mundo',
-                correo     :  'key@io.com',
-                url        :  'www.keySystems1.com'
-            },
-            {
-                categoriaId:  0,
-                empresaId  :  1,
-                nombre     :  'ArepaSotf1',
-                icon       :  'img/ionic.png',
-                tel        :  '0212 - 329 00 87',
-                direccion  :  'En en el fin del mundo',
-                correo     :  'Arepa@io.com',
-                url        :  'www.ArepaSotf1.com' 
-            }
-        ]
+        empresas: informatica
     }, {
         id: 1,
         categoria: 'Pintura',
         icon: 'img/ionic.png',
-        empresas:[
-            {
-                categoriaId:  1,
-                empresaId  :  0,                
-                nombre     :  'key Systems2',
-                icon       :  'img/ionic.png',
-                tel        :  '0212 - 329 00 87',
-                direccion  :  'En en el fin del mundo',
-                correo     :  'key@io.com',
-                url        :  'www.keySystems2.com'
-            },
-            {
-                categoriaId:  1,
-                empresaId  :  1,
-                nombre     :  'ArepaSotf2',
-                icon       :  'img/ionic.png',
-                tel        :  '0212 - 329 00 87',
-                direccion  :  'En en el fin del mundo',
-                correo     :  'Arepa@io.com',
-                url        :  'www.ArepaSotf2.com' 
-            }
-        ]
+        empresas: pintura
     }, {
         id: 2,
         categoria: 'Ropa',
         icon: 'img/ionic.png',
-        empresas:[
-            {
-                categoriaId:  2,
-                empresaId  :  0,
-                nombre     :  'key Systems3',
-                icon       :  'img/ionic.png',
-                tel        :  '0212 - 329 00 87',
-                direccion  :  'En en el fin del mundo',
-                correo     :  'key@io.com',
-                url        :  'www.keySystems3.com'
-            },
-            {
-                categoriaId:  2,
-                empresaId  :  1,
-                nombre     :  'ArepaSotf3',
-                icon       :  'img/ionic.png',
-                tel        :  '0212 - 329 00 87',
-                direccion  :  'En en el fin del mundo',
-                correo     :  'Arepa@io.com',
-                url        :  'www.ArepaSotf3.com' 
-            }
-        ]
+        empresas: ropa
     }, {
         id: 3,
         categoria: 'Hogar',
@@ -91,6 +28,7 @@ angular.module('starter.services', [])
         categoria: 'Festejo',
         icon: 'img/ionic.png'
     }];
+
 
   //console.log(categorias[0].empresas[0]);
   return {
