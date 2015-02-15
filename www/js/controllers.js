@@ -10,10 +10,8 @@ angular.module('starter.controllers', [])
 
 .controller('EmpresaCtrl', function($scope, $stateParams, Categorias) {
     $scope.categoria = Categorias.get($stateParams.categoriaId);
-    console.log($scope.categoria);
 })
 
 .controller('EmpresaDetalleCtrl', function($scope, $stateParams, Categorias) {
     $scope.empresa = Categorias.detalle($stateParams.categoriaId, $stateParams.empresaId);
-    console.log($stateParams.categoriaId);
 });
