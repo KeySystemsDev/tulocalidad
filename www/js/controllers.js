@@ -1,7 +1,9 @@
 angular.module('starter.controllers', [])
 
-.controller('InitKey', function($scope) {
-    console.log('InitKey');
+.controller('tulocalidadCtrl', function($scope, $state) {
+    $scope.gocategoria = function() {
+    $state.go('categoria');
+  };
 })
 
 .controller('CategoriasCtrl', function($scope, Categorias) {

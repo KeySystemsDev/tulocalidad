@@ -32,7 +32,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
   .state('tulocalidad', {
        url: "/tulocalidad",
        templateUrl: "templates/tulocalidad.html",
-       //controller: 'tulocalidadCtrl'
+       controller: 'tulocalidadCtrl'
   })
 
   .state('categoria', {
