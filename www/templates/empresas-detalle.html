@@ -2,45 +2,42 @@
 	<ion-content>
 		<div class="list card">
 
-		  <div class="item item-avatar">
-		    <img ng-src="{{empresa.icon}}">
-		    <h2>{{empresa.nombre}}</h2>
-		    <p>Tel: {{empresa.tel}}</p>
-		  </div>
-
-		  <div class="item item-body">
-		    <google-map
-				center="centerProperty"
-				zoom="zoomProperty" 
-				markers="markersProperty"
-				latitude="clickedLatitudeProperty"
-				longitude="clickedLongitudeProperty"
-				mark-click="true"
-				draggable="true"
-				style="height: 350px; width: 100%">
-			</google-map>
-		    <p>
-		      {{empresa.direccion}}
-		    </p>		    
-		  </div>
-
-		  <div class="item tabs tabs-secondary tabs-icon-left">
-		    <a class="tab-item" href="#">
-		      <i class="icon ion-home"></i>
-		      {{empresa.url}}
-		    </a>
-		    <a class="tab-item" href="#">
-		      <i class="icon ion-email"></i>
-		      {{empresa.correo}}
-		    </a>
-		    <a class="tab-item" href="#">
-		      <i class="icon ion-ios7-telephone"></i>
-		      {{empresa.tel}}
-		    </a>
-		  </div>
-
-		</div>
-
-		
+		  	<div class="item item-avatar">
+		    	<img ng-src="{{empresa.icon}}">
+		    	<h2>{{empresa.nombre}}</h2>
+		    	<p>Tel: {{empresa.tel}}</p>
+		  	</div>
+		  	<div class="map">
+		    	<google-map
+					center="centerProperty"
+					zoom="zoomProperty" 
+					markers="markersProperty"
+					latitude="clickedLatitudeProperty"
+					longitude="clickedLongitudeProperty"
+					mark-click="true"
+					draggable="true"
+					style="height: 350px; width: 100%">
+				</google-map>
+			</div>
+		  	<div class="item">  
+			    <p>
+			      {{empresa.direccion}}
+			    </p>		    
+		  	</div>
+		  	<div class="item tabs tabs-secondary tabs-icon-left">
+		    	<a class="tab-item" href="#">
+		      		<i class="icon ion-home"></i>
+		      			{{empresa.url}}
+		    	</a>
+		    	<a class="tab-item" href="#">
+		      		<i class="icon ion-email"></i>
+		      			{{empresa.correo}}
+		    	</a>
+		    	<a class="tab-item" href="#">
+		      		<i class="icon ion-ios7-telephone"></i>
+		      			{{empresa.tel}}
+		    		</a>
+		  	</div>
+		</div>		
 	</ion-content>
 </ion-view>
