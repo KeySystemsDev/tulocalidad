@@ -9,7 +9,16 @@
 		  </div>
 
 		  <div class="item item-body">
-		    <img class="full-image" src="img/mapa.png">
+		    <google-map
+				center="centerProperty"
+				zoom="zoomProperty" 
+				markers="markersProperty"
+				latitude="clickedLatitudeProperty"
+				longitude="clickedLongitudeProperty"
+				mark-click="true"
+				draggable="true"
+				style="height: 350px; width: 100%">
+			</google-map>
 		    <p>
 		      {{empresa.direccion}}
 		    </p>		    
@@ -31,5 +40,7 @@
 		  </div>
 
 		</div>
+
+		
 	</ion-content>
 </ion-view>

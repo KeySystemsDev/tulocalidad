@@ -16,4 +16,17 @@ angular.module('starter.controllers', [])
 
 .controller('EmpresaDetalleCtrl', function($scope, $stateParams, Categorias) {
     $scope.empresa = Categorias.detalle($stateParams.categoriaId, $stateParams.empresaId);
+
+    angular.extend($scope, {
+			centerProperty: {
+				lat: 11,
+				lng: -66
+			},
+			zoomProperty: 5,
+			markersProperty: [$scope.empresa.position],
+			clickedLatitudeProperty: null,	
+			clickedLongitudeProperty: null,
+		});
+
+    
 });
