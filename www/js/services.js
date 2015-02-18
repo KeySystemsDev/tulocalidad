@@ -25,8 +25,9 @@ angular.module('starter.services', [])
         icon: 'img/ionic.png'
     }, {
         id: 4,
-        categoria: 'Festejo',
-        icon: 'img/ionic.png'
+        categoria: 'Aseo',
+        icon: 'img/ionic.png',
+        empresas: aseo
     }];
 
 
