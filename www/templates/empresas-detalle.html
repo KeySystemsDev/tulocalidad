@@ -1,6 +1,6 @@
 <ion-view view-title="{{empresa.nombre}}">
 	<ion-content>
-		<div class="list card">
+		<div class="list card margin-0">
 
 		  	<div class="item item-avatar">
 		    	<img ng-src="{{empresa.icon}}">
@@ -21,12 +21,13 @@
 			</div>
 		  	<div class="item">  
 			    <p>
-			      {{empresa.direccion}}
+			    	<i class="icon ion-home"></i>
+			      	{{empresa.direccion}}
 			    </p>		    
 		  	</div>
 		  	<div class="item tabs tabs-secondary tabs-icon-left">
 		    	<a class="tab-item" href="#">
-		      		<i class="icon ion-home"></i>
+		      		<i class="icon ion-star"></i>
 		      			{{empresa.url}}
 		    	</a>
 		    	<a class="tab-item" href="#">

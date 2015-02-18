@@ -32,4 +32,13 @@
 }
 .angular-google-map {
 			display: block;
-		}
+}
+.padding-0{
+	padding: 0px;
+}
+.padding-5{
+	padding: 5px;
+}
+.margin-0{
+	margin: 0px 0px;
+}
