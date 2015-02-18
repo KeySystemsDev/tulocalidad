@@ -18,11 +18,8 @@ angular.module('starter.controllers', [])
     $scope.empresa = Categorias.detalle($stateParams.categoriaId, $stateParams.empresaId);
 
     angular.extend($scope, {
-			centerProperty: {
-				lat: 11,
-				lng: -66
-			},
-			zoomProperty: 5,
+			centerProperty: $scope.empresa.positionmap,
+			zoomProperty: 17,
 			markersProperty: [$scope.empresa.position],
 			clickedLatitudeProperty: null,	
 			clickedLongitudeProperty: null,

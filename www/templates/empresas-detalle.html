@@ -1,6 +1,6 @@
 <ion-view view-title="{{empresa.nombre}}">
 	<ion-content>
-		<div class="list card margin-0">
+		<div class="list card card-custom">
 
 		  	<div class="item item-avatar">
 		    	<img ng-src="{{empresa.icon}}">
@@ -19,26 +19,31 @@
 					style="height: 350px; width: 100%">
 				</google-map>
 			</div>
-		  	<div class="item">  
+		  	
+		</div>
+		<div class="item">  
 			    <p>
-			    	<i class="icon ion-home"></i>
+			    	<i class="icon ion-home icon-custom"></i>
 			      	{{empresa.direccion}}
 			    </p>		    
 		  	</div>
-		  	<div class="item tabs tabs-secondary tabs-icon-left">
-		    	<a class="tab-item" href="#">
-		      		<i class="icon ion-star"></i>
+		  	<div class="item">  
+			    <p>
+			    	<i class="icon ion-earth icon-custom"></i>
 		      			{{empresa.url}}
-		    	</a>
-		    	<a class="tab-item" href="#">
-		      		<i class="icon ion-email"></i>
-		      			{{empresa.correo}}
-		    	</a>
-		    	<a class="tab-item" href="#">
-		      		<i class="icon ion-ios7-telephone"></i>
-		      			{{empresa.tel}}
-		    		</a>
+			    </p>		    
 		  	</div>
-		</div>		
+		  	<div class="item">  
+			    <p>
+			    	<i class="icon ion-email icon-custom"></i>
+		      			{{empresa.correo}}
+			    </p>		    
+		  	</div>
+		  	<div class="item">  
+			    <p>
+			    	<i class="icon ion-ios7-telephone icon-custom"></i>
+		      			{{empresa.tel}}
+			    </p>		    
+		  	</div>	
 	</ion-content>
 </ion-view>
