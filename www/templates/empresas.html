@@ -1,7 +1,15 @@
 <ion-view view-title="{{categoria.categoria}}">
-	<ion-content>
+	<ion-nav-buttons side="right">
+        <button class="button button-icon button-clear ion-search placeholder-icon" menu-toggle="riht" ng-click="searchempresa()">
+        </button>
+    </ion-nav-buttons>
+    <ion-content>
+        <label class="item item-input" ng-show="isVisible">
+            <i class="icon ion-search placeholder-icon"></i>
+            <input type="search" ng-model="query.search"  placeholder="Search">
+        </label>    
 		<ion-list>
-            <ion-item class="item-remove-animate item-avatar item-icon-right" ng-repeat="empresa in categoria.empresas" type="item-text-wrap" href="#/empresas-detalle/{{empresa.categoriaId}}/{{empresa.empresaId}}">
+            <ion-item class="item-remove-animate item-avatar item-icon-right" ng-repeat="empresa in categoria.empresas | filter:query.search" type="item-text-wrap" href="#/empresas-detalle/{{empresa.categoriaId}}/{{empresa.empresaId}}">
                 <img ng-src="{{empresa.icon}}">
                 <h2>{{empresa.nombre}}</h2>
                 <p>Tel: {{empresa.tel}}</p>

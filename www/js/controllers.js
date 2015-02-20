@@ -9,13 +9,20 @@ angular.module('starter.controllers', [])
 .controller('CategoriasCtrl', function($scope, Categorias) {
     $scope.categorias = Categorias.all();
     $scope.isVisible = false;
-	$scope.search = function() {
+	$scope.searchcategoria = function() {
+		$scope.query = {};
 		$scope.isVisible = ! $scope.isVisible;
+
 	};
 })
 
 .controller('EmpresaCtrl', function($scope, $stateParams, Categorias) {
     $scope.categoria = Categorias.get($stateParams.categoriaId);
+    $scope.isVisible = false;
+	$scope.searchempresa = function() {
+		$scope.query = {};
+		$scope.isVisible = ! $scope.isVisible;
+	};
 })
 
 .controller('EmpresaDetalleCtrl', function($scope, $stateParams, Categorias) {
