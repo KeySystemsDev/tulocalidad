@@ -3,7 +3,22 @@ angular.module('starter.controllers', [])
 .controller('tulocalidadCtrl', function($scope, $state) {
     $scope.gocategoria = function() {
     $state.go('categoria');
+  	};
+  	$scope.goestados = function() {
+    $state.go('estados');
   };
+})
+
+.controller('EstadosCtrl', function($scope, Categorias) {
+    $scope.estados = Categorias.estadoall();
+	$scope.names = ['pizzaa', 'unicorns', 'robots'];
+    $scope.my = {predeterminado: '0'  };
+	$scope.seleccionandoEstado = function() {
+		console.log($scope.my.predeterminado)
+		loca
+	};
+    
+     
 })
 
 .controller('CategoriasCtrl', function($scope, Categorias) {
@@ -12,7 +27,6 @@ angular.module('starter.controllers', [])
 	$scope.searchcategoria = function() {
 		$scope.query = {};
 		$scope.isVisible = ! $scope.isVisible;
-
 	};
 })
 

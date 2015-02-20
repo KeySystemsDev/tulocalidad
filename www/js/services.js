@@ -30,19 +30,19 @@ angular.module('starter.services', [])
         empresas: aseo
     }];
 
-
   //console.log(categorias[0].empresas[0]);
   return {
     all: function() {
-      return categorias;
+        return categorias;
+    },
+    estadoall: function() {
+        return estados;
     },
     get: function(categoriaId) {
-      // Simple index lookup
-      return categorias[categoriaId];
+        return categorias[categoriaId];
     },
     detalle: function(categoriaId, empresaId) {
-      // Simple index lookup
-      return categorias[categoriaId].empresas[empresaId];
+        return categorias[categoriaId].empresas[empresaId];
     }
   }
 });

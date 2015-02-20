@@ -35,6 +35,12 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services','g
        controller: 'tulocalidadCtrl'
   })
 
+  .state('estados', {
+       url: "/estados",
+       templateUrl: "templates/estados.html",
+       controller: 'EstadosCtrl'
+  })
+
   .state('categoria', {
        url: "/categoria",
        templateUrl: "templates/categoria.html",
