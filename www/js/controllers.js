@@ -8,6 +8,10 @@ angular.module('starter.controllers', [])
 
 .controller('CategoriasCtrl', function($scope, Categorias) {
     $scope.categorias = Categorias.all();
+    $scope.isVisible = false;
+	$scope.search = function() {
+		$scope.isVisible = ! $scope.isVisible;
+	};
 })
 
 .controller('EmpresaCtrl', function($scope, $stateParams, Categorias) {
