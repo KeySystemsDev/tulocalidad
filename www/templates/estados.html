@@ -1,19 +1,18 @@
 <ion-view view-title="Estados">
 	<ion-content>
-		
-
-
- <form >
-   <h2>Which is your favorite?</h2>
-     <label ng-repeat="name in estados">
-       
-       <input ng-click="seleccionandoEstado()" type="radio"
-              ng-model="my.predeterminado"
-              ng-value="name"              
-              name="predeterminado">
-              {{name.estado}}
-     </label>
-   <div>You chose {{my.predeterminado.id}}</div>
- </form>		
+        <div class="list">
+            <form>
+                <label class="item item-radio" ng-repeat="estado in estados">  
+                    <input ng-click="seleccionandoEstado()" type="radio"
+                    ng-model="predeterminada.id"
+                    ng-value="estado"              
+                    name="id">
+                    <div class="item-content">
+                    {{estado.estado}}
+                     </div>
+                     <i class="radio-icon ion-checkmark"></i>
+                </label>
+            </form>	
+        </div>
 	</ion-content>
 </ion-view>

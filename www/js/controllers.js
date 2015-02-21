@@ -11,14 +11,10 @@ angular.module('starter.controllers', [])
 
 .controller('EstadosCtrl', function($scope, Categorias) {
     $scope.estados = Categorias.estadoall();
-	$scope.names = ['pizzaa', 'unicorns', 'robots'];
-    $scope.my = {predeterminado: '0'  };
+    $scope.predeterminada = {id: '0'};
 	$scope.seleccionandoEstado = function() {
-		console.log($scope.my.predeterminado)
-		loca
+		console.log($scope.predeterminada.id.id);
 	};
-    
-     
 })
 
 .controller('CategoriasCtrl', function($scope, Categorias) {
