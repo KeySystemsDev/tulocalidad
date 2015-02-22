@@ -41,8 +41,8 @@ angular.module('starter.services', [])
     get: function(categoriaId) {
         return categorias[categoriaId];
     },
-    detalle: function(categoriaId, empresaId) {
-        return categorias[categoriaId].empresas[empresaId];
+    detalle: function(categoriaId, empresaId, estadoId) {
+        return categorias[categoriaId].empresas[empresaId].estado[estadoId];
     }
   }
 });

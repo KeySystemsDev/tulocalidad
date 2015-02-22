@@ -3,7 +3,7 @@ var estados = [{
         estado: 'Miranda'
     }, {
         id : 1,
-    	estado: 'Caracas'
+    	  estado: 'Caracas'
     }, {
        	id : 2,
        	estado: 'Bolivar'

@@ -15,8 +15,9 @@ angular.module('starter.controllers', [])
 	$scope.seleccionandoEstado = function() {
 		//console.log($scope.predeterminada.id.id);
 		localStorage.setItem('estado', $scope.predeterminada.id.estado);
+		localStorage.setItem('estadoid', $scope.predeterminada.id.id);
 		$scope.estado = localStorage.getItem('estado');
-		console.log($scope.estado);
+		console.log(localStorage.getItem('estadoid'));
 	};
 	$scope.estado = localStorage.getItem('estado');
 })
@@ -40,8 +41,9 @@ angular.module('starter.controllers', [])
 })
 
 .controller('EmpresaDetalleCtrl', function($scope, $stateParams, Categorias) {
-    $scope.empresa = Categorias.detalle($stateParams.categoriaId, $stateParams.empresaId);
-
+    var estadoId = localStorage.getItem('estadoid');
+    $scope.empresa = Categorias.detalle($stateParams.categoriaId, $stateParams.empresaId, $stateParams.estadoId);
+    
     angular.extend($scope, {
 			centerProperty: $scope.empresa.positionmap,
 			zoomProperty: 17,
