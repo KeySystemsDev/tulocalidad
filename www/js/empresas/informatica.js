@@ -1,5 +1,6 @@
 var informatica = [
-        {
+        {   
+            estado     :  0,
             categoriaId:  0,
             empresaId  :  0,
             nombre     :  'key Systems1',
@@ -11,6 +12,7 @@ var informatica = [
             position     :  { latitude: 10.375725, longitude:  -66.955842 },
             positionmap  :  { lat: 10.375725, lng:  -66.955842 }
         }, {
+            estado     :  1,
             categoriaId:  0,
             empresaId  :  1,
             nombre     :  'ArepaSotf1',

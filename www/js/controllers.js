@@ -6,15 +6,19 @@ angular.module('starter.controllers', [])
   	};
   	$scope.goestados = function() {
     $state.go('estados');
-  };
+  	};
 })
 
 .controller('EstadosCtrl', function($scope, Categorias) {
     $scope.estados = Categorias.estadoall();
     $scope.predeterminada = {id: '0'};
 	$scope.seleccionandoEstado = function() {
-		console.log($scope.predeterminada.id.id);
+		//console.log($scope.predeterminada.id.id);
+		localStorage.setItem('estado', $scope.predeterminada.id.estado);
+		$scope.estado = localStorage.getItem('estado');
+		console.log($scope.estado);
 	};
+	$scope.estado = localStorage.getItem('estado');
 })
 
 .controller('CategoriasCtrl', function($scope, Categorias) {
