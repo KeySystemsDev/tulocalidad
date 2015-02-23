@@ -2,10 +2,10 @@ angular.module('starter.controllers', [])
 
 .controller('tulocalidadCtrl', function($scope, $state) {
     $scope.gocategoria = function() {
-    $state.go('categoria');
+    	$state.go('categoria');
   	};
   	$scope.goestados = function() {
-    $state.go('estados');
+    	$state.go('estados');
   	};
 })
 
@@ -31,7 +31,8 @@ angular.module('starter.controllers', [])
 	};
 })
 
-.controller('EmpresaCtrl', function($scope, $stateParams, Categorias) {
+.controller('EmpresaCtrl', function($scope, $stateParams, Categorias) {      
+    var estadoId = localStorage.getItem('estadoid');
     $scope.categoria = Categorias.get($stateParams.categoriaId);
     $scope.isVisible = false;
 	$scope.searchempresa = function() {
@@ -41,9 +42,8 @@ angular.module('starter.controllers', [])
 })
 
 .controller('EmpresaDetalleCtrl', function($scope, $stateParams, Categorias) {
-    var estadoId = localStorage.getItem('estadoid');
-    $scope.empresa = Categorias.detalle($stateParams.categoriaId, $stateParams.empresaId, $stateParams.estadoId);
-    
+
+    $scope.empresa = Categorias.detalle($stateParams.categoriaId, $stateParams.empresaId);
     angular.extend($scope, {
 			centerProperty: $scope.empresa.positionmap,
 			zoomProperty: 17,

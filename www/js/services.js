@@ -1,8 +1,8 @@
 angular.module('starter.services', [])
 
 .factory('Categorias', function() {
+	var estadoId = localStorage.getItem('estadoid');
   // Might use a resource here that returns a JSON array
-
   // Some fake testing data
     var categorias = [{
         id: 0,
@@ -41,8 +41,8 @@ angular.module('starter.services', [])
     get: function(categoriaId) {
         return categorias[categoriaId];
     },
-    detalle: function(categoriaId, empresaId, estadoId) {
-        return categorias[categoriaId].empresas[empresaId].estado[estadoId];
+    detalle: function(categoriaId, empresaId) {
+        return categorias[categoriaId].empresas[empresaId];
     }
   }
 });
