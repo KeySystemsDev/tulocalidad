@@ -7,9 +7,10 @@ angular.module('starter.controllers', [])
   	$scope.goestados = function() {
     	$state.go('estados');
   	};
+  	$scope.estado = localStorage.getItem('estado');
 })
 
-.controller('EstadosCtrl', function($scope, Categorias) {
+.controller('EstadosCtrl', function($scope, Categorias,$state) {
     $scope.estados = Categorias.estadoall();
     $scope.predeterminada = {id: '0'};
 	$scope.seleccionandoEstado = function() {
@@ -18,12 +19,23 @@ angular.module('starter.controllers', [])
 		localStorage.setItem('estadoid', $scope.predeterminada.id.id);
 		$scope.estado = localStorage.getItem('estado');
 		console.log(localStorage.getItem('estadoid'));
+
+
+		
+		document.location.reload();
+		
+	};
+
+	$scope.tulocalidad = function(){
+		$state.go('tulocalidad');
 	};
 		
 	$scope.estado = localStorage.getItem('estado');
+
 })
 
 .controller('CategoriasCtrl', function($scope, Categorias) {
+	
     $scope.categorias = Categorias.all();
     $scope.isVisible = false;
 	$scope.searchcategoria = function() {
@@ -33,6 +45,7 @@ angular.module('starter.controllers', [])
 })
 
 .controller('EmpresaCtrl', function($scope, $stateParams, Categorias) {      
+
     $scope.estadoId = localStorage.getItem('estadoid');
     $scope.categoria = Categorias.get($stateParams.categoriaId);
     
