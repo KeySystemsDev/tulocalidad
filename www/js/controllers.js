@@ -19,6 +19,7 @@ angular.module('starter.controllers', [])
 		$scope.estado = localStorage.getItem('estado');
 		console.log(localStorage.getItem('estadoid'));
 	};
+		
 	$scope.estado = localStorage.getItem('estado');
 })
 
@@ -32,8 +33,9 @@ angular.module('starter.controllers', [])
 })
 
 .controller('EmpresaCtrl', function($scope, $stateParams, Categorias) {      
-    var estadoId = localStorage.getItem('estadoid');
+    $scope.estadoId = localStorage.getItem('estadoid');
     $scope.categoria = Categorias.get($stateParams.categoriaId);
+    
     $scope.isVisible = false;
 	$scope.searchempresa = function() {
 		$scope.query = {};
