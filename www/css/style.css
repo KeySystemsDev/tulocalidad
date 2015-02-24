@@ -86,3 +86,9 @@
 	padding: 0px;
 	margin-right: 2px;
 }
+.disable-user-behavior{
+	background-color: #721520;
+}
+.title{
+	color: #fff;
+}

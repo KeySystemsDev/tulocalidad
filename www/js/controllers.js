@@ -9,7 +9,7 @@ angular.module('starter.controllers', [])
   	};
   	$scope.estado = localStorage.getItem('estado');
 
-  	$ionicModal.fromTemplateUrl('templates/contact-modal.html', {
+  	$ionicModal.fromTemplateUrl('templates/estados-modal.html', {
     	scope: $scope,
     	animation: 'slide-in-up'
   			}).then(function(modal) {
