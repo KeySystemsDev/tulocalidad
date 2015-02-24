@@ -7,7 +7,10 @@ angular.module('starter.controllers', [])
   	$scope.goestados = function() {
     	$state.go('estados');
   	};
-  	$scope.estado = localStorage.getItem('estado');
+	
+  	$scope.estado = (localStorage.getItem('estado')) != null ? localStorage.getItem('estado') : localStorage.setItem('estado', 'Miranada');
+  	$scope.estado = (localStorage.getItem('estadoid')) != null ? localStorage.getItem('estado') : localStorage.setItem('estadoid', '0');
+  	
   	$scope.estadoId = localStorage.getItem('estadoid');
 
   	$ionicModal.fromTemplateUrl('templates/estados-modal.html', {
@@ -59,7 +62,7 @@ angular.module('starter.controllers', [])
 })
 
 .controller('CategoriasCtrl', function($scope, Categorias) {
-	
+  	$scope.estado = localStorage.getItem('estado');
     $scope.categorias = Categorias.all();
     $scope.isVisible = false;
 	$scope.searchcategoria = function() {
