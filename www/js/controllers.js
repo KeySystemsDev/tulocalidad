@@ -8,6 +8,7 @@ angular.module('starter.controllers', [])
     	$state.go('estados');
   	};
   	$scope.estado = localStorage.getItem('estado');
+  	$scope.estadoId = localStorage.getItem('estadoid');
 
   	$ionicModal.fromTemplateUrl('templates/estados-modal.html', {
     	scope: $scope,
@@ -31,6 +32,9 @@ angular.module('starter.controllers', [])
 		console.log(localStorage.getItem('estadoid'));
 		document.location.reload();
 	};
+
+	$scope.publicidad = Categorias.publicidadall();
+
 })
 
 .controller('EstadosCtrl', function($scope, Categorias,$state) {

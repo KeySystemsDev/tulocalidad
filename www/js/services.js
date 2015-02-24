@@ -113,6 +113,9 @@ angular.module('starter.services', [])
     estadoall: function() {
         return estados;
     },
+    publicidadall: function() {
+        return publicidad;
+    },
     get: function(categoriaId) {
         return categorias[categoriaId];
     },
