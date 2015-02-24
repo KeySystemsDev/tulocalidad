@@ -1,7 +1,29 @@
 <ion-view view-title="Directorio {{estado}}">
-	
+	<script id="contact-modal.html" type="text/ng-template">
+    <div class="modal" id="modal">
+      <ion-header-bar on-drag="dragDown($event)" on-release="resetPosition($event)">
+        <h1 class="title">{{estado}}</h1>
+      </ion-header-bar>
+      <ion-content class="padding">
+        <div class="list"> 
+            <form>
+                <label class="item item-radio" ng-repeat="estado in estados">  
+                    <input ng-click="seleccionandoEstado()" type="radio"
+                    ng-model="predeterminada.id"
+                    ng-value="estado"              
+                    name="id">
+                    <div class="item-content">
+                    {{estado.estado}}
+                     </div>
+                     <i class="radio-icon ion-checkmark"></i>
+                </label>
+            </form> 
+        </div>
+      </ion-content>
+    </div>
+  </script>
     <ion-nav-buttons side="right">
-        <button class="button button-icon button-clear ion-location" ng-click="goestados()">
+        <button class="button button-icon button-clear ion-location" ng-click="openModal()">
         </button>
         <button class="button button-icon button-clear ion-archive" ng-click="gocategoria()">
         </button>
