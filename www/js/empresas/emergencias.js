@@ -10,7 +10,7 @@ var emergencias = [
             correo       :  '',
             url          :  '',
             position     :  { latitude: 10.375725, longitude:  -66.955842 },
-            positionmap  :  { latitude: 10.375725, longitude:  -66.955842}
+            positionmap  :  { lat: 10.375725, lng:  -66.955842}
         }, {
             estadoId     :  0,
             categoriaId  :  0,
