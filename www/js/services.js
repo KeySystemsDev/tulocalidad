@@ -8,7 +8,7 @@ angular.module('starter.services', [])
         id: 0,
         categoria: 'Emergencias',
         icon: 'img/categorias/alert11.png',
-        empresas: informatica
+        empresas: emergencias
     }, {
         id: 1,
         categoria: 'Accesorios para Vehículos',
