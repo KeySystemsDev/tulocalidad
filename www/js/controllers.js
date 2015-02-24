@@ -9,62 +9,17 @@ angular.module('starter.controllers', [])
   	};
   	$scope.estado = localStorage.getItem('estado');
 
-  	$ionicModal.fromTemplateUrl('contact-modal.html', {
-    scope: $scope,
-    animation: 'slide-in-up'
-  }).then(function(modal) {
-    $scope.modal = modal;
-    $scope.modalDragStart = { active: true, value: 0 }
-  })
+  	$ionicModal.fromTemplateUrl('templates/contact-modal.html', {
+    	scope: $scope,
+    	animation: 'slide-in-up'
+  			}).then(function(modal) {
+    			$scope.modal = modal;
+    			$scope.modalDragStart = { active: true, value: 0 }
+  	})
 
-  $scope.openModal = function() {
-    $scope.modal.show()
-  }
-
-  $scope.closeModal = function() {
-    return $scope.modal.hide();
-  };
-
-  $scope.$on('$destroy', function() {
-    $scope.modal.remove();
-  });
-  
-   $scope.dragDown = function (event) {
-        if ($scope.modalDragStart.active) {
-            $scope.modalDragStart = { active: false, value: event.gesture.center.pageY };
-        }
-        var element = angular.element('#modal'),
-            windowHeight = $window.innerHeight,
-            y = event.gesture.center.pageY - $scope.modalDragStart.value;
-        if (y >= 0 && y <= windowHeight) {
-            element.css({
-                webkitTransform: 'translate3d(0,' + y + 'px,0)',
-                transform: 'translate3d(0,' + y + 'px,0)'
-            });
-        }
-    };
-    $scope.resetPosition = function (event) {
-        $scope.modalDragStart = { active: true, value: 0 }
-        var element = angular.element('#modal'),
-            y = event.gesture.center.pageY,
-            windowHeight = $window.innerHeight;
-        if (y >= (windowHeight * 0.5)) {
-            element.css({
-                transform: 'translate3d(0,' + windowHeight + 'px,0)'
-            });
-            $timeout(function () {
-                $scope.closeModal().then(function () {
-                    element.removeAttr('style');
-                });
-            }, 100);
-        }
-        else {
-            $timeout(function () {
-                element.removeAttr('style');
-            }, 100);
-        }
-
-     };
+  	$scope.openModal = function() {
+    	$scope.modal.show()
+  	}
 
     $scope.estados = Categorias.estadoall();
     $scope.predeterminada = {id: '0'};
