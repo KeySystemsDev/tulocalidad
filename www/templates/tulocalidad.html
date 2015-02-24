@@ -1,4 +1,4 @@
-<ion-view view-title="Directorio {{estado}}">
+<ion-view view-title="Directorio {{ estado }}">
     <ion-nav-buttons side="right">
         <div class="row button-tulocalidad">
             <div class="col button-tulocalidad"><button class="button button-icon button-clear ion-location" ng-click="openModal()">
@@ -10,28 +10,25 @@
    
     <ion-content>
         <div class="box-content">
-            <div class="row padding-0">
-                <!--50 -->
-                <div class="col col-50 padding-0">
-                    <a class="" href="{{publicidad[0].href}}">
-                        <img class="tamano" ng-src="{{publicidad[0].image}}">
+            <!--<div class="row padding-0">
+                <div class="col col-50 padding-0" ng-if="publicidad[0].estadoId == estadoId">
+                    <a class="" href="{{ publicidad[0].href }}">
+                        <img class="tamano" ng-src="{{ publicidad[0].image }}">
                     </a>
                 </div>
-                <!-- 50 -->
                 <div class="col col-50 padding-0">
-                    <!-- 25 cuadro -->
                     <div class="row padding-0">
                         <div class="col padding-0">
                             <div class="col padding-0">
-                                <a class="" href="{{publicidad[1].href}}">
-                                    <img class="tamano" ng-src="{{publicidad[1].image}}">
+                                <a class="" href="{{ publicidad[1].href }}">
+                                    <img class="tamano" ng-src="{{ publicidad[1].image }}">
                                 </a>
                             </div>
                         </div>
                         <div class="col padding-0">
                             <div class="col padding-0">
-                                <a class="" href="{{publicidad[2].href}}">
-                                    <img class="tamano" ng-src="{{publicidad[2].image}}">
+                                <a class="" href="{{ publicidad[2].href }}">
+                                    <img class="tamano" ng-src="{{ publicidad[2].image }}">
                                 </a>
                             </div>
                         </div>
@@ -39,110 +36,133 @@
                     <div class="row padding-0">
                         <div class="col padding-0">
                             <div class="col padding-0">
-                                <a class="" href="{{publicidad[3].href}}">
-                                    <img class="tamano" ng-src="{{publicidad[3].image}}">
+                                <a class="" href="{{ publicidad[3].href }}">
+                                    <img class="tamano" ng-src="{{ publicidad[3].image }}">
                                 </a>
                             </div>
                         </div>
                         <div class="col padding-0">
                             <div class="col padding-0">
-                                <a class="" href="{{publicidad[4].href}}">
-                                    <img class="tamano" ng-src="{{publicidad[4].image}}">
+                                <a class="" href="{{ publicidad[4].href }}">
+                                    <img class="tamano" ng-src="{{ publicidad[4].image }}">
                                 </a>
                             </div>
                         </div>
                     </div>
-                </div>
-            
-            </div>
-            <!-- 100 -->
-            <div class="row padding-0">
+                </div>            
+            </div>-->
+            <div class="row padding-0" ng-if="publicidad[0].estadoId == estadoId">
                 <div class="col col-100 padding-0"> 
                     <ion-slide-box auto-play="true" does-continue="true">
                         <ion-slide>
-                            <a class="" href="{{publicidad[5].href}}">
-                                <img class="tamano" ng-src="{{publicidad[5].image}}">
+                            <a class="" href="{{ publicidad[0].href }}">
+                                <img class="tamano" ng-src="{{ publicidad[0].image }}">
                             </a>
                         </ion-slide>
                         <ion-slide>
-                            <a class="" href="{{publicidad[6].href}}">
-                                <img class="tamano" ng-src="{{publicidad[6].image}}">
+                            <a class="" href="{{ publicidad[1].href }}">
+                                <img class="tamano" ng-src="{{ publicidad[1].image }}">
                             </a>
                         </ion-slide>
                     </ion-slide-box>   
                 </div>
             </div>
-
-            <!-- 50 -->
-            <div class="row padding-0">
+            
+            <div class="row padding-0" ng-if="publicidad[2].estadoId == estadoId">
                 <div class="col col-50 padding-0">
-                    <a class="" href="{{publicidad[7].href}}">
-                        <img class="tamano" ng-src="{{publicidad[7].image}}">
+                    <a class="" href="{{ publicidad[2].href }}">
+                        <img class="tamano" ng-src="{{ publicidad[2].image }}">
                     </a>
                 </div>
                 <div class="col col-50 padding-0">
-                    <a class="" href="{{publicidad[8].href}}">
-                        <img class="tamano" ng-src="{{publicidad[8].image}}">
+                    <a class="" href="{{ publicidad[3].href }}">
+                        <img class="tamano" ng-src="{{ publicidad[3].image }}">
                     </a>    
                 </div>
             </div>
 
-            <!-- 25 linea-->
             <div class="row padding-0">
+                <div class="col col-100 padding-0"> 
+                    <ion-slide-box auto-play="true" does-continue="true">
+                        <ion-slide>
+                            <a class="" href="{{ publicidad[1].href }}">
+                                <img class="tamano" ng-src="{{ publicidad[1].image }}">
+                            </a>
+                        </ion-slide>
+                        <ion-slide>
+                            <a class="" href="{{ publicidad[0].href }}">
+                                <img class="tamano" ng-src="{{ publicidad[0].image }}">
+                            </a>
+                        </ion-slide>
+                    </ion-slide-box>   
+                </div>
+            </div>
+            
+            <div class="row padding-0">
+                <div class="col col-50 padding-0">
+                    <a class="" href="{{ publicidad[3].href }}">
+                        <img class="tamano" ng-src="{{ publicidad[3].image }}">
+                    </a>
+                </div>
+                <div class="col col-50 padding-0">
+                    <a class="" href="{{ publicidad[2].href }}">
+                        <img class="tamano" ng-src="{{ publicidad[2].image }}">
+                    </a>    
+                </div>
+            </div>
+            
+            <!--<div class="row padding-0">
                 <div class="col col-25 padding-0">
-                    <a class="" href="{{publicidad[9].href}}">
-                        <img class="tamano" ng-src="{{publicidad[9].image}}">
+                    <a class="" href="{{ publicidad[9].href }}">
+                        <img class="tamano" ng-src="{{ publicidad[9].image }}">
                     </a>
                 </div>
                 <div class="col col-25 padding-0">
-                    <a class="" href="{{publicidad[10].href}}">
-                        <img class="tamano" ng-src="{{publicidad[10].image}}">
+                    <a class="" href="{{ publicidad[10].href }}">
+                        <img class="tamano" ng-src="{{ publicidad[10].image }}">
                     </a>
                 </div>
                 <div class="col col-25 padding-0">
-                    <a class="" href="{{publicidad[11].href}}">
-                        <img class="tamano" ng-src="{{publicidad[11].image}}">
+                    <a class="" href="{{ publicidad[11].href }}">
+                        <img class="tamano" ng-src="{{ publicidad[11].image }}">
                     </a>
                 </div>
                 <div class="col col-25 padding-0">
-                    <a class="" href="{{publicidad[12].href}}">
-                        <img class="tamano" ng-src="{{publicidad[12].image}}">
+                    <a class="" href="{{ publicidad[12].href }}">
+                        <img class="tamano" ng-src="{{ publicidad[12].image }}">
                     </a>
                 </div>
             </div>
 
-            <div class="row padding-0">
-                <!--50 -->
+            <div class="row padding-0">                
                 <div class="col col-50 padding-0">
-                    <a class="" href="{{publicidad[13].href}}">
-                        <img class="tamano" ng-src="{{publicidad[13].image}}">
+                    <a class="" href="{{ publicidad[13].href }}">
+                        <img class="tamano" ng-src="{{ publicidad[13].image }}">
                     </a>
-                </div>
-                <!-- 50 -->   
+                </div>                
                 <div class="col col-50 padding-0">
-                    <a class="" href="{{publicidad[14].href}}">
-                        <img class="tamano" ng-src="{{publicidad[14].image}}">
+                    <a class="" href="{{ publicidad[14].href }}">
+                        <img class="tamano" ng-src="{{ publicidad[14].image }}">
                     </a>
                 </div>     
             </div>
 
-            <!-- 100 -->
             <div class="row padding-0">
                 <div class="col col-100 padding-0">
                     <ion-slide-box auto-play="true" does-continue="true">
                         <ion-slide>
-                            <a class="" href="{{publicidad[15].href}}">
-                                <img class="tamano" ng-src="{{publicidad[15].image}}">
+                            <a class="" href="{{ publicidad[15].href }}">
+                                <img class="tamano" ng-src="{{ publicidad[15].image }}">
                             </a>
                         </ion-slide>
                         <ion-slide>
-                            <a class="" href="{{publicidad[16].href}}">
-                                <img class="tamano" ng-src="{{publicidad[16].image}}">
+                            <a class="" href="{{ publicidad[16].href }}">
+                                <img class="tamano" ng-src="{{ publicidad[16].image }}">
                             </a>
                         </ion-slide>
                     </ion-slide-box>
                 </div>
-            </div>
+            </div>-->
 
 
         </div>
