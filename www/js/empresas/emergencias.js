@@ -1,4 +1,4 @@
-var emergencias = [
+var empresa_1 = [
         {   
             estadoId        :  0,
             categoriaId     :  0,

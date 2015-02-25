@@ -9,7 +9,7 @@
             <input type="search" ng-model="query.search"  placeholder="Search">
         </label>    
 		<ion-list>
-            <ion-item class="item-remove-animate item-avatar item-icon-right" ng-repeat="empresa in categoria.empresas | filter:query.search | filter: {estadoId : estadoId}" type="item-text-wrap" href="#/empresas-detalle/{{empresa.categoriaId}}/{{empresa.empresaId}}">
+            <ion-item class="item-remove-animate item-avatar item-icon-right" ng-repeat="empresa in categoria.empresa | filter:query.search | filter: {estadoId : estadoId}" type="item-text-wrap" href="#/empresas-detalle/{{empresa.categoriaId}}/{{empresa.empresaId}}">
                 <img ng-src="{{empresa.icon}}">
                 <h2>{{empresa.nombre}}</h2>
                 <p>Tel: {{empresa.tel}}</p>
