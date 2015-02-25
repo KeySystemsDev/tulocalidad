@@ -1,16 +1,17 @@
 var emergencias = [
         {   
-            estadoId     :  0,
-            categoriaId  :  0,
-            empresaId    :  0,
-            nombre       :  'Electricidad de Caracas',
-            icon         :  'img/emergencias/1.jpg',
-            tel          :  '(0212) 502-2111 / 207-5811',
-            direccion    :  '',
-            correo       :  '',
-            url          :  '',
-            position     :  { latitude: 10.375725, longitude:  -66.955842 },
-            positionmap  :  { lat: 10.375725, lng:  -66.955842}
+            estadoId        :  0,
+            categoriaId     :  0,
+            empresaId       :  0,
+            nombre          :  'Electricidad de Caracas',
+            icon            :  'img/emergencias/1.jpg',
+            telefono_local  :  '0212-502-2111',
+            telefono_movil  :  '0412-743-12-45',
+            direccion       :  '',
+            correo          :  '',
+            url             :  'http://keysystems.com.ve/',
+            position        :  { latitude: 10.375725, longitude:  -66.955842 },
+            positionmap     :  { lat: 10.375725, lng:  -66.955842}
         }, {
             estadoId     :  0,
             categoriaId  :  0,
