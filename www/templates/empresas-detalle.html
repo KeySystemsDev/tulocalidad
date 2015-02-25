@@ -1,11 +1,11 @@
-<ion-view view-title="{{empresa.nombre}}">
+<ion-view view-title="{{ empresa.nombre }}">
 	<ion-content>
 		<div class="list card card-custom">
 
 		  	<div class="item item-avatar">
-		    	<img ng-src="{{empresa.icon}}">
-		    	<h2>{{empresa.nombre}}</h2>
-		    	<p>Tel: {{empresa.tel}}</p>
+		    	<img ng-src="{{ empresa.icon }}">
+		    	<h2>{{ empresa.nombre }}</h2>
+		    	<p>Tel: {{ empresa.telefono_local }}</p>
 		  	</div>
 		  	<div class="map" ng-if="empresa.positionmap != ''">
 		    	<google-map
@@ -24,14 +24,14 @@
 		<div class="item" ng-if="empresa.direccion != ''">  
 		    <p>
 		    	<i class="icon ion-home icon-custom"></i>
-		      	{{empresa.direccion}}
+		      	{{ empresa.direccion }}
 		    </p>		    
 	  	</div>
 	  	<div class="item" ng-if="empresa.url != ''">  
-		    <a class="text-none" href="#" browse-to="{{empresa.url}}">
+		    <a class="text-none" href="#" browse-to="{{ 'http://' + empresa.url }}">
 			    <p>
 			    	<i class="icon ion-earth icon-custom"></i>
-		      		{{empresa.url}}
+		      		{{ empresa.url }}
 			    </p>
 		    </a>    
 	  	</div>
@@ -39,22 +39,22 @@
 	  	<div class="item" ng-if="empresa.correo != ''">  
 		    <p>
 		    	<i class="icon ion-email icon-custom"></i>
-	      		{{empresa.correo}}
+	      		{{ empresa.correo }}
 		    </p>		    
 	  	</div>
 	  	<div class="item" ng-if="empresa.telefono_local != ''">  
-		    <a class="text-none" ng-href="tel:{{empresa.telefono_local}}">
+		    <a class="text-none" ng-href="tel:{{ empresa.telefono_local }}">
 			    <p>
 			    	<i class="icon ion-ios7-telephone icon-custom"></i>
-		      		Local: {{empresa.telefono_local}}
+		      		Local: {{ empresa.telefono_local }}
 			    </p>
 		    </a>		    
 	  	</div>
 	  	<div class="item" ng-if="empresa.telefono_movil != ''">  
-		    <a class="text-none" ng-href="tel:{{empresa.telefono_movil}}">
+		    <a class="text-none" ng-href="tel:{{ empresa.telefono_movil }}">
 			    <p>
 			    	<i class="icon ion-ios7-telephone icon-custom"></i>
-		      		Movil: {{empresa.telefono_movil}}
+		      		Movil: {{ empresa.telefono_movil }}
 			    </p>
 		    </a>		    
 	  	</div>	
