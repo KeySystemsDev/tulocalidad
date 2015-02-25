@@ -51,7 +51,7 @@
 		    </a>		    
 	  	</div>
 	  	<div class="item" ng-if="empresa.telefono_movil != ''">  
-		    <a class="text-none" ng-href="tel:{{ empresa.telefono_movil }}">
+		    <a class="text-none" ng-href="tel:{{ '+58 ' + empresa.telefono_movil }}">
 			    <p>
 			    	<i class="icon ion-ios7-telephone icon-custom"></i>
 		      		Movil: {{ empresa.telefono_movil }}
