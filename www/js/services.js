@@ -2,8 +2,6 @@ angular.module('starter.services', [])
 
 .factory('Categorias', function() {
 	var estadoId = localStorage.getItem('estadoid');
-  // Might use a resource here that returns a JSON array
-  // Some fake testing data
     var categorias = [{
         id: 0,
         categoria: 'Emergencias Médicas',
@@ -13,7 +11,7 @@ angular.module('starter.services', [])
     }, {
         id: 1,
         categoria: 'Emergencias Viales',
-        icon: 'img/categorias/electric42.png',
+        icon: 'img/categorias/car52.png',
         descripcion: 'Grúas, Transito terrestre.',
         empresas: ''
     }, {
@@ -30,9 +28,9 @@ angular.module('starter.services', [])
         empresas: ''
     }, {
         id: 4,
-        categoria: 'Taxis',
-        icon: 'img/categorias/electric42.png',
-        descripcion: 'Líneas e individuales.',
+        categoria: 'Transporte',
+        icon: 'img/categorias/transport19.png',
+        descripcion: 'Taxis, Autobuses.',
         empresas: ''
     }, {
         id: 5,
