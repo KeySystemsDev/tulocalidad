@@ -4,7 +4,7 @@ var emergencias = [
             categoriaId  :  0,
             empresaId    :  0,
             nombre       :  'Electricidad de Caracas',
-            icon         :  'img/emergencias/1.png',
+            icon         :  'img/emergencias/1.jpg',
             tel          :  '(0212) 502-2111 / 207-5811',
             direccion    :  '',
             correo       :  '',

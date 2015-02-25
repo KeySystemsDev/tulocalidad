@@ -11,8 +11,8 @@
         <ion-list>
             <ion-item class="item-remove-animate item-avatar item-icon-right" ng-repeat="categoria in categorias | filter:query.search" type="item-text-wrap" href="#/empresas/{{categoria.id}}">
                 <img ng-src="{{categoria.icon}}">
-                <h2 class="padding">{{categoria.categoria}}</h2>
-                <p></p>
+                <h2>{{ categoria.categoria }}</h2>
+                <p>{{ categoria.descripcion }}</p>
                 <i class="icon ion-chevron-right icon-accessory"></i>
             </ion-item>
         </ion-list>
