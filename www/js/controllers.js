@@ -38,6 +38,10 @@ angular.module('starter.controllers', [])
 
 	$scope.publicidad = Categorias.publicidadall();
 
+	$scope.acerca = function(){
+		$state.go('acerca');
+	}
+
 })
 
 .controller('EstadosCtrl', function($scope, Categorias,$state) {
