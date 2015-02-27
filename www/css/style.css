@@ -90,9 +90,9 @@
 	padding: 0px;
 	margin-right: 0px;
 }
-/*.disable-user-behavior{
+.disable-user-behavior{
 	background-color: #721520;
-}*/
+}
 .title{
 	color: #fff;
 }
@@ -145,7 +145,7 @@
  	background-image: url(../img/fondo_acerca.jpg);
 }
 .redes-sociales{
-	margin-top: 160px;
+	margin-top: 120px;
 	margin-left: -2px;
 	text-decoration:none;
 	background-color: transparent;
@@ -157,4 +157,5 @@
 .button-redes{
 	min-width: 50px;
 	min-height: 50px;
+	background-color: transparent;
 }
