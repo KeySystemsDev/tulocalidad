@@ -61,17 +61,20 @@ angular.module('starter.controllers', [])
 
 })
 
-.controller('CategoriasCtrl', function($scope, Categorias) {
+.controller('CategoriasCtrl', function($scope, Categorias, $ionicScrollDelegate) {
   	$scope.estado = localStorage.getItem('estado');
     $scope.categorias = Categorias.all();
     $scope.isVisible = false;
 	$scope.searchcategoria = function() {
 		$scope.query = {};
 		$scope.isVisible = ! $scope.isVisible;
+		$ionicScrollDelegate.scrollTop();
+		
+
 	};
 })
 
-.controller('EmpresaCtrl', function($scope, $stateParams, Categorias) {      
+.controller('EmpresaCtrl', function($scope, $stateParams, Categorias,$ionicScrollDelegate) {      
 
     $scope.estadoId = localStorage.getItem('estadoid');
     $scope.categoria = Categorias.get($stateParams.categoriaId);
@@ -80,6 +83,7 @@ angular.module('starter.controllers', [])
 	$scope.searchempresa = function() {
 		$scope.query = {};
 		$scope.isVisible = ! $scope.isVisible;
+		$ionicScrollDelegate.scrollTop();
 	};
 })
 
