@@ -8,7 +8,7 @@ angular.module('starter.controllers', [])
     	$state.go('estados');
   	};
 	
-  	$scope.estado = (localStorage.getItem('estado')) != null ? localStorage.getItem('estado') : localStorage.setItem('estado', 'Miranada');
+  	$scope.estado = (localStorage.getItem('estado')) != null ? localStorage.getItem('estado') : localStorage.setItem('estado', 'Miranda');
   	$scope.estado = (localStorage.getItem('estadoid')) != null ? localStorage.getItem('estado') : localStorage.setItem('estadoid', '0');
   	
   	$scope.estadoId = localStorage.getItem('estadoid');
