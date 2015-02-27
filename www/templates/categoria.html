@@ -1,13 +1,15 @@
 <ion-view view-title="Categoría {{ estado }}">
     <ion-nav-buttons side="right">
-        <button class="button button-icon button-clear ion-search placeholder-icon" menu-toggle="riht" ng-click="searchcategoria()">
-        </button> 
+        <div class="row button-categorias">
+            <label class="item item-input button-search-custon" ng-show="isVisible">
+                <i class="icon ion-search placeholder-icon"></i>
+                <input type="search" ng-model="query.search" placeholder="Search">
+            </label>
+            <button class="button button-icon button-clear ion-search placeholder-icon" menu-toggle="riht" ng-click="searchcategoria()">
+            </button>
+        </div>
     </ion-nav-buttons>
 	<ion-content>  
-        <label class="item item-input" ng-show="isVisible">
-            <i class="icon ion-search placeholder-icon"></i>
-            <input type="search" ng-model="query.search" placeholder="Search">
-        </label>
         <ion-list>
             <ion-item class="item-remove-animate item-avatar item-icon-right" ng-repeat="categoria in categorias | filter:query.search" type="item-text-wrap" href="#/empresas/{{categoria.id}}">
                 <img ng-src="{{categoria.icon}}">

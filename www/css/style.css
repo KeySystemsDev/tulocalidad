@@ -99,3 +99,21 @@
 .text-none{
 	text-decoration:none;
 }
+.button-search-custon{
+	margin-right: 5px;
+	padding: 0px 0 0px 16px;
+	color: #fff;
+	border-radius: 4px;
+}
+.button-categorias{
+	padding: 0px;
+	bottom: 0px;
+	position: relative;
+	top: -1.99px;
+}
+.button-empresa{
+	padding: 0px;
+	bottom: 0px;
+	position: relative;
+	top: -1.99px;
+}
