@@ -1,21 +1,13 @@
 <ion-view view-title="Directorio {{ estado }}">
     
-    <ion-nav-buttons side="left">
-        <div class="row button-tulocalidad-acerca">
-            <div class="col button-tulocalidad-acerca">
-                <button class="button button-clear" ng-click="acerca()">
-                    <img class="icon-aplicacion" src="img/app.png"> 
-                </button>
-            </div>
-        </div>  
-    </ion-nav-buttons>
+    
 
     <ion-nav-buttons side="right">
         <div class="row button-tulocalidad">
             <div class="col button-tulocalidad"><button class="button button-icon button-clear ion-location" ng-click="openModal()">
             </button></div>
-            <div class="col button-tulocalidad"><button class="button button-icon button-clear ion-grid" ng-click="gocategoria()">
-            </button></div>
+            <div class="col button-tulocalidad"><a class="button button-icon button-clear ion-grid" href="#/app/categoria">
+            </a></div>
         </div>  
     </ion-nav-buttons>
    
