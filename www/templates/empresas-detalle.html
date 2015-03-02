@@ -5,7 +5,7 @@
 		  	<div class="item item-avatar">
 		    	<img ng-src="{{ empresa.icon }}">
 		    	<h2>{{ empresa.nombre }}</h2>
-		    	<p>Tel: {{ empresa.telefono_local }}</p>
+		    	<p ng-if="empresa.rif != ''">Rif: {{ empresa.rif }}</p>
 		  	</div>
 		  	<div class="map" ng-if="empresa.positionmap != ''">
 		    	<google-map
@@ -21,12 +21,12 @@
 			</div>
 		  	
 		</div>
-		<div class="item" ng-if="empresa.direccion != ''">  
-		    <p>
-		    	<i class="icon ion-home icon-custom"></i>
-		      	{{ empresa.direccion }}
-		    </p>		    
-	  	</div>
+		<div class="item item-body" ng-if="empresa.direccion != ''">
+     		<p style="margin-top: -5px;">
+		      	Dirección: {{ empresa.direccion }}
+		    </p>
+  		</div>
+
 	  	<div class="item" ng-if="empresa.url != ''">  
 		    <a class="text-none" href="#" browse-to="{{ 'http://' + empresa.url }}">
 			    <p>
