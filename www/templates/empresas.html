@@ -14,7 +14,7 @@
             <ion-item class="item-remove-animate item-avatar item-icon-right" ng-repeat="empresa in categoria.empresa | filter:query.search | filter: {estadoId : estadoId}" type="item-text-wrap" href="#/app/empresas-detalle/{{empresa.categoriaId}}/{{empresa.empresaId}}">
                 <img ng-src="{{empresa.icon}}">
                 <h2>{{empresa.nombre}}</h2>
-                <p>Tel: {{empresa.telefono_local}}</p>
+                <p>Tel: {{empresa.rif}}</p>
                 <i class="icon ion-chevron-right icon-accessory"></i>
             </ion-item>
         </ion-list>
