@@ -268,3 +268,21 @@
     background-position: 50% 100%;
     background-repeat: no-repeat;
 }
+/*libreria de icon ionic*/
+.item-icon-left .icon, .item-icon-right .icon {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -moz-box;
+	display: -moz-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	-webkit-align-items: center;
+	-moz-align-items: center;
+	align-items: center;
+	position: absolute;
+	top: 0;
+	height: 100%;
+	font-size: 25px;
+}
