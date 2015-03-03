@@ -25,6 +25,10 @@ angular.module('starter.controllers', [])
       $scope.modal.show()
     }
 
+    $scope.closeModal = function() {
+    return $scope.modal.hide();
+    };
+
     $scope.estados = Categorias.estadoall();
     $scope.predeterminada = {id: '0'};
   $scope.seleccionandoEstado = function() {

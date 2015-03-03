@@ -30,6 +30,16 @@ angular.module('starter', ['ionic', 'starter.controllers','starter.services','go
     //controller: 'AppCtrl'
   })
 
+    .state('app.acerca', {
+      url: "/acerca",
+      views: {
+        'menuContent': {
+          templateUrl: "templates/acerca.html",
+          //controller: 'acercaCtrl'
+        }
+      }
+    })
+
     .state('app.tulocalidad', {
       url: "/tulocalidad",
       views: {

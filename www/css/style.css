@@ -21,6 +21,9 @@
 .right{
 	text-align: right;
 }
+.color-back{
+	color: #777777;
+}
 .local{
 	font-size: 45px;
 	/*border: 1px solid #ddd;*/
@@ -52,8 +55,8 @@
     background-color: #721520;
     background-image: linear-gradient(0deg, #e6b400, #e6b400 50%, transparent 50%);
     color: #fff; }
-.bar.bar-vinotinto .title {
-	color: #fff; }
+/*.bar.bar-vinotinto .title {
+	color: #fff; }*/
 .bar.bar-vinotinto.bar-footer {
 	background-image: linear-gradient(180deg, #e6b400, #e6b400 50%, transparent 50%); }
 .bar-vinotinto .button {
@@ -91,12 +94,12 @@
 	padding: 0px;
 	margin-right: 0px;
 }
-.disable-user-behavior{
+/*.disable-user-behavior{
 	background-color: #721520;
-}
-.title{
+}*/
+/*.title{
 	color: #fff;
-}
+}*/
 .icon-aplicacion{
 	width: 32px;
 	height: 32px;
@@ -126,21 +129,21 @@
 .box-acerca{
 	margin-top:100px;
 }
-.box-acerca-text-2 h1{
+.box-acerca-text{
 	text-align: center;
-	
-	color:#343434;
-	font: bold 18px Tahoma;
+	color:#555555;
+	font: bold 14px Tahoma;
 	text-shadow: 2px 2px white,
 				 -2px -2px white,
 				 2px -2px white,
 				 -2px 2px white;
-  
 }
 .acerca-img {
   	display: block;
 	margin-left: auto;
-	margin-right: auto
+	margin-right: auto;
+	width: 150px;
+	height: 150px;
  }
 .acerca{
  	background-image: url(../img/fondo_acerca.jpg);
@@ -204,12 +207,64 @@
 .icon-side-menu{
 	color:#555555;
 }
-.icon-key-side-menu{
-	width: 150px;
 
+.icon-key-side-menu{
+	top:5px;
+	margin-left: 15px;
+	width: 150px;
+	position: absolute;
 }
-.item-key-systems{
+
+.item-key-systems-border{
 	border-bottom: solid #3b4f6d;
 	border-width: 5px;
+}
 
+.item-key-systems{
+	padding: 18px;
+}
+
+
+/* top bar */
+.top-header{ 
+    height:6px;
+    background-image: -webkit-linear-gradient(left,
+        #d9534f 20%, 
+        #6f5499 20%, 
+        #6f5499 40%, 
+        #428bca 40%, 
+        #428bca 60%,
+        #f0ad4e 60%, 
+        #f0ad4e 80%, 
+        #5cb85c 80%);
+  background-image: -moz-linear-gradient(left,
+        #d9534f 20%, 
+        #6f5499 20%,
+        #6f5499 40%, 
+        #428bca 40%, 
+        #428bca 60%, 
+        #f0ad4e 60%, 
+        #f0ad4e 80%, 
+        #5cb85c 80%);
+    background-image: -ms-linear-gradient(left,
+        #d9534f 20%, 
+        #6f5499 20%, 
+        #6f5499 40%, 
+        #428bca 40%, 
+        #428bca 60%, 
+        #f0ad4e 60%, 
+        #f0ad4e 80%, 
+        #5cb85c 80%);
+    background-image: linear-gradient(left,
+        #d9534f 20%, 
+        #6f5499 20%, 
+        #6f5499 40%, 
+        #428bca 40%, 
+        #428bca 60%, 
+        #f0ad4e 60%,
+        #f0ad4e 80%, 
+        #5cb85c 80%);
+    background-size:100% 6px;
+    background-position: 50% 100%;
+    background-repeat: no-repeat;
 }
