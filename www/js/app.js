@@ -89,7 +89,7 @@ angular.module('starter', ['ionic', 'starter.controllers','starter.services','go
   link: function ($scope, $element, $attrs) {
    var handleTap = function (e) {
     // todo: capture Google Analytics here
-    var inAppBrowser = window.open(encodeURI($attrs.browseTo), '_system');
+    var inAppBrowser = window.open(encodeURI($attrs.browseTo), '_system', '_blank');
    };
    var tapGesture = $ionicGesture.on('tap', handleTap, $element);
    $scope.$on('$destroy', function () {

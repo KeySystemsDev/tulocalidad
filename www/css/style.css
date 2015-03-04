@@ -159,9 +159,17 @@
 	height: 50px;
 }
 .button-redes{
-	min-width: 50px;
-	min-height: 50px;
+	min-width: 0px;
+	min-height: 0px;
 	background-color: transparent;
+	top: 0px;
+	bottom: 0px;
+}
+.button-clear.button-clear {
+	border-color: transparent;
+	background: none;
+	box-shadow: none;
+	color: #555555;
 }
 .bar-custon{
 	border-bottom: solid #721520;
@@ -285,4 +293,10 @@
 	top: 0;
 	height: 100%;
 	font-size: 25px;
+}
+
+.redes-sociales-icon{
+	text-align: center;
+	font-size: 20px;
+	color: #555555;
 }
