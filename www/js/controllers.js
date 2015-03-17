@@ -29,12 +29,12 @@ angular.module('starter.controllers', [])
     return $scope.modal.hide();
     };
 
-    $scope.estados = Categorias.estadoall();
+    $scope.estados = estados.get();
     $scope.predeterminada = {id: '0'};
     $scope.seleccionandoEstado = function() {
       //console.log($scope.predeterminada.id.id);
-      localStorage.setItem('estado', $scope.predeterminada.id.estado);
-      localStorage.setItem('estadoid', $scope.predeterminada.id.id);
+      localStorage.setItem('estado', $scope.predeterminada.id.nombre_estado);
+      localStorage.setItem('estadoid', $scope.predeterminada.id.id_estado);
       $scope.estado = localStorage.getItem('estado');
       console.log(localStorage.getItem('estadoid'));
       document.location.reload();
@@ -45,11 +45,6 @@ angular.module('starter.controllers', [])
     $scope.acerca = function(){
       $state.go('acerca');
     }
-
-    $scope.estados_disponibles = estados.get();
-    console.log($scope.estados_disponibles);
-
-
 })
 
 .controller('EstadosCtrl', function($scope, Categorias,$state) {
