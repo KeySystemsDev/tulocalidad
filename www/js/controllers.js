@@ -47,19 +47,20 @@ angular.module('starter.controllers', [])
     }
 })
 
-.controller('CategoriasCtrl', function($scope, Categorias, $ionicScrollDelegate) {
+.controller('CategoriasCtrl', function($scope, Categorias, $ionicScrollDelegate, categoria_estado) {
     console.log('CategoriasCtrl');
     $scope.estado = localStorage.getItem('estado');
     $scope.categorias = Categorias.all();
     $scope.isVisible = false;
   
-  $scope.searchcategoria = function() {
-    $scope.query = {};
-    $scope.isVisible = ! $scope.isVisible;
-    $ionicScrollDelegate.scrollTop();
-    
+    $scope.searchcategoria = function() {
+        $scope.query = {};
+        $scope.isVisible = ! $scope.isVisible;
+        $ionicScrollDelegate.scrollTop();
+    };
 
-  };
+    $scope.categoria_estado = categoria_estado.get({'id_estado': '0'});
+    console.log($scope.categoria_estado);
 })
 
 .controller('EmpresaCtrl', function($scope, $stateParams, Categorias,$ionicScrollDelegate) {      
