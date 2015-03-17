@@ -1,6 +1,6 @@
 angular.module('starter.controllers', [])
 
-.controller('tulocalidadCtrl', function($scope, $state,  $ionicModal,$timeout,$window, Categorias) {
+.controller('tulocalidadCtrl', function($scope, $state,  $ionicModal,$timeout,$window, Categorias, estados) {
     $scope.gocategoria = function() {
       $state.go('categoria');
     };
@@ -31,20 +31,24 @@ angular.module('starter.controllers', [])
 
     $scope.estados = Categorias.estadoall();
     $scope.predeterminada = {id: '0'};
-  $scope.seleccionandoEstado = function() {
-    //console.log($scope.predeterminada.id.id);
-    localStorage.setItem('estado', $scope.predeterminada.id.estado);
-    localStorage.setItem('estadoid', $scope.predeterminada.id.id);
-    $scope.estado = localStorage.getItem('estado');
-    console.log(localStorage.getItem('estadoid'));
-    document.location.reload();
-  };
+    $scope.seleccionandoEstado = function() {
+      //console.log($scope.predeterminada.id.id);
+      localStorage.setItem('estado', $scope.predeterminada.id.estado);
+      localStorage.setItem('estadoid', $scope.predeterminada.id.id);
+      $scope.estado = localStorage.getItem('estado');
+      console.log(localStorage.getItem('estadoid'));
+      document.location.reload();
+    };
 
-  $scope.publicidad = Categorias.publicidadall();
+    $scope.publicidad = Categorias.publicidadall();
 
-  $scope.acerca = function(){
-    $state.go('acerca');
-  }
+    $scope.acerca = function(){
+      $state.go('acerca');
+    }
+
+    $scope.estados_disponibles = estados.get();
+    console.log($scope.estados_disponibles);
+
 
 })
 

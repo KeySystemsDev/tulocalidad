@@ -94,5 +94,14 @@ angular.module('starter.services', [])
         return categorias[categoriaId].empresa[empresaId];
     }
   }
+})
+
+.factory("estados", function ($resource) {
+    return $resource("http://keysystems.com.ve/tulocalidad/estados.php", //la url donde queremos consumir
+        {}, //aquí podemos pasar variables que queramos pasar a la consulta
+        //a la función get le decimos el método, y, si es un array lo que devuelve
+        //ponemos isArray en true
+        { get: { method: "GET", isArray: true }
+    })
 });
 
