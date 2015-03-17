@@ -47,27 +47,6 @@ angular.module('starter.controllers', [])
     }
 })
 
-.controller('EstadosCtrl', function($scope, Categorias,$state) {
-    $scope.estados = Categorias.estadoall();
-    $scope.predeterminada = {id: '0'};
-  $scope.seleccionandoEstado = function() {
-    //console.log($scope.predeterminada.id.id);
-    localStorage.setItem('estado', $scope.predeterminada.id.estado);
-    localStorage.setItem('estadoid', $scope.predeterminada.id.id);
-    $scope.estado = localStorage.getItem('estado');
-    console.log(localStorage.getItem('estadoid'));  
-    document.location.reload();
-    
-  };
-
-  $scope.tulocalidad = function(){
-    $state.go('tulocalidad');
-  };
-    
-  $scope.estado = localStorage.getItem('estado');
-
-})
-
 .controller('CategoriasCtrl', function($scope, Categorias, $ionicScrollDelegate) {
     console.log('CategoriasCtrl');
     $scope.estado = localStorage.getItem('estado');
