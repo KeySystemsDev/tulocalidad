@@ -30,11 +30,13 @@ angular.module('starter.controllers', [])
     };
 
     $scope.estados = estados.get();
+
     $scope.predeterminada = {id: '0'};
     $scope.seleccionandoEstado = function() {
       //console.log($scope.predeterminada.id.id);
       localStorage.setItem('estado', $scope.predeterminada.id.nombre_estado);
       localStorage.setItem('estadoid', $scope.predeterminada.id.id_estado);
+      localStorage.setItem('id_estado', $scope.predeterminada.id.id_estado);
       $scope.estado = localStorage.getItem('estado');
       console.log(localStorage.getItem('estadoid'));
       document.location.reload();
@@ -49,8 +51,9 @@ angular.module('starter.controllers', [])
 
 .controller('CategoriasCtrl', function($scope, Categorias, $ionicScrollDelegate, categoria_estado) {
     console.log('CategoriasCtrl');
+    
     $scope.estado = localStorage.getItem('estado');
-    $scope.categorias = Categorias.all();
+    $scope.categorias = categoria_estado.get({'id_estado': localStorage.getItem('id_estado')});
     $scope.isVisible = false;
   
     $scope.searchcategoria = function() {
@@ -58,9 +61,6 @@ angular.module('starter.controllers', [])
         $scope.isVisible = ! $scope.isVisible;
         $ionicScrollDelegate.scrollTop();
     };
-
-    $scope.categoria_estado = categoria_estado.get({'id_estado': '0'});
-    console.log($scope.categoria_estado);
 })
 
 .controller('EmpresaCtrl', function($scope, $stateParams, Categorias,$ionicScrollDelegate) {      
