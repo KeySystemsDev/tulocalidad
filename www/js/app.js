@@ -61,7 +61,7 @@ angular.module('starter', ['ionic', 'starter.controllers','starter.services','go
     })
 
     .state('app.empresas', {
-      url: "/empresas/:categoriaId",
+      url: "/empresas/:id_categoria",
       views: {
         'menuContent': {
           templateUrl: "templates/empresas.html",
@@ -71,7 +71,7 @@ angular.module('starter', ['ionic', 'starter.controllers','starter.services','go
     })
 
     .state('app.empresas-detalle', {
-      url: "/empresas-detalle/:categoriaId/:empresaId",
+      url: "/empresas-detalle/:id_empresa",
       views: {
         'menuContent': {
           templateUrl: "templates/empresas-detalle.html",

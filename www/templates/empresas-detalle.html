@@ -1,13 +1,13 @@
-<ion-view view-title="{{ empresa.nombre }}">
+<ion-view view-title="Empresa {{ empresa[0].nombre_empresa }}">
 	<ion-content>
 		<div class="list card card-custom">
 
 		  	<div class="item item-avatar">
-		    	<img ng-src="{{ empresa.icon }}">
-		    	<h2>{{ empresa.nombre }}</h2>
-		    	<p ng-if="empresa.rif != ''">Rif: {{ empresa.rif }}</p>
+		    	<img src="img/tulocalidad.png">
+		    	<h2>{{ empresa[0].nombre_empresa }}</h2>
+		    	<p ng-if="empresa[0].rif_empresa != ''">Rif: {{ empresa[0].rif_empresa }}</p>
 		  	</div>
-		  	<div class="map" ng-if="empresa.positionmap != ''">
+		  	<div class="map">
 		    	<google-map
 					center="centerProperty"
 					zoom="zoomProperty" 
@@ -16,45 +16,47 @@
 					longitude="clickedLongitudeProperty"
 					mark-click="true"
 					draggable="true"
-					style="height: 350px; width: 100%">
+					style="height: 300px; width: 100%">
 				</google-map>
 			</div>
 		  	
 		</div>
-		<div class="item item-body" ng-if="empresa.direccion != ''">
+		<div class="item item-body" ng-if="empresa[0].direccion_empresa != ''">
      		<p style="margin-top: -5px;">
-		      	Dirección: {{ empresa.direccion }}
+		      	Dirección: {{ empresa[0].direccion_empresa }}
 		    </p>
   		</div>
 
-	  	<div class="item" ng-if="empresa.url != ''">  
-		    <a class="text-none" href="#" browse-to="{{ 'http://' + empresa.url }}">
+	  	<div class="item" ng-if="empresa[0].url_empresa != ''">  
+		    <a class="text-none" href="#" browse-to="{{ empresa[0].url_empresa }}">
 			    <p>
 			    	<i class="icon ion-earth icon-custom"></i>
-		      		{{ empresa.url }}
+		      		{{ empresa[0].url_empresa }}
 			    </p>
 		    </a>    
 	  	</div>
 
-	  	<div class="item" ng-if="empresa.correo != ''">  
-		    <p>
-		    	<i class="icon ion-email icon-custom"></i>
-	      		{{ empresa.correo }}
-		    </p>		    
+	  	<div class="item" ng-if="empresa[0].correo_empresa != ''">  
+		    <a class="text-none" ng-href="mailto:{{ empresa[0].correo_empresa }}">
+			    <p>
+			    	<i class="icon ion-email icon-custom"></i>
+		      		{{ empresa[0].correo_empresa }}
+			    </p>
+			</a>		    
 	  	</div>
-	  	<div class="item" ng-if="empresa.telefono_local != ''">  
-		    <a class="text-none" ng-href="tel:{{ '+58 ' + empresa.telefono_local }}">
+	  	<div class="item" ng-if="empresa[0].telefono_empresa != ''">  
+		    <a class="text-none" ng-href="tel:{{ '+58 ' + empresa[0].telefono_empresa }}">
 			    <p>
 			    	<i class="icon ion-ios7-telephone icon-custom"></i>
-		      		Local: {{ empresa.telefono_local }}
+		      		Local: {{ empresa[0].telefono_empresa }}
 			    </p>
 		    </a>		    
 	  	</div>
-	  	<div class="item" ng-if="empresa.telefono_movil != ''">  
-		    <a class="text-none" ng-href="tel:{{ '+58 ' + empresa.telefono_movil }}">
+	  	<div class="item" ng-if="empresa[0].telefono_movil_empresa != ''">  
+		    <a class="text-none" ng-href="tel:{{ '+58 ' + empresa[0].telefono_movil_empresa }}">
 			    <p>
 			    	<i class="icon ion-ios7-telephone icon-custom"></i>
-		      		Movil: {{ empresa.telefono_movil }}
+		      		Movil: {{ empresa[0].telefono_movil_empresa }}
 			    </p>
 		    </a>		    
 	  	</div>	

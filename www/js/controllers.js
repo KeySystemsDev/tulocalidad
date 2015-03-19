@@ -49,7 +49,7 @@ angular.module('starter.controllers', [])
     }
 })
 
-.controller('CategoriasCtrl', function($scope, Categorias, $ionicScrollDelegate, categoria_estado) {
+.controller('CategoriasCtrl', function($scope, $ionicScrollDelegate, categoria_estado, MyService) {
     console.log('CategoriasCtrl');
     
     $scope.estado = localStorage.getItem('estado');
@@ -61,28 +61,40 @@ angular.module('starter.controllers', [])
         $scope.isVisible = ! $scope.isVisible;
         $ionicScrollDelegate.scrollTop();
     };
+
+    $scope.id_categoria = function(id_categoria) {
+        MyService.id_categoria = id_categoria;
+    }
 })
 
-.controller('EmpresaCtrl', function($scope, $stateParams, Categorias,$ionicScrollDelegate) {      
+.controller('EmpresaCtrl', function($scope, $ionicScrollDelegate, empresas_categorias, MyService) {      
     console.log('EmpresaCtrl');
-    $scope.estadoId = localStorage.getItem('estadoid');
-    $scope.categoria = Categorias.get($stateParams.categoriaId);
-    
+
+    $scope.empresas = empresas_categorias.get({ 'id_estado': localStorage.getItem('id_estado'),
+                                                'id_categoria': MyService.id_categoria});
+
     $scope.isVisible = false;
-  $scope.searchempresa = function() {
-    $scope.query = {};
-    $scope.isVisible = ! $scope.isVisible;
-    $ionicScrollDelegate.scrollTop();
-  };
+    $scope.searchempresa = function() {
+      $scope.query = {};
+      $scope.isVisible = ! $scope.isVisible;
+      $ionicScrollDelegate.scrollTop();
+    };
+
+    $scope.id_empresa = function(id_empresa) {
+        MyService.id_empresa = id_empresa;
+    }
 })
 
-.controller('EmpresaDetalleCtrl', function($scope, $stateParams, Categorias) {
+.controller('EmpresaDetalleCtrl', function($scope, detalle_empresa, MyService) {
     console.log('EmpresaDetalleCtrl');
-    $scope.empresa = Categorias.detalle($stateParams.categoriaId, $stateParams.empresaId);
+
+    $scope.empresa = detalle_empresa.get({'id_empresa': MyService.id_empresa});
+    console.log($scope.empresa);
+
     angular.extend($scope, {
-      centerProperty: $scope.empresa.positionmap,
+      centerProperty: { lat: 10.375725, lng:  -66.955842},
       zoomProperty: 17,
-      markersProperty: [$scope.empresa.position],
+      markersProperty: [{ latitude: 10.375725, longitude:  -66.955842 }],
       clickedLatitudeProperty: null,  
       clickedLongitudeProperty: null,
     });
