@@ -1,6 +1,6 @@
 angular.module('starter.controllers', [])
 
-.controller('tulocalidadCtrl', function($scope, $state,  $ionicModal,$timeout,$window, Categorias, estados) {
+.controller('tulocalidadCtrl', function($scope, $state,  $ionicModal, publicidad, estados) {
     $scope.gocategoria = function() {
       $state.go('categoria');
     };
@@ -42,7 +42,7 @@ angular.module('starter.controllers', [])
       document.location.reload();
     };
 
-    $scope.publicidad = Categorias.publicidadall();
+    $scope.publicidad = publicidad.publicidad_empresas();
 
     $scope.acerca = function(){
       $state.go('acerca');
@@ -73,6 +73,8 @@ angular.module('starter.controllers', [])
     $scope.empresas = empresas_categorias.get({ 'id_estado': localStorage.getItem('id_estado'),
                                                 'id_categoria': MyService.id_categoria});
 
+    $scope.estado = localStorage.getItem('estado');
+
     $scope.isVisible = false;
     $scope.searchempresa = function() {
       $scope.query = {};
@@ -89,7 +91,6 @@ angular.module('starter.controllers', [])
     console.log('EmpresaDetalleCtrl');
 
     $scope.empresa = detalle_empresa.get({'id_empresa': MyService.id_empresa});
-    console.log($scope.empresa);
 
     angular.extend($scope, {
       centerProperty: { lat: 10.375725, lng:  -66.955842},
