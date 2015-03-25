@@ -42,11 +42,12 @@ angular.module('starter.controllers', [])
       document.location.reload();
     };
 
-    $scope.publicidad = publicidad.publicidad_empresas();
-
     $scope.acerca = function(){
       $state.go('acerca');
     }
+
+    $scope.publicidad = publicidad.get();
+    console.log($scope.publicidad);
 
     /*isotope*/
     $('.isotope-wrapper')

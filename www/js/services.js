@@ -1,17 +1,18 @@
 angular.module('starter.services', [])
 
-.factory('publicidad', function() {
-  return {
-    publicidad_empresas: function() {
-        return publicidad;
-    }
-  }
-})
-
 .factory("MyService", function() {
   return {
     data: {}
   };
+})
+
+.factory("publicidad", function ($resource) {
+    return $resource("http://keysystems.com.ve/tulocalidad/registrar/publicidad.php", //la url donde queremos consumir
+        {}, //aquí podemos pasar variables que queramos pasar a la consulta
+        //a la función get le decimos el método, y, si es un array lo que devuelve
+        //ponemos isArray en true
+        { get: { method: "GET", isArray: true }
+    })
 })
 
 .factory("estados", function ($resource) {

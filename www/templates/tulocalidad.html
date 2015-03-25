@@ -10,352 +10,198 @@
     </ion-nav-buttons>
    
     <ion-content>
-        <div class="box-content">
-            <!--<div class="row padding-0">
-                <div class="col col-50 padding-0" ng-if="publicidad[0].estadoId == estadoId">
-                    <a class="" href="{{ publicidad[0].href }}">
-                        <img class="tamano" ng-src="{{ publicidad[0].image }}">
-                    </a>
-                </div>
-                <div class="col col-50 padding-0">
-                    <div class="row padding-0">
-                        <div class="col padding-0">
-                            <div class="col padding-0">
-                                <a class="" href="{{ publicidad[1].href }}">
-                                    <img class="tamano" ng-src="{{ publicidad[1].image }}">
-                                </a>
-                            </div>
-                        </div>
-                        <div class="col padding-0">
-                            <div class="col padding-0">
-                                <a class="" href="{{ publicidad[2].href }}">
-                                    <img class="tamano" ng-src="{{ publicidad[2].image }}">
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row padding-0">
-                        <div class="col padding-0">
-                            <div class="col padding-0">
-                                <a class="" href="{{ publicidad[3].href }}">
-                                    <img class="tamano" ng-src="{{ publicidad[3].image }}">
-                                </a>
-                            </div>
-                        </div>
-                        <div class="col padding-0">
-                            <div class="col padding-0">
-                                <a class="" href="{{ publicidad[4].href }}">
-                                    <img class="tamano" ng-src="{{ publicidad[4].image }}">
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>            
-            </div>-->
-            <div class="row padding-0" ng-if="publicidad[0].estadoId == estadoId">
-                <div class="col col-100 padding-0"> 
-                    <ion-slide-box auto-play="true" does-continue="true">
-                        <ion-slide>
-                            <a class="" href="{{ publicidad[0].href }}">
-                                <img class="tamano" ng-src="{{ publicidad[0].image }}">
-                            </a>
-                        </ion-slide>
-                        <ion-slide>
-                            <a class="" href="{{ publicidad[1].href }}">
-                                <img class="tamano" ng-src="{{ publicidad[1].image }}">
-                            </a>
-                        </ion-slide>
-                    </ion-slide-box>   
-                </div>
-            </div>
+        
+        <div class="isotope-wrapper">
             
-            <div class="row padding-0" ng-if="publicidad[2].estadoId == estadoId">
-                <div class="col col-50 padding-0">
-                    <a class="" href="{{ publicidad[2].href }}">
-                        <img class="tamano" ng-src="{{ publicidad[2].image }}">
-                    </a>
-                </div>
-                <div class="col col-50 padding-0">
-                    <a class="" href="{{ publicidad[3].href }}">
-                        <img class="tamano" ng-src="{{ publicidad[3].image }}">
-                    </a>    
-                </div>
-            </div>
-
-            <div class="row padding-0">
-                <div class="col col-100 padding-0"> 
-                    <ion-slide-box auto-play="true" does-continue="true">
-                        <ion-slide>
-                            <a class="" href="{{ publicidad[1].href }}">
-                                <img class="tamano" ng-src="{{ publicidad[1].image }}">
-                            </a>
-                        </ion-slide>
-                        <ion-slide>
-                            <a class="" href="{{ publicidad[0].href }}">
-                                <img class="tamano" ng-src="{{ publicidad[0].image }}">
-                            </a>
-                        </ion-slide>
-                    </ion-slide-box>   
-                </div>
-            </div>
+            <!--<form class="isotope-toolbar">
+                <label><input type="radio" data-type="*" checked="" name="isotope-filter"> all</label>
+                <label><input type="radio" data-type="people" name="isotope-filter"> people</label>
+                <label><input type="radio" data-type="nature" name="isotope-filter"> nature</label>
+                <label><input type="radio" data-type="animals" name="isotope-filter"> animals</label>
+            </form>-->
             
-            <div class="row padding-0">
-                <div class="col col-50 padding-0">
-                    <a class="" href="{{ publicidad[3].href }}">
-                        <img class="tamano" ng-src="{{ publicidad[3].image }}">
-                    </a>
+            <div class="isotope-box">
+
+                <div class="isotope-item" data-type="nature">
+                    <img data-src="http://keysystems.com.ve/tulocalidad/publicidad/keysystems.jpg" class="lazyload" />
                 </div>
-                <div class="col col-50 padding-0">
-                    <a class="" href="{{ publicidad[2].href }}">
-                        <img class="tamano" ng-src="{{ publicidad[2].image }}">
-                    </a>    
+                <div class="isotope-item" data-type="people">
+                    <img data-src="http://lorempixel.com/400/240/people/2/" class="lazyload" />
+                </div>
+
+                <div class="isotope-item item-portrait" data-type="animals">
+                    <img data-src="http://lorempixel.com/240/400/animals/9/" class="lazyload" />
+                </div>
+
+                <div class="isotope-item" data-type="people">
+                    <img data-src="http://lorempixel.com/400/240/people/4/" class="lazyload" />
+                </div>
+                <div class="isotope-item item-portrait" data-type="people">
+                    <img data-src="http://lorempixel.com/240/400/people/6/" class="lazyload" />
+                </div>
+                <div class="isotope-item" data-type="people">
+                    <img data-src="http://lorempixel.com/400/240/people/5/" class="lazyload" />
+                </div>
+                <div class="isotope-item item-portrait" data-type="animals">
+                    <img data-src="http://lorempixel.com/240/400/animals/1/" class="lazyload" />
+                </div>
+                <div class="isotope-item item-portrait" data-type="animals">
+                    <img data-src="http://lorempixel.com/240/400/animals/2/" class="lazyload" />
+                </div>
+                <div class="isotope-item" data-type="people">
+                    <img data-src="http://lorempixel.com/400/240/people/6/" class="lazyload" />
+                </div>
+
+                <div class="isotope-item" data-type="people">
+                    <img data-src="http://lorempixel.com/400/240/people/8/" class="lazyload" />
+                </div>
+                <div class="isotope-item" data-type="people">
+                    <img data-src="http://lorempixel.com/400/240/people/9/" class="lazyload" />
+                </div>
+
+                <div class="isotope-item item-portrait" data-type="people">
+                    <img data-src="http://lorempixel.com/240/400/people/1/" class="lazyload" />
+                </div>
+
+                <div class="isotope-item item-portrait" data-type="people">
+                    <img data-src="http://lorempixel.com/240/400/people/4/" class="lazyload" />
+                </div>
+
+                <div class="isotope-item item-portrait" data-type="animals">
+                    <img data-src="http://lorempixel.com/240/400/animals/8/" class="lazyload" />
+                </div>
+                <div class="isotope-item item-portrait" data-type="people">
+                    <img data-src="http://lorempixel.com/240/400/people/5/" class="lazyload" />
+                </div>
+
+                <div class="isotope-item" data-type="animals">
+                    <img data-src="http://lorempixel.com/400/240/animals/1/" class="lazyload" />
+                </div>
+                <div class="isotope-item item-portrait" data-type="nature">
+                    <img data-src="http://lorempixel.com/240/400/nature/9/" class="lazyload" />
+                </div>
+
+                <div class="isotope-item item-portrait" data-type="people">
+                    <img data-src="http://lorempixel.com/240/400/people/8/" class="lazyload" />
+                </div>
+                <div class="isotope-item item-portrait" data-type="people">
+                    <img data-src="http://lorempixel.com/240/400/people/9/" class="lazyload" />
+                </div>
+
+                <div class="isotope-item" data-type="nature">
+                    <img data-src="http://lorempixel.com/400/240/nature/1/" class="lazyload" />
+                </div>
+                <div class="isotope-item" data-type="nature">
+                    <img data-src="http://lorempixel.com/400/240/nature/2/" class="lazyload" />
+                </div>
+                <div class="isotope-item" data-type="nature">
+                    <img data-src="http://lorempixel.com/400/240/nature/3/" class="lazyload" />
+                </div>
+
+                <div class="isotope-item" data-type="people">
+                    <img data-src="http://lorempixel.com/400/240/people/3/" class="lazyload" />
+                </div>
+                <div class="isotope-item" data-type="animals">
+                    <img data-src="http://lorempixel.com/400/240/animals/4/" class="lazyload" />
+                </div>
+                <div class="isotope-item item-portrait" data-type="animals">
+                    <img data-src="http://lorempixel.com/240/400/animals/6/" class="lazyload" />
+                </div>
+                <div class="isotope-item item-portrait" data-type="people">
+                    <img data-src="http://lorempixel.com/240/400/people/2/" class="lazyload" />
+                </div>
+                <div class="isotope-item item-portrait" data-type="people">
+                    <img data-src="http://lorempixel.com/240/400/people/3/" class="lazyload" />
+                </div>
+                <div class="isotope-item" data-type="nature">
+                    <img data-src="http://lorempixel.com/400/240/nature/4/" class="lazyload" />
+                </div>
+
+                <div class="isotope-item" data-type="nature">
+                    <img data-src="http://lorempixel.com/400/240/nature/8/" class="lazyload" />
+                </div>
+                <div class="isotope-item" data-type="nature">
+                    <img data-src="http://lorempixel.com/400/240/nature/9/" class="lazyload" />
+                </div>
+
+                <div class="isotope-item item-portrait" data-type="nature">
+                    <img data-src="http://lorempixel.com/240/400/nature/1/" class="lazyload" />
+                </div>
+                <div class="isotope-item item-portrait" data-type="nature">
+                    <img data-src="http://lorempixel.com/240/400/nature/2/" class="lazyload" />
+                </div>
+                <div class="isotope-item" data-type="nature">
+                    <img data-src="http://lorempixel.com/400/240/nature/5/" class="lazyload" />
+                </div>
+                <div class="isotope-item" data-type="animals">
+                    <img data-src="http://lorempixel.com/400/240/animals/2/" class="lazyload" />
+                </div>
+                <div class="isotope-item" data-type="nature">
+                    <img data-src="http://lorempixel.com/400/240/nature/6/" class="lazyload" />
+                </div>
+                <div class="isotope-item item-portrait" data-type="nature">
+                    <img data-src="http://lorempixel.com/240/400/nature/3/" class="lazyload" />
+                </div>
+                <div class="isotope-item item-portrait" data-type="nature">
+                    <img data-src="http://lorempixel.com/240/400/nature/4/" class="lazyload" />
+                </div>
+
+                <div class="isotope-item item-portrait" data-type="nature">
+                    <img data-src="http://lorempixel.com/240/400/nature/7/" class="lazyload" />
+                </div>
+                <div class="isotope-item" data-type="animals">
+                    <img data-src="http://lorempixel.com/400/240/animals/5/" class="lazyload" />
+                </div>
+                <div class="isotope-item" data-type="people">
+                    <img data-src="http://lorempixel.com/400/240/people/1/" class="lazyload" />
+                </div>
+
+                <div class="isotope-item" data-type="animals">
+                    <img data-src="http://lorempixel.com/400/240/animals/3/" class="lazyload" />
+                </div>
+
+                <div class="isotope-item" data-type="animals">
+                    <img data-src="http://lorempixel.com/400/240/animals/6/" class="lazyload" />
+                </div>
+                <div class="isotope-item" data-type="animals">
+                    <img data-src="http://lorempixel.com/400/240/animals/7/" class="lazyload" />
+                </div>
+
+                <div class="isotope-item item-portrait" data-type="nature">
+                    <img data-src="http://lorempixel.com/240/400/nature/8/" class="lazyload" />
+                </div>
+                <div class="isotope-item" data-type="animals">
+                    <img data-src="http://lorempixel.com/400/240/animals/8/" class="lazyload" />
+                </div>
+                <div class="isotope-item" data-type="animals">
+                    <img data-src="http://lorempixel.com/400/240/animals/9/" class="lazyload" />
+                </div>
+                <div class="isotope-item item-portrait" data-type="nature">
+                    <img data-src="http://lorempixel.com/240/400/nature/6/" class="lazyload" />
+                </div>
+
+                <div class="isotope-item item-portrait" data-type="animals">
+                    <img data-src="http://lorempixel.com/240/400/animals/3/" class="lazyload" />
+                </div>
+                <div class="isotope-item item-portrait" data-type="animals">
+                    <img data-src="http://lorempixel.com/240/400/animals/4/" class="lazyload" />
+                </div>
+                <div class="isotope-item item-portrait" data-type="nature">
+                    <img data-src="http://lorempixel.com/240/400/nature/5/" class="lazyload" />
+                </div>
+                <div class="isotope-item item-portrait" data-type="people">
+                    <img data-src="http://lorempixel.com/240/400/people/7/" class="lazyload" />
+                </div>
+                <div class="isotope-item item-portrait" data-type="animals">
+                    <img data-src="http://lorempixel.com/240/400/animals/5/" class="lazyload" />
+                </div>
+                <div class="isotope-item item-portrait" data-type="animals">
+                    <img data-src="http://lorempixel.com/240/400/animals/7/" class="lazyload" />
+                </div>
+                <div class="isotope-item" data-type="people">
+                    <img data-src="http://lorempixel.com/400/240/people/7/" class="lazyload" />
                 </div>
             </div>
-            
-            <!--<div class="row padding-0">
-                <div class="col col-25 padding-0">
-                    <a class="" href="{{ publicidad[9].href }}">
-                        <img class="tamano" ng-src="{{ publicidad[9].image }}">
-                    </a>
-                </div>
-                <div class="col col-25 padding-0">
-                    <a class="" href="{{ publicidad[10].href }}">
-                        <img class="tamano" ng-src="{{ publicidad[10].image }}">
-                    </a>
-                </div>
-                <div class="col col-25 padding-0">
-                    <a class="" href="{{ publicidad[11].href }}">
-                        <img class="tamano" ng-src="{{ publicidad[11].image }}">
-                    </a>
-                </div>
-                <div class="col col-25 padding-0">
-                    <a class="" href="{{ publicidad[12].href }}">
-                        <img class="tamano" ng-src="{{ publicidad[12].image }}">
-                    </a>
-                </div>
-            </div>
-
-            <div class="row padding-0">                
-                <div class="col col-50 padding-0">
-                    <a class="" href="{{ publicidad[13].href }}">
-                        <img class="tamano" ng-src="{{ publicidad[13].image }}">
-                    </a>
-                </div>                
-                <div class="col col-50 padding-0">
-                    <a class="" href="{{ publicidad[14].href }}">
-                        <img class="tamano" ng-src="{{ publicidad[14].image }}">
-                    </a>
-                </div>     
-            </div>
-
-            <div class="row padding-0">
-                <div class="col col-100 padding-0">
-                    <ion-slide-box auto-play="true" does-continue="true">
-                        <ion-slide>
-                            <a class="" href="{{ publicidad[15].href }}">
-                                <img class="tamano" ng-src="{{ publicidad[15].image }}">
-                            </a>
-                        </ion-slide>
-                        <ion-slide>
-                            <a class="" href="{{ publicidad[16].href }}">
-                                <img class="tamano" ng-src="{{ publicidad[16].image }}">
-                            </a>
-                        </ion-slide>
-                    </ion-slide-box>
-                </div>
-            </div>-->
-
-
-            
-<div class="isotope-wrapper">
-    <form class="isotope-toolbar">
-        <label><input type="radio" data-type="*" checked="" name="isotope-filter"> all</label>
-        <label><input type="radio" data-type="people" name="isotope-filter"> people</label>
-        <label><input type="radio" data-type="nature" name="isotope-filter"> nature</label>
-        <label><input type="radio" data-type="animals" name="isotope-filter"> animals</label>
-    </form>
-    <div class="isotope-box">
-
-<div class="isotope-item" data-type="nature">
-            <img data-src="http://lorempixel.com/400/240/nature/7/" class="lazyload" />
         </div>
-        <div class="isotope-item" data-type="people">
-            <img data-src="http://lorempixel.com/400/240/people/2/" class="lazyload" />
-        </div>
-
-        <div class="isotope-item item-portrait" data-type="animals">
-            <img data-src="http://lorempixel.com/240/400/animals/9/" class="lazyload" />
-        </div>
-
-        <div class="isotope-item" data-type="people">
-            <img data-src="http://lorempixel.com/400/240/people/4/" class="lazyload" />
-        </div>
-        <div class="isotope-item item-portrait" data-type="people">
-            <img data-src="http://lorempixel.com/240/400/people/6/" class="lazyload" />
-        </div>
-        <div class="isotope-item" data-type="people">
-            <img data-src="http://lorempixel.com/400/240/people/5/" class="lazyload" />
-        </div>
-        <div class="isotope-item item-portrait" data-type="animals">
-            <img data-src="http://lorempixel.com/240/400/animals/1/" class="lazyload" />
-        </div>
-        <div class="isotope-item item-portrait" data-type="animals">
-            <img data-src="http://lorempixel.com/240/400/animals/2/" class="lazyload" />
-        </div>
-        <div class="isotope-item" data-type="people">
-            <img data-src="http://lorempixel.com/400/240/people/6/" class="lazyload" />
-        </div>
-
-        <div class="isotope-item" data-type="people">
-            <img data-src="http://lorempixel.com/400/240/people/8/" class="lazyload" />
-        </div>
-        <div class="isotope-item" data-type="people">
-            <img data-src="http://lorempixel.com/400/240/people/9/" class="lazyload" />
-        </div>
-
-        <div class="isotope-item item-portrait" data-type="people">
-            <img data-src="http://lorempixel.com/240/400/people/1/" class="lazyload" />
-        </div>
-
-        <div class="isotope-item item-portrait" data-type="people">
-            <img data-src="http://lorempixel.com/240/400/people/4/" class="lazyload" />
-        </div>
-
-        <div class="isotope-item item-portrait" data-type="animals">
-            <img data-src="http://lorempixel.com/240/400/animals/8/" class="lazyload" />
-        </div>
-        <div class="isotope-item item-portrait" data-type="people">
-            <img data-src="http://lorempixel.com/240/400/people/5/" class="lazyload" />
-        </div>
-
-        <div class="isotope-item" data-type="animals">
-            <img data-src="http://lorempixel.com/400/240/animals/1/" class="lazyload" />
-        </div>
-        <div class="isotope-item item-portrait" data-type="nature">
-            <img data-src="http://lorempixel.com/240/400/nature/9/" class="lazyload" />
-        </div>
-
-        <div class="isotope-item item-portrait" data-type="people">
-            <img data-src="http://lorempixel.com/240/400/people/8/" class="lazyload" />
-        </div>
-        <div class="isotope-item item-portrait" data-type="people">
-            <img data-src="http://lorempixel.com/240/400/people/9/" class="lazyload" />
-        </div>
-
-        <div class="isotope-item" data-type="nature">
-            <img data-src="http://lorempixel.com/400/240/nature/1/" class="lazyload" />
-        </div>
-        <div class="isotope-item" data-type="nature">
-            <img data-src="http://lorempixel.com/400/240/nature/2/" class="lazyload" />
-        </div>
-        <div class="isotope-item" data-type="nature">
-            <img data-src="http://lorempixel.com/400/240/nature/3/" class="lazyload" />
-        </div>
-
-        <div class="isotope-item" data-type="people">
-            <img data-src="http://lorempixel.com/400/240/people/3/" class="lazyload" />
-        </div>
-        <div class="isotope-item" data-type="animals">
-            <img data-src="http://lorempixel.com/400/240/animals/4/" class="lazyload" />
-        </div>
-        <div class="isotope-item item-portrait" data-type="animals">
-            <img data-src="http://lorempixel.com/240/400/animals/6/" class="lazyload" />
-        </div>
-        <div class="isotope-item item-portrait" data-type="people">
-            <img data-src="http://lorempixel.com/240/400/people/2/" class="lazyload" />
-        </div>
-        <div class="isotope-item item-portrait" data-type="people">
-            <img data-src="http://lorempixel.com/240/400/people/3/" class="lazyload" />
-        </div>
-        <div class="isotope-item" data-type="nature">
-            <img data-src="http://lorempixel.com/400/240/nature/4/" class="lazyload" />
-        </div>
-
-        <div class="isotope-item" data-type="nature">
-            <img data-src="http://lorempixel.com/400/240/nature/8/" class="lazyload" />
-        </div>
-        <div class="isotope-item" data-type="nature">
-            <img data-src="http://lorempixel.com/400/240/nature/9/" class="lazyload" />
-        </div>
-
-        <div class="isotope-item item-portrait" data-type="nature">
-            <img data-src="http://lorempixel.com/240/400/nature/1/" class="lazyload" />
-        </div>
-        <div class="isotope-item item-portrait" data-type="nature">
-            <img data-src="http://lorempixel.com/240/400/nature/2/" class="lazyload" />
-        </div>
-        <div class="isotope-item" data-type="nature">
-            <img data-src="http://lorempixel.com/400/240/nature/5/" class="lazyload" />
-        </div>
-        <div class="isotope-item" data-type="animals">
-            <img data-src="http://lorempixel.com/400/240/animals/2/" class="lazyload" />
-        </div>
-        <div class="isotope-item" data-type="nature">
-            <img data-src="http://lorempixel.com/400/240/nature/6/" class="lazyload" />
-        </div>
-        <div class="isotope-item item-portrait" data-type="nature">
-            <img data-src="http://lorempixel.com/240/400/nature/3/" class="lazyload" />
-        </div>
-        <div class="isotope-item item-portrait" data-type="nature">
-            <img data-src="http://lorempixel.com/240/400/nature/4/" class="lazyload" />
-        </div>
-
-        <div class="isotope-item item-portrait" data-type="nature">
-            <img data-src="http://lorempixel.com/240/400/nature/7/" class="lazyload" />
-        </div>
-        <div class="isotope-item" data-type="animals">
-            <img data-src="http://lorempixel.com/400/240/animals/5/" class="lazyload" />
-        </div>
-        <div class="isotope-item" data-type="people">
-            <img data-src="http://lorempixel.com/400/240/people/1/" class="lazyload" />
-        </div>
-
-        <div class="isotope-item" data-type="animals">
-            <img data-src="http://lorempixel.com/400/240/animals/3/" class="lazyload" />
-        </div>
-
-        <div class="isotope-item" data-type="animals">
-            <img data-src="http://lorempixel.com/400/240/animals/6/" class="lazyload" />
-        </div>
-        <div class="isotope-item" data-type="animals">
-            <img data-src="http://lorempixel.com/400/240/animals/7/" class="lazyload" />
-        </div>
-
-        <div class="isotope-item item-portrait" data-type="nature">
-            <img data-src="http://lorempixel.com/240/400/nature/8/" class="lazyload" />
-        </div>
-        <div class="isotope-item" data-type="animals">
-            <img data-src="http://lorempixel.com/400/240/animals/8/" class="lazyload" />
-        </div>
-        <div class="isotope-item" data-type="animals">
-            <img data-src="http://lorempixel.com/400/240/animals/9/" class="lazyload" />
-        </div>
-        <div class="isotope-item item-portrait" data-type="nature">
-            <img data-src="http://lorempixel.com/240/400/nature/6/" class="lazyload" />
-        </div>
-
-        <div class="isotope-item item-portrait" data-type="animals">
-            <img data-src="http://lorempixel.com/240/400/animals/3/" class="lazyload" />
-        </div>
-        <div class="isotope-item item-portrait" data-type="animals">
-            <img data-src="http://lorempixel.com/240/400/animals/4/" class="lazyload" />
-        </div>
-        <div class="isotope-item item-portrait" data-type="nature">
-            <img data-src="http://lorempixel.com/240/400/nature/5/" class="lazyload" />
-        </div>
-        <div class="isotope-item item-portrait" data-type="people">
-            <img data-src="http://lorempixel.com/240/400/people/7/" class="lazyload" />
-        </div>
-        <div class="isotope-item item-portrait" data-type="animals">
-            <img data-src="http://lorempixel.com/240/400/animals/5/" class="lazyload" />
-        </div>
-        <div class="isotope-item item-portrait" data-type="animals">
-            <img data-src="http://lorempixel.com/240/400/animals/7/" class="lazyload" />
-        </div>
-        <div class="isotope-item" data-type="people">
-            <img data-src="http://lorempixel.com/400/240/people/7/" class="lazyload" />
-        </div>
-    </div>
-</div>
 	</ion-content>
 </ion-view>
