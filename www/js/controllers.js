@@ -48,17 +48,29 @@ angular.module('starter.controllers', [])
       $state.go('acerca');
     }
 
-    var isoOptions = {
-        masonry: {
-        columnWidth: 50
-        }
-    };
+    /*isotope*/
+    $('.isotope-wrapper')
+        .each(function(){
 
-    $( function() {
-        // init isotope
-        var $container = $('.isotope').isotope( isoOptions );
-        var isActive = true;
-    });
+            var $isotope = $('.isotope-box', this);
+            var $filterCheckboxes = $('input[type="radio"]', this);
+
+            var filter = function(){
+                var type = $filterCheckboxes.filter(':checked').data('type') || '*';
+                if(type !== '*'){
+                    type = '[data-type="'+ type +'"]';
+                }
+                $isotope.isotope({ filter: type });
+            };
+
+            $isotope.isotope({
+                itemSelector: '.isotope-item',
+                layoutMode: 'masonry'
+            });
+
+            $(this).on('change', filter);
+            filter();
+        });
 })
 
 .controller('CategoriasCtrl', function($scope, $ionicScrollDelegate, categoria_estado, MyService) {
