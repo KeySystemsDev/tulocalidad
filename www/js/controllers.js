@@ -47,6 +47,18 @@ angular.module('starter.controllers', [])
     $scope.acerca = function(){
       $state.go('acerca');
     }
+
+    var isoOptions = {
+        masonry: {
+        columnWidth: 50
+        }
+    };
+
+    $( function() {
+        // init isotope
+        var $container = $('.isotope').isotope( isoOptions );
+        var isActive = true;
+    });
 })
 
 .controller('CategoriasCtrl', function($scope, $ionicScrollDelegate, categoria_estado, MyService) {

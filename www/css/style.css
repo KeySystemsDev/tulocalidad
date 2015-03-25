@@ -302,3 +302,32 @@
 	font-size: 20px;
 	color: #555555;
 }
+
+
+/* ---- isotope ---- */
+
+.isotope {
+  background: #DDD;
+  max-width: 1200px;
+}
+
+/* clear fix */
+.isotope:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+/* ---- .item ---- */
+
+.isotope-box {
+  float: left;
+  width: 100px;
+  height: 100px;
+  background: #0D8;
+  border: 2px solid #333;
+  border-color: hsla(0, 0%, 0%, 0.7);
+}
+
+.isotope-box.width2 { width: 200px; }
+.isotope-box.height2 { height: 200px; }
