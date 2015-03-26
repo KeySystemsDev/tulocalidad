@@ -329,6 +329,7 @@
   margin: 1%;
   box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.22);
   border-radius: 6px;
+  float: left;
 }
 
 .isotope-item:before {
@@ -365,3 +366,7 @@
   min-height: 60px;
 }
 /*isotope*/
+
+.publicidad{
+	background: url(../img/fondo_acerca.jpg);
+}

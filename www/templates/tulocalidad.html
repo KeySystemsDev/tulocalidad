@@ -9,7 +9,7 @@
         </div>  
     </ion-nav-buttons>
    
-    <ion-content>
+    <ion-content class="publicidad">
         
         <div class="isotope-wrapper" >
             
@@ -20,7 +20,7 @@
                 <label><input type="radio" data-type="animals" name="isotope-filter"> animals</label>
             </form>-->
             
-            <div class="isotope-box">
+            <!--<div class="isotope-box">
 
                 <div class="isotope-item" data-type="">
                     <img src="img/publicidad/m-4.jpg" class="lazyload" />
@@ -33,12 +33,14 @@
                     <img data-src="http://lorempixel.com/240/400/animals/9/" class="lazyload" />
                 </div>
 
-            </div>
+            </div>-->
 
             <div class="isotope-box" >
                
-                <div class="isotope-item" ng-repeat="publicidad in publicidades" data-type="" >
-                    <img ng-src="{{ publicidad.url_imagen_publicidad }}" class="lazyload" />
+                <div class="isotope-item {{ publicidad.tamano_imagen }}" ng-repeat="publicidad in publicidades" data-type="">
+                    <a href="#/app/empresas-detalle/{{empresa.id_empresa}}" ng-click="id_empresa({{ publicidad.id_empresa }})">
+                        <img ng-src="{{ publicidad.url_imagen_publicidad }}" class="lazyload" />
+                    </a>
                 </div>
 
             </div>

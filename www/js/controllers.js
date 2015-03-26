@@ -1,6 +1,6 @@
 angular.module('starter.controllers', [])
 
-.controller('tulocalidadCtrl', function($scope, $state,  $ionicModal, publicidad, estados) {
+.controller('tulocalidadCtrl', function($scope, $state,  $ionicModal, publicidad, estados, MyService) {
     $scope.gocategoria = function() {
       $state.go('categoria');
     };
@@ -72,6 +72,10 @@ angular.module('starter.controllers', [])
             $(this).on('change', filter);
             filter();
         });
+
+    $scope.id_empresa = function(id_empresa) {
+        MyService.id_empresa = id_empresa;
+    }
 })
 
 .controller('CategoriasCtrl', function($scope, $ionicScrollDelegate, categoria_estado, MyService) {
