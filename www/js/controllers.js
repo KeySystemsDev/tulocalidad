@@ -46,8 +46,8 @@ angular.module('starter.controllers', [])
       $state.go('acerca');
     }
 
-    $scope.publicidad = publicidad.get();
-    console.log($scope.publicidad);
+    $scope.publicidades = publicidad.get();
+    console.log($scope.publicidades);
 
     /*isotope*/
     $('.isotope-wrapper')
