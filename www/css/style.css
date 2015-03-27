@@ -335,7 +335,7 @@
 .isotope-item:before {
   content: '';
   display: inline-block;
-  padding-top: 60%;
+  padding-top: 150%;
 }
 
 .mediana:before {
