@@ -370,3 +370,10 @@
 .publicidad{
 	background: url(../img/fondo_acerca.jpg);
 }
+
+.pad-sides {
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+

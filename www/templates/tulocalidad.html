@@ -34,7 +34,7 @@
                 </div>
 
             </div>-->
-
+            <!--
             <div class="isotope-box" >
                
                 <div class="isotope-item {{ publicidad.tamano_imagen }}" ng-repeat="publicidad in publicidades" data-type="">
@@ -43,8 +43,22 @@
                     </a>
                 </div>
 
+            </div>-->
+            
+            <div class="pad-sides" masonry="{columnWidth: 10, gutter: 0, transitionDuration: '.9s',
+                        hiddenStyle: {opacity: .001, transform: 'scale(0.01)', transform: 'rotate(200deg)'},
+                        visibleStyle: {opacity: 1, transform: 'rotate(200deg)'}}">
+                
+                <div class="masonry-brick" ng-repeat="publicidad in publicidades">
+                    <a href="#/app/empresas-detalle/{{empresa.id_empresa}}" ng-click="id_empresa({{ publicidad.id_empresa }})">
+                        <div class="">
+                            <img ng-src="{{ publicidad.url_imagen_publicidad }}" alt="pop singer">
+                        </div>
+                    </a>
+                </div>
+            
             </div>
-        
+
         </div>
 	</ion-content>
 </ion-view>
