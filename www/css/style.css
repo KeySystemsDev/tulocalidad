@@ -434,6 +434,11 @@ div.item-publicidad h2 {
     position: relative;
     text-shadow: -1px -1px 1px rgba(0,0,0,0.2);
 }
+div .item-publicidad p{
+	padding: 0px 3px;
+	font-size: 14px;
+	
+}
 
 div.box-img-publicidad{
 	width: 100%;
@@ -447,5 +452,7 @@ div.box-img-publicidad img{
 }
 a.publicidad-box{
 	color: #333;
+	padding: 0 0px;
 }
+
 
