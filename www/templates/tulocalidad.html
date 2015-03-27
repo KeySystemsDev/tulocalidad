@@ -11,16 +11,16 @@
    
     <ion-content class="publicidad">
         
-        <div class="isotope-wrapper" >
+        <!--<div class="isotope-wrapper" >
             
-            <!--<form class="isotope-toolbar">
+            <form class="isotope-toolbar">
                 <label><input type="radio" data-type="*" checked="" name="isotope-filter"> all</label>
                 <label><input type="radio" data-type="people" name="isotope-filter"> people</label>
                 <label><input type="radio" data-type="nature" name="isotope-filter"> nature</label>
                 <label><input type="radio" data-type="animals" name="isotope-filter"> animals</label>
-            </form>-->
+            </form>
             
-            <!--<div class="isotope-box">
+            <div class="isotope-box">
 
                 <div class="isotope-item" data-type="">
                     <img src="img/publicidad/m-4.jpg" class="lazyload" />
@@ -33,7 +33,7 @@
                     <img data-src="http://lorempixel.com/240/400/animals/9/" class="lazyload" />
                 </div>
 
-            </div>-->
+            </div>
             
             <div class="isotope-box" >
                
@@ -44,8 +44,11 @@
                 </div>
 
             </div>
-            <!--
-            <div class="pad-sides" masonry="{columnWidth: 10, gutter: 0, transitionDuration: '.9s',
+
+        </div>-->
+            
+            
+            <!--<div class="pad-sides" masonry="{columnWidth: 10, gutter: 0, transitionDuration: '.9s',
                         hiddenStyle: {opacity: .001, transform: 'scale(0.01)', transform: 'rotate(200deg)'},
                         visibleStyle: {opacity: 1, transform: 'rotate(200deg)'}}">
                 
@@ -58,8 +61,15 @@
                 </div>
             
             </div>-->
-        
-
-        </div>
+        <a class="publicidad-box" href="#/app/empresas-detalle/{{empresa.id_empresa}}" ng-repeat="publicidad in publicidades" ng-click="id_empresa({{ publicidad.id_empresa }})">
+            
+            <div class="item-publicidad folded">
+                <div class="box-img-publicidad">
+                    <img ng-src="{{ publicidad.url_imagen_publicidad }}">
+                </div>
+                <p>{{ publicidad.titulo_publicidad }}</p>
+            </div>
+        </a>
+            
 	</ion-content>
 </ion-view>
