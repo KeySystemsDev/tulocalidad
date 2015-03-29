@@ -2,7 +2,7 @@
     
     <ion-nav-buttons side="right">
         <div class="row button-tulocalidad">
-            <div class="col button-tulocalidad button-tulocalidad-estados"><button class="button button-icon button-clear ion-location" ng-click="openModal()">
+            <div class="col button-tulocalidad button-tulocalidad-estados"><button class="button button-icon button-clear ion-arrow-expand" ng-click="openModal()">
             </button></div>
             <div class="col button-tulocalidad"><a class="button button-icon button-clear ion-android-more-vertical" href="#/app/categoria">
             </a></div>
@@ -61,7 +61,8 @@
                 </div>
             
             </div>-->
-        <a class="publicidad-box button-clear" href="#/app/empresas-detalle/{{empresa.id_empresa}}" ng-repeat="publicidad in publicidades" ng-click="id_empresa({{ publicidad.id_empresa }})">
+
+        <!--<a class="publicidad-box button-clear" href="#/app/empresas-detalle/{{empresa.id_empresa}}" ng-repeat="publicidad in publicidades" ng-click="id_empresa({{ publicidad.id_empresa }})">
             
             <div class="item-publicidad folded">
                 <div class="box-img-publicidad">
@@ -69,7 +70,17 @@
                 </div>
                 <p>{{ publicidad.titulo_publicidad.slice(0,10) }}...</p>
             </div>
-        </a>
+        </a>-->
+            
+
+            <a class="col col-50" href="#/app/empresas-detalle/{{empresa.id_empresa}}" ng-repeat="publicidad in publicidades" ng-click="id_empresa({{ publicidad.id_empresa }})" style="float: left; text-decoration:none;">
+                <div class="item item-image">
+                    <img ng-src="{{ publicidad.url_imagen_publicidad }}">
+                </div>
+                <div class="item item-divider" style="font-size: 14px;">
+                    {{ publicidad.titulo_publicidad }}
+                </div>
+            </a>
             
 	</ion-content>
 </ion-view>     

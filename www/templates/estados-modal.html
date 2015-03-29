@@ -1,21 +1,29 @@
 <div class="modal" id="modal">
     <ion-header-bar class="bar bar-stable" on-drag="dragDown($event)" on-release="resetPosition($event)">
-        <button class="button button-clear button-primary ion-close-round" ng-click="closeModal()"></button>
+        <button class="button button-clear button-primary ion-arrow-shrink icon" ng-click="closeModal()"></button>
         <h1 class="title color-back">{{estado}}</h1>
         
     </ion-header-bar>
     <ion-content>
         <div class="list"> 
             <form>
-                <label class="item item-radio" ng-repeat="estado in estados">  
-                    <input ng-click="seleccionandoEstado()" type="radio"
-                    ng-model="predeterminada.id"
-                    ng-value="estado"              
-                    name="id">
-                    <div class="item-content">
-                        {{estado.nombre_estado}}
+            <label class="item item-radio">
+                <label class="item item-radio" ng-repeat="estado in estados" >
+                    <div ng-if="estadoId == estado.id_estado">                    
+                        <div class="item item-content item-icon-right">
+                            <i class="icon ion-checkmark-circled"></i>
+                            {{ estado.nombre_estado}} 
+                        </div>
                     </div>
-                    <i class="radio-icon ion-checkmark"></i>
+                </label>
+                <label class="item item-radio" ng-repeat="estado in estados" >
+                    <div ng-if="estadoId != estado.id_estado">                    
+                        <input ng-click="seleccionandoEstado()" type="radio" ng-model="predeterminada.id" ng-value="estado" name="id" checked>
+                        <div class="item-content">
+                            {{ estado.nombre_estado }}
+                        </div>
+                        <i class="radio-icon ion-checkmark"></i>
+                    </div>
                 </label>
             </form> 
         </div>

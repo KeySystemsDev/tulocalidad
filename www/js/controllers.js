@@ -2,10 +2,10 @@ angular.module('starter.controllers', [])
 
 .controller('tulocalidadCtrl', function($scope, $state,  $ionicModal, publicidad, estados, MyService) {
     $scope.gocategoria = function() {
-      $state.go('categoria');
+        $state.go('categoria');
     };
     $scope.goestados = function() {
-      $state.go('estados');
+        $state.go('estados');
     };
   
     $scope.estado = (localStorage.getItem('estado')) != null ? localStorage.getItem('estado') : localStorage.setItem('estado', 'Miranda');
@@ -14,32 +14,32 @@ angular.module('starter.controllers', [])
     $scope.estadoId = localStorage.getItem('estadoid');
 
     $ionicModal.fromTemplateUrl('templates/estados-modal.html', {
-      scope: $scope,
-      animation: 'slide-in-up'
+        scope: $scope,
+        animation: 'slide-in-up'
         }).then(function(modal) {
-          $scope.modal = modal;
-          $scope.modalDragStart = { active: true, value: 0 }
+            $scope.modal = modal;
+            $scope.modalDragStart = { active: true, value: 0 }
     })
 
     $scope.openModal = function() {
-      $scope.modal.show()
+        $scope.modal.show()
     }
 
     $scope.closeModal = function() {
-    return $scope.modal.hide();
+        return $scope.modal.hide();
     };
 
     $scope.estados = estados.get();
 
     $scope.predeterminada = {id: '0'};
     $scope.seleccionandoEstado = function() {
-      //console.log($scope.predeterminada.id.id);
-      localStorage.setItem('estado', $scope.predeterminada.id.nombre_estado);
-      localStorage.setItem('estadoid', $scope.predeterminada.id.id_estado);
-      localStorage.setItem('id_estado', $scope.predeterminada.id.id_estado);
-      $scope.estado = localStorage.getItem('estado');
-      console.log(localStorage.getItem('estadoid'));
-      document.location.reload();
+        //console.log($scope.predeterminada.id.id);
+        localStorage.setItem('estado', $scope.predeterminada.id.nombre_estado);
+        localStorage.setItem('estadoid', $scope.predeterminada.id.id_estado);
+        localStorage.setItem('id_estado', $scope.predeterminada.id.id_estado);
+        $scope.estado = localStorage.getItem('estado');
+        console.log(localStorage.getItem('estadoid'));
+        document.location.reload();
     };
 
     $scope.acerca = function(){
@@ -106,9 +106,9 @@ angular.module('starter.controllers', [])
 
     $scope.isVisible = false;
     $scope.searchempresa = function() {
-      $scope.query = {};
-      $scope.isVisible = ! $scope.isVisible;
-      $ionicScrollDelegate.scrollTop();
+        $scope.query = {};
+        $scope.isVisible = ! $scope.isVisible;
+        $ionicScrollDelegate.scrollTop();
     };
 
     $scope.id_empresa = function(id_empresa) {
@@ -122,11 +122,11 @@ angular.module('starter.controllers', [])
     $scope.empresa = detalle_empresa.get({'id_empresa': MyService.id_empresa});
 
     angular.extend($scope, {
-      centerProperty: { lat: 10.375725, lng:  -66.955842},
-      zoomProperty: 17,
-      markersProperty: [{ latitude: 10.375725, longitude:  -66.955842 }],
-      clickedLatitudeProperty: null,  
-      clickedLongitudeProperty: null,
+        centerProperty: { lat: 10.375725, lng:  -66.955842},
+        zoomProperty: 17,
+        markersProperty: [{ latitude: 10.375725, longitude:  -66.955842 }],
+        clickedLatitudeProperty: null,  
+        clickedLongitudeProperty: null,
     });
 
     

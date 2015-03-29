@@ -5,7 +5,7 @@
 		  	<div class="item item-avatar">
 		    	<img src="img/tulocalidad.png">
 		    	<h2 style="text-transform: capitalize;">{{ empresa[0].nombre_empresa }}</h2>
-		    	<p ng-if="empresa[0].rif_empresa != ''">Rif: {{ empresa[0].rif_empresa }}</p>
+		    	<p ng-if="empresa[0].rif_empresa != ''"><b>Rif:</b> {{ empresa[0].rif_empresa }}</p>
 		  	</div>
 		  	<div class="map">
 		    	<google-map
@@ -16,14 +16,14 @@
 					longitude="clickedLongitudeProperty"
 					mark-click="true"
 					draggable="true"
-					style="height: 300px; width: 100%">
+					style="height: 200px; width: 100%">
 				</google-map>
 			</div>
 		  	
 		</div>
-		<div class="item item-body" ng-if="empresa[0].direccion_empresa != ''">
+		<div class="item item-body" ng-if="empresa[0].direccion_empresa != null">
      		<p style="margin-top: -5px;">
-		      	Dirección: {{ empresa[0].direccion_empresa }}
+		      	<b>Dirección:</b> {{ empresa[0].direccion_empresa }}
 		    </p>
   		</div>
 
@@ -31,12 +31,12 @@
 		    <a class="text-none" href="#" browse-to="{{ empresa[0].url_empresa }}">
 			    <p>
 			    	<i class="icon ion-earth icon-custom"></i>
-		      		{{ empresa[0].url_empresa }}
+		      		{{ empresa[0].url_empresa.slice(7,50) }}
 			    </p>
 		    </a>    
 	  	</div>
 
-	  	<div class="item" ng-if="empresa[0].correo_empresa != ''">  
+	  	<div class="item" ng-if="empresa[0].correo_empresa != null">  
 		    <a class="text-none" ng-href="mailto:{{ empresa[0].correo_empresa }}">
 			    <p>
 			    	<i class="icon ion-email icon-custom"></i>
@@ -47,16 +47,16 @@
 	  	<div class="item" ng-if="empresa[0].telefono_empresa != ''">  
 		    <a class="text-none" ng-href="tel:{{ '+58 ' + empresa[0].telefono_empresa }}">
 			    <p>
-			    	<i class="icon ion-ios7-telephone icon-custom"></i>
-		      		Local: {{ empresa[0].telefono_empresa }}
+			    	<i class="icon ion-android-call icon-custom"></i>
+		      		<b>Local:</b> {{ empresa[0].telefono_empresa }}
 			    </p>
 		    </a>		    
 	  	</div>
 	  	<div class="item" ng-if="empresa[0].telefono_movil_empresa != ''">  
 		    <a class="text-none" ng-href="tel:{{ '+58 ' + empresa[0].telefono_movil_empresa }}">
 			    <p>
-			    	<i class="icon ion-ios7-telephone icon-custom"></i>
-		      		Movil: {{ empresa[0].telefono_movil_empresa }}
+			    	<i class="icon ion-android-call icon-custom"></i>
+		      		<b>Movil:</b> {{ empresa[0].telefono_movil_empresa }}
 			    </p>
 		    </a>		    
 	  	</div>	
