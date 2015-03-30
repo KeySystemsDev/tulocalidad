@@ -47,31 +47,6 @@ angular.module('starter.controllers', [])
     }
 
     $scope.publicidades = publicidad.get();
-    console.log($scope.publicidades);
-
-    /*isotope*/
-    $('.isotope-wrapper')
-        .each(function(){
-
-            var $isotope = $('.isotope-box', this);
-            var $filterCheckboxes = $('input[type="radio"]', this);
-
-            var filter = function(){
-                var type = $filterCheckboxes.filter(':checked').data('type') || '*';
-                if(type !== '*'){
-                    type = '[data-type="'+ type +'"]';
-                }
-                $isotope.isotope({ filter: type });
-            };
-
-            $isotope.isotope({
-                itemSelector: '.isotope-item',
-                layoutMode: 'masonry'
-            });
-
-            $(this).on('change', filter);
-            filter();
-        });
 
     $scope.id_empresa = function(id_empresa) {
         MyService.id_empresa = id_empresa;
