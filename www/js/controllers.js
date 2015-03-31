@@ -7,11 +7,17 @@ angular.module('starter.controllers', [])
     $scope.goestados = function() {
         $state.go('estados');
     };
-  
-    $scope.estado = (localStorage.getItem('estado')) != null ? localStorage.getItem('estado') : localStorage.setItem('estado', 'Miranda');
-    $scope.estado = (localStorage.getItem('estadoid')) != null ? localStorage.getItem('estado') : localStorage.setItem('estadoid', '0');
     
-    $scope.estadoId = localStorage.getItem('estadoid');
+    if (localStorage.getItem('estado') != null) {
+        localStorage.getItem('estado');
+        localStorage.getItem('id_estado');
+    }else{
+        localStorage.setItem('estado', 'Miranda');
+        localStorage.setItem('id_estado', '0');
+    }
+
+    $scope.estado = localStorage.getItem('estado');
+    $scope.id_estado = localStorage.getItem('id_estado');
 
     $ionicModal.fromTemplateUrl('templates/estados-modal.html', {
         scope: $scope,
@@ -35,15 +41,13 @@ angular.module('starter.controllers', [])
     $scope.seleccionandoEstado = function() {
         //console.log($scope.predeterminada.id.id);
         localStorage.setItem('estado', $scope.predeterminada.id.nombre_estado);
-        localStorage.setItem('estadoid', $scope.predeterminada.id.id_estado);
         localStorage.setItem('id_estado', $scope.predeterminada.id.id_estado);
         $scope.estado = localStorage.getItem('estado');
-        console.log(localStorage.getItem('estadoid'));
         document.location.reload();
     };
 
     $scope.acerca = function(){
-      $state.go('acerca');
+        $state.go('acerca');
     }
 
     $scope.publicidades = publicidad.get();
