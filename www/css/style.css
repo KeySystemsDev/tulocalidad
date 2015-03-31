@@ -150,12 +150,6 @@
 .acerca{
  	background-image: url(../img/fondo_acerca.jpg);
 }
-.redes-sociales{
-	margin-top: 120px;
-	margin-left: -2px;
-	text-decoration:none;
-	background-color: transparent;
-}
 .img-size-redes{
 	width: 50px;
 	height: 50px;
@@ -370,7 +364,11 @@
 .publicidad{
 	background: url(../img/fondo_acerca.jpg);
 }
-
+.box-publicidad{
+	max-height: none;
+	float: left; 
+	text-decoration:none;
+}
 .pad-sides {
     margin-left: 5px;
     margin-right: 5px;

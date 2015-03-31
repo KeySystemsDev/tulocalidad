@@ -11,14 +11,14 @@
    
     <ion-content class="publicidad">
         
-            <a class="col col-50" href="#/app/empresas-detalle/{{empresa.id_empresa}}" ng-repeat="publicidad in publicidades" ng-click="id_empresa({{ publicidad.id_empresa }})" style="float: left; text-decoration:none;">
-                <div class="item item-image">
-                    <img ng-src="{{ publicidad.url_imagen_publicidad }}">
-                </div>
-                <div class="item item-divider" style="font-size: 14px;">
-                    {{ publicidad.titulo_publicidad }}
-                </div>
-            </a>
+        <a class="col col-50 button-clear box-publicidad" href="#/app/empresas-detalle/{{empresa.id_empresa}}" ng-repeat="publicidad in publicidades" ng-click="id_empresa({{ publicidad.id_empresa }})">
+            <div class="item item-image">
+                <img ng-src="{{ publicidad.url_imagen_publicidad }}">
+            </div>
+            <div class="item item-divider" style="font-size: 14px;">
+                {{ publicidad.titulo_publicidad }}
+            </div>
+        </a>
             
 	</ion-content>
 </ion-view>     
