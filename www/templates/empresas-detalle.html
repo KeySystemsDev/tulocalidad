@@ -5,7 +5,7 @@
 		  	<div class="item item-avatar">
 		    	<img src="img/tulocalidad.png">
 		    	<h2 style="text-transform: capitalize;">{{ empresa[0].nombre_empresa }}</h2>
-		    	<p ng-if="empresa[0].rif_empresa != ''"><b>Rif:</b> {{ empresa[0].rif_empresa }}</p>
+		    	<p ng-if="empresa[0].rif_empresa != null"><b>Rif:</b> {{ empresa[0].rif_empresa }}</p>
 		  	</div>
 		  	<div class="map">
 		    	<google-map
@@ -27,7 +27,7 @@
 		    </p>
   		</div>
 
-	  	<div class="item" ng-if="empresa[0].url_empresa != ''">  
+	  	<div class="item" ng-if="empresa[0].url_empresa != null">  
 		    <a class="text-none" href="#" browse-to="{{ empresa[0].url_empresa }}">
 			    <p>
 			    	<i class="icon ion-earth icon-custom"></i>
@@ -44,7 +44,7 @@
 			    </p>
 			</a>		    
 	  	</div>
-	  	<div class="item" ng-if="empresa[0].telefono_empresa != ''">  
+	  	<div class="item" ng-if="empresa[0].telefono_empresa != null">  
 		    <a class="text-none" ng-href="tel:{{ '+58 ' + empresa[0].telefono_empresa }}">
 			    <p>
 			    	<i class="icon ion-android-call icon-custom"></i>
@@ -52,7 +52,7 @@
 			    </p>
 		    </a>		    
 	  	</div>
-	  	<div class="item" ng-if="empresa[0].telefono_movil_empresa != ''">  
+	  	<div class="item" ng-if="empresa[0].telefono_movil_empresa != null">  
 		    <a class="text-none" ng-href="tel:{{ '+58 ' + empresa[0].telefono_movil_empresa }}">
 			    <p>
 			    	<i class="icon ion-android-call icon-custom"></i>
