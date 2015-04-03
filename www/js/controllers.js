@@ -95,67 +95,33 @@ angular.module('starter.controllers', [])
     }
 })
 
-.controller('EmpresaDetalleCtrl', ['$scope', 'detalle_empresa', 'MyService', 'Service',
-    function($scope, detalle_empresa, MyService, Service) {
+.controller('EmpresaDetalleCtrl', function($scope, detalle_empresa, MyService) {
+    console.log('EmpresaDetalleCtrl');
+
+    angular.extend($scope, {
+        centerProperty: { lat: 0, lng:  0 },
+        zoomProperty: 17,
+        markersProperty: [{ latitude: 0, longitude: 0 }],
+        clickedLatitudeProperty: null,  
+        clickedLongitudeProperty: null,
+    });
+
+    $scope.empresa = detalle_empresa.get({'id_empresa': MyService.id_empresa},
         
-        console.log('EmpresaDetalleCtrl');
-
-        angular.extend($scope, {
-            centerProperty: { lat: 0, lng:  0 },
-            zoomProperty: 17,
-            markersProperty: [{ latitude: 0, longitude: 0 }],
-            clickedLatitudeProperty: null,  
-            clickedLongitudeProperty: null,
-        });
-
-        $scope.empresa = detalle_empresa.get({'id_empresa': MyService.id_empresa},function (dato) {
+        function (empresa) {
             
-            angular.forEach(dato, function () {
-            
-                //console.log($scope.empresa[0].positionmap_empresa);
-                //console.log($scope.empresa[0].position_empresa);
-                
-             });
-
-            console.log(dato[0].positionmap_empresa);
-            console.log(dato[0].position_empresa);
-
-            var centerProperty = { 'lat': '10.375725', 'lng':  '-66.955842' };
-            var markersProperty = { 'latitude': '10.375725', 'longitude':  '-66.955842' };
-
             angular.extend($scope, {
-                centerProperty: centerProperty,
+                centerProperty: { lat : empresa[0].positionmap_empresa_latitude , 
+                                  lng : empresa[0].positionmap_empresa_longitude 
+                                },
                 zoomProperty: 17,
-                markersProperty: [markersProperty],
+                markersProperty: [{ latitude  : empresa[0].positionmap_empresa_latitude, 
+                                    longitude : empresa[0].positionmap_empresa_longitude 
+                                }],
                 clickedLatitudeProperty: null,  
                 clickedLongitudeProperty: null,
             });  
-        });
-      
-        /*angular.extend($scope, {
-            centerProperty: { lat: 0, lng:  0 },
-            zoomProperty: 17,
-            markersProperty: [{ latitude: 0, longitude: 0 }],
-            clickedLatitudeProperty: null,  
-            clickedLongitudeProperty: null,
-        });
+        }
+    );
 
-        var url_rechazar = 'http://keysystems.com.ve/tulocalidad/registrar/detalle_empresa.php';
-        var params = {'id_empresa': MyService.id_empresa};
-
-        Service.getData(url_rechazar, params).then(function (response) {
-            
-            console.log('Service');
-            console.log(response.data[0]);
-            console.log(response.data[0].position_empresa);
-
-            angular.extend($scope, {
-                centerProperty: response.data[0].position_empresa,
-                zoomProperty: 17,
-                markersProperty: [response.data[0].positionmap_empresa],
-                clickedLatitudeProperty: null,  
-                clickedLongitudeProperty: null,
-            });
-        });*/
-
-}]);
+});
