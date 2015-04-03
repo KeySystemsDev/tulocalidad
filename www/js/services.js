@@ -49,6 +49,17 @@ angular.module('starter.services', [])
         //ponemos isArray en true
         { get: { method: "GET", isArray: true }
     })
+})
+
+.service("Service", function ($http) {
+
+    this.getData = function (url, params) {
+        return $http({
+            method: "GET",
+            url: url,
+            params: params
+        });
+    }
 });
 
 
