@@ -94,15 +94,30 @@ angular.module('starter.controllers', [])
 .controller('EmpresaDetalleCtrl', function($scope, detalle_empresa, MyService) {
     console.log('EmpresaDetalleCtrl');
 
-    $scope.empresa = detalle_empresa.get({'id_empresa': MyService.id_empresa});
+    $scope.empresa = detalle_empresa.get({'id_empresa': MyService.id_empresa},function (dato) {
+        
+        angular.forEach(dato, function () {
+        
+            console.log($scope.empresa[0].positionmap_empresa);
+            console.log($scope.empresa[0].position_empresa);
+  
+         });
+
+    });
+    
+    console.log($scope.empresa);
+    // Necesito Acceso a estos dos...
+    console.log($scope.empresa[0].positionmap_empresa);
+    console.log($scope.empresa[0].position_empresa);
 
     angular.extend($scope, {
-        centerProperty: { lat: 10.375725, lng:  -66.955842},
+        centerProperty: { lat: 10.375725, lng:  -66.955842 },
         zoomProperty: 17,
         markersProperty: [{ latitude: 10.375725, longitude:  -66.955842 }],
         clickedLatitudeProperty: null,  
         clickedLongitudeProperty: null,
     });
 
-    
+
+
 });
