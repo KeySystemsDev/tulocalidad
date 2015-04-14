@@ -7,17 +7,20 @@
 		    	<h2 style="text-transform: capitalize;">{{ empresa[0].nombre_empresa }}</h2>
 		    	<p ng-if="empresa[0].rif_empresa != null"><b>Rif:</b> {{ empresa[0].rif_empresa }}</p>
 		  	</div>
-		  	<div class="map">
-		    	<google-map
-					center="centerProperty"
-					zoom="zoomProperty" 
-					markers="markersProperty"
-					latitude="clickedLatitudeProperty"
-					longitude="clickedLongitudeProperty"
-					mark-click="true"
-					draggable="true"
-					style="height: 200px; width: 100%">
-				</google-map>
+		  
+			<div id="map_canvas">
+			    <ui-gmap-google-map 
+			    	center="map.center" 
+			    	zoom="map.zoom"
+			    	draggable="false"
+			    	options="map.options">
+				        <ui-gmap-marker 
+				        		coords="map.marker"
+				        		idkey="map.id"
+				        		options="map.options"
+				        		draggable="false">
+				        </ui-gmap-marker>
+			    </ui-gmap-google-map>
 			</div>
 		  	
 		</div>

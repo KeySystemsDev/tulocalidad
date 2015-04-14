@@ -95,32 +95,27 @@ angular.module('starter.controllers', [])
     }
 })
 
-.controller('EmpresaDetalleCtrl', function($scope, detalle_empresa, MyService) {
+.controller('EmpresaDetalleCtrl', function($scope, detalle_empresa, MyService, $timeout) {
     console.log('EmpresaDetalleCtrl');
 
-    angular.extend($scope, {
-        centerProperty: { lat: 0, lng:  0 },
-        zoomProperty: 17,
-        markersProperty: [{ latitude: 0, longitude: 0 }],
-        clickedLatitudeProperty: null,  
-        clickedLongitudeProperty: null,
-    });
+    
 
     $scope.empresa = detalle_empresa.get({'id_empresa': MyService.id_empresa},
         
         function (empresa) {
             
-            angular.extend($scope, {
-                centerProperty: { lat : empresa[0].positionmap_empresa_latitude , 
-                                  lng : empresa[0].positionmap_empresa_longitude 
+            $scope.map = {  center: 
+                                {   latitude: empresa[0].positionmap_empresa_latitude, 
+                                    longitude:  empresa[0].positionmap_empresa_longitude
                                 },
-                zoomProperty: 17,
-                markersProperty: [{ latitude  : empresa[0].positionmap_empresa_latitude, 
-                                    longitude : empresa[0].positionmap_empresa_longitude 
-                                }],
-                clickedLatitudeProperty: null,  
-                clickedLongitudeProperty: null,
-            });  
+                            marker: 
+                                {   latitude: empresa[0].positionmap_empresa_latitude, 
+                                    longitude:  empresa[0].positionmap_empresa_longitude
+                                }, 
+                            zoom: 17, 
+                            id: 0,
+                            options: {scrollwheel: false}
+                        };
         }
     );
 
