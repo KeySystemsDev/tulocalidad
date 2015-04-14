@@ -95,7 +95,7 @@ angular.module('starter.controllers', [])
     }
 })
 
-.controller('EmpresaDetalleCtrl', function($scope, detalle_empresa, MyService, $timeout) {
+.controller('EmpresaDetalleCtrl', function($scope, detalle_empresa, MyService) {
     console.log('EmpresaDetalleCtrl');
 
     
