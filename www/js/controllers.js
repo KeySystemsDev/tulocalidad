@@ -50,7 +50,7 @@ angular.module('starter.controllers', [])
         $state.go('acerca');
     }
 
-    $scope.publicidades = publicidad.get();
+    $scope.publicidades = publicidad.get({'id_estado': localStorage.getItem('id_estado')});
 
     $scope.id_empresa = function(id_empresa) {
         MyService.id_empresa = id_empresa;
@@ -62,6 +62,7 @@ angular.module('starter.controllers', [])
     
     $scope.estado = localStorage.getItem('estado');
     $scope.categorias = categoria_estado.get({'id_estado': localStorage.getItem('id_estado')});
+
     $scope.isVisible = false;
   
     $scope.searchcategoria = function() {

@@ -7,7 +7,7 @@ angular.module('starter.services', [])
 })
 
 .factory("publicidad", function ($resource) {
-    return $resource("http://keysystems.com.ve/tulocalidad/registrar/publicidad.php", //la url donde queremos consumir
+    return $resource("http://www.tulocalidad.com.ve/movil/empresa/publicidad", //la url donde queremos consumir
         {}, //aquí podemos pasar variables que queramos pasar a la consulta
         //a la función get le decimos el método, y, si es un array lo que devuelve
         //ponemos isArray en true
@@ -16,7 +16,7 @@ angular.module('starter.services', [])
 })
 
 .factory("estados", function ($resource) {
-    return $resource("http://keysystems.com.ve/tulocalidad/registrar/estados.php", //la url donde queremos consumir
+    return $resource("http://www.tulocalidad.com.ve/movil/empresa/estados", //la url donde queremos consumir
         {}, //aquí podemos pasar variables que queramos pasar a la consulta
         //a la función get le decimos el método, y, si es un array lo que devuelve
         //ponemos isArray en true
@@ -25,7 +25,7 @@ angular.module('starter.services', [])
 })
 
 .factory("categoria_estado", function ($resource) {
-    return $resource("http://keysystems.com.ve/tulocalidad/registrar/categoria_estado.php", //la url donde queremos consumir
+    return $resource("http://www.tulocalidad.com.ve/movil/empresa/categoria-estado", //la url donde queremos consumir
         {}, //aquí podemos pasar variables que queramos pasar a la consulta
         //a la función get le decimos el método, y, si es un array lo que devuelve
         //ponemos isArray en true
@@ -34,7 +34,7 @@ angular.module('starter.services', [])
 })
 
 .factory("empresas_categorias", function ($resource) {
-    return $resource("http://keysystems.com.ve/tulocalidad/registrar/empresas_categorias.php", //la registrar/url donde queremos consumir
+    return $resource("http://www.tulocalidad.com.ve/movil/empresa/empresa-categoria", //la registrar/url donde queremos consumir
         {}, //aquí podemos pasar variables que queramos pasar a la consulta
         //a la función get le decimos el método, y, si es un array lo que devuelve
         //ponemos isArray en true
@@ -43,7 +43,7 @@ angular.module('starter.services', [])
 })
 
 .factory("detalle_empresa", function ($resource) {
-    return $resource("http://keysystems.com.ve/tulocalidad/registrar/detalle_empresa.php", //la url donde queremos consumir
+    return $resource("http://www.tulocalidad.com.ve/movil/empresa/empresa-detalle", //la url donde queremos consumir
         {}, //aquí podemos pasar variables que queramos pasar a la consulta
         //a la función get le decimos el método, y, si es un array lo que devuelve
         //ponemos isArray en true
