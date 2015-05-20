@@ -1,5 +1,9 @@
 angular.module('starter.controllers', [])
 
+.controller('ConfiguracionCtrl', function(){
+
+})
+
 .controller('tulocalidadCtrl', function($scope, $state,  $ionicModal, publicidad, estados, MyService) {
     $scope.gocategoria = function() {
         $state.go('categoria');

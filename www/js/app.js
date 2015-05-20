@@ -50,6 +50,16 @@ angular.module('starter', ['ionic', 'starter.controllers','starter.services','ui
       }
     })
 
+    .state('app.configuracion', {
+      url: "/configuracion",
+      views: {
+        'menuContent': {
+          templateUrl: "templates/configuracion.html",
+          controller: 'ConfiguracionCtrl'
+        }
+      }
+    })
+
     .state('app.categoria', {
       url: "/categoria",
       views: {

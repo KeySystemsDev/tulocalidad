@@ -4,13 +4,20 @@
         <div class="row button-tulocalidad">
             <div class="col button-tulocalidad button-tulocalidad-estados"><button class="button button-icon button-clear ion-location" ng-click="openModal()">
             </button></div>
-            <div class="col button-tulocalidad"><a class="button button-icon button-clear ion-android-more-vertical" href="#/app/categoria">
+            <div class="col button-tulocalidad"><a class="button button-icon button-clear ion-android-more-vertical" href="#/app/configuracion">
             </a></div>
         </div>  
     </ion-nav-buttons>
    
     <ion-content class="publicidad">
         
+        <ion-list>
+            <ion-item class="item-remove-animate item-icon-right" type="item-text-wrap" href="#/app/categoria">
+                <h2 style="margin-top: 10px">Categorias</h2>     
+                <i class="icon ion-chevron-right icon-accessory"></i>
+            </ion-item>
+        </ion-list>
+
         <a class="col col-50 button-clear box-publicidad" href="#/app/empresas-detalle/{{empresa.id_empresa}}" ng-repeat="publicidad in publicidades" ng-click="id_empresa({{ publicidad.id_empresa }})">
             <div class="item item-image">
                 <img ng-src="{{ publicidad.url_imagen_publicidad }}">
