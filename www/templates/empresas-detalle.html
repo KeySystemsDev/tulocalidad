@@ -1,11 +1,15 @@
 <ion-view view-title="Empresa {{ empresa[0].nombre_empresa }}">
 	<ion-content>
+
+		<!--<a ng-click="openGeo( {{lat}} , {{long}} )" ng-href="geo:{{lat}},{{long}}?z=6&q=10.349653,-67.022355(Treasure)"><h1>hola</h1></a>
+        <p>{{lat}},{{long}}</p>-->
+
 		<div class="list card card-custom">
 
 		  	<div class="item item-avatar">
-		    	<img src="img/empresa-detalle.png">
+		    	<img src="http://www.tulocalidad.com.ve{{ empresa[0].icon_empresa }}">
 		    	<h2 style="text-transform: capitalize;">{{ empresa[0].nombre_empresa }}</h2>
-		    	<p ng-if="empresa[0].rif_empresa != null"><b>Rif:</b> {{ empresa[0].rif_empresa }}</p>
+		    	<p ng-if="empresa[0].rif_empresa != ''"><b>Rif:</b> {{ empresa[0].rif_empresa }}</p>
 		  	</div>
 		  
 			<div id="map_canvas">
@@ -24,13 +28,13 @@
 			</div>
 		  	
 		</div>
-		<div class="item item-body" ng-if="empresa[0].direccion_empresa != null">
+		<div class="item item-body" ng-if="empresa[0].direccion_empresa != ''">
      		<p style="margin-top: -5px;">
 		      	<b>Dirección:</b> {{ empresa[0].direccion_empresa }}
 		    </p>
   		</div>
 
-	  	<div class="item" ng-if="empresa[0].url_empresa != null">  
+	  	<div class="item" ng-if="empresa[0].url_empresa != ''">  
 		    <a class="text-none" href="#" browse-to="{{ empresa[0].url_empresa }}">
 			    <p>
 			    	<i class="icon ion-earth icon-custom"></i>
@@ -39,7 +43,7 @@
 		    </a>    
 	  	</div>
 
-	  	<div class="item" ng-if="empresa[0].correo_empresa != null">  
+	  	<div class="item" ng-if="empresa[0].correo_empresa != ''">  
 		    <a class="text-none" ng-href="mailto:{{ empresa[0].correo_empresa }}">
 			    <p>
 			    	<i class="icon ion-email icon-custom"></i>
@@ -47,7 +51,7 @@
 			    </p>
 			</a>		    
 	  	</div>
-	  	<div class="item" ng-if="empresa[0].telefono_empresa != null">  
+	  	<div class="item" ng-if="empresa[0].telefono_empresa != ''">  
 		    <a class="text-none" ng-href="tel:{{ '+58 ' + empresa[0].telefono_empresa }}">
 			    <p>
 			    	<i class="icon ion-android-call icon-custom"></i>
@@ -55,7 +59,7 @@
 			    </p>
 		    </a>		    
 	  	</div>
-	  	<div class="item" ng-if="empresa[0].telefono_movil_empresa != null">  
+	  	<div class="item" ng-if="empresa[0].telefono_movil_empresa != ''">  
 		    <a class="text-none" ng-href="tel:{{ '+58 ' + empresa[0].telefono_movil_empresa }}">
 			    <p>
 			    	<i class="icon ion-android-call icon-custom"></i>

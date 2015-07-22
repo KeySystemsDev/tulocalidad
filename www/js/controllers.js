@@ -4,7 +4,18 @@ angular.module('starter.controllers', [])
 
 })
 
-.controller('tulocalidadCtrl', function($scope, $state,  $ionicModal, publicidad, estados, MyService) {
+.controller('tulocalidadCtrl', function($scope, $rootScope, $state, $window, $ionicModal, $cordovaGeolocation, publicidad, estados, MyService) {
+
+    var posOptions = {timeout: 10000, enableHighAccuracy: true};
+    
+    $cordovaGeolocation.getCurrentPosition(posOptions)
+        .then(function (position) {
+              $rootScope.lat  = position.coords.latitude;
+              $rootScope.long = position.coords.longitude;
+        }, function(err) {
+            // error
+    });
+
     $scope.gocategoria = function() {
         $state.go('categoria');
     };
@@ -100,10 +111,12 @@ angular.module('starter.controllers', [])
     }
 })
 
-.controller('EmpresaDetalleCtrl', function($scope, detalle_empresa, MyService) {
+.controller('EmpresaDetalleCtrl', function($scope, $window, detalle_empresa, MyService) {
     console.log('EmpresaDetalleCtrl');
 
-    
+    $scope.openGeo = function(latitude, longitude) {
+        $window.open('geo:' + latitude + ',' + longitude + '?z=11&q=10.349653,-67.022355(Treasure)', '_system', 'location=yes');
+    };
 
     $scope.empresa = detalle_empresa.get({'id_empresa': MyService.id_empresa},
         
