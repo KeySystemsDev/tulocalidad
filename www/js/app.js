@@ -4,7 +4,13 @@
 // 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)
 // the 2nd parameter is an array of 'requires'
 // 'starter.controllers' is found in controllers.js
-angular.module('starter', ['ionic', 'starter.controllers','starter.services','uiGmapgoogle-maps','ngResource', 'ngCordova'])
+angular.module('starter', [ 'ionic', 
+                            'starter.controllers', 
+                            'starter.services',
+                            'uiGmapgoogle-maps',
+                            'ngResource', 
+                            'ngCordova', 
+                            'chieffancypants.loadingBar'])
 
 .run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
@@ -20,7 +26,10 @@ angular.module('starter', ['ionic', 'starter.controllers','starter.services','ui
   });
 })
 
-.config(function($stateProvider, $urlRouterProvider) {
+.config(function($stateProvider, $urlRouterProvider, cfpLoadingBarProvider) {
+  
+  cfpLoadingBarProvider.includeSpinner = true;
+
   $stateProvider
 
   .state('app', {
