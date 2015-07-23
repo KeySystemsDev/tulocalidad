@@ -82,11 +82,21 @@ angular.module('starter.controllers', [])
     }
 })
 
-.controller('CategoriasCtrl', function($scope, $ionicScrollDelegate, categoria_estado, MyService) {
+.controller('CategoriasCtrl', function($scope, $http, $ionicScrollDelegate, categoria_estado, MyService) {
     console.log('CategoriasCtrl');
     
     $scope.estado = localStorage.getItem('estado');
     $scope.categorias = categoria_estado.get({'id_estado': localStorage.getItem('id_estado')});
+
+    $scope.RecargarCategorias = function(){
+        $http.get('http://www.tulocalidad.com.ve/movil/empresa/categoria-estado', {id_estado: localStorage.getItem('id_estado')})
+            .success(function(categorias) {
+                $scope.categorias = categorias;
+            })
+            .finally(function() {
+                $scope.$broadcast('scroll.refreshComplete');
+            });
+    }
 
     $scope.isVisible = false;
   
@@ -101,11 +111,27 @@ angular.module('starter.controllers', [])
     }
 })
 
-.controller('EmpresaCtrl', function($scope, $ionicScrollDelegate, empresas_categorias, MyService) {      
+.controller('EmpresaCtrl', function($scope, $http, $ionicScrollDelegate, empresas_categorias, MyService) {      
     console.log('EmpresaCtrl');
 
     $scope.empresas = empresas_categorias.get({ 'id_estado': localStorage.getItem('id_estado'),
-                                                'id_categoria': MyService.id_categoria});
+                                               'id_categoria': MyService.id_categoria});
+
+    $scope.RecargarEmpresas = function(){
+        $http.get('http://www.tulocalidad.com.ve/movil/empresa/empresa-categoria', {
+            params: {
+                id_estado: localStorage.getItem('id_estado'),
+                id_categoria: MyService.id_categoria
+                }
+            })
+            .success(function(empresas) {
+                $scope.empresas = empresas;
+                console.log($scope.empresas);
+            })
+            .finally(function() {
+                $scope.$broadcast('scroll.refreshComplete');
+            });
+    }
 
     $scope.estado = localStorage.getItem('estado');
 

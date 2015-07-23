@@ -6,6 +6,9 @@
         </div>
     </ion-nav-buttons>
     <ion-content>
+
+        <ion-refresher on-refresh="RecargarEmpresas()"></ion-refresher>
+
         <label class="item item-input" ng-show="isVisible">
             <i class="icon ion-search placeholder-icon"></i>
             <input type="search" ng-model="query.search" placeholder="Buscar">
