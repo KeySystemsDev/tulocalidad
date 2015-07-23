@@ -7,13 +7,13 @@
 		<div class="list card card-custom">
 
 		  	<div class="item item-avatar">
-		    	<img src="http://www.tulocalidad.com.ve{{ empresa[0].icon_empresa }}">
+		    	<img ng-src="http://www.tulocalidad.com.ve{{ empresa[0].icon_empresa }}">
 		    	<h2 style="text-transform: capitalize;">{{ empresa[0].nombre_empresa }}</h2>
 		    	<p ng-if="empresa[0].rif_empresa != ''"><b>Rif:</b> {{ empresa[0].rif_empresa }}</p>
 		  	</div>
 		  
 			<div id="map_canvas">
-			    <ui-gmap-google-map 
+			    <ui-gmap-google-map ng-if="empresa[0].privacidad_empresa != 0"
 			    	center="map.center" 
 			    	zoom="map.zoom"
 			    	draggable="false"
@@ -25,6 +25,7 @@
 				        		draggable="true">
 				        </ui-gmap-marker>
 			    </ui-gmap-google-map>
+			    <img width="100%" src="img/mapa-no-dis.jpg" ng-cloak ng-if="empresa[0].privacidad_empresa != 1">
 			</div>
 		  	
 		</div>
