@@ -84,7 +84,7 @@
 	margin-right: 20px;
 }
 .item-avatar > img:first-child, .item-avatar .item-image, .item-avatar .item-content > img:first-child, .item-avatar .item-content .item-image, .item-avatar-left > img:first-child, .item-avatar-left .item-image, .item-avatar-left .item-content > img:first-child, .item-avatar-left .item-content .item-image {
-	border-radius: 0;
+	border-radius: 5px;
 }
 .button-tulocalidad{
 	padding: 0px;
@@ -174,7 +174,7 @@
 .bar.bar-stable {
 	border-bottom: solid #721520;
 	border-color: #721520;
-	background-color: #f8f8f8;
+	background-color: #fff;
 	background-image: linear-gradient(0deg, #b2b2b2, #b2b2b2 50%, transparent 50%);
 	color: #444;
 }
@@ -362,7 +362,7 @@
 /*isotope*/
 
 .publicidad{
-	background: url(../img/fondo_acerca.jpg);
+	background: #EFF1F5;
 }
 .box-publicidad{
 	max-height: none;
