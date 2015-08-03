@@ -32,12 +32,12 @@ angular.module('starter', [ 'ionic',
 
   $stateProvider
 
-  .state('tab', {
-    url: "/tab",
-    abstract: true,
-    templateUrl: "templates/tabs.html",
-    //controller: 'AppCtrl'
-  })
+    .state('tab', {
+      url: "/tab",
+      abstract: true,
+      templateUrl: "templates/tabs.html",
+      //controller: 'AppCtrl'
+    })
 
     .state('tab.recomendados', {
       url: "/recomendados",
@@ -48,7 +48,7 @@ angular.module('starter', [ 'ionic',
         }
       }
     })
-    
+
     .state('tab.acerca', {
       url: "/acerca",
       views: {
@@ -80,20 +80,20 @@ angular.module('starter', [ 'ionic',
       }
     })
 
-    .state('app.empresas', {
+    .state('tab.empresas', {
       url: "/empresas/:id_categoria",
       views: {
-        'menuContent': {
+        'tab-categoria': {
           templateUrl: "templates/empresas.html",
           controller: 'EmpresaCtrl'
         }
       }
     })
 
-    .state('app.empresas-detalle', {
+    .state('tab.empresas-detalle', {
       url: "/empresas-detalle/:id_empresa",
       views: {
-        'menuContent': {
+        'tab-categoria': {
           templateUrl: "templates/empresas-detalle.html",
           controller: 'EmpresaDetalleCtrl'
         }

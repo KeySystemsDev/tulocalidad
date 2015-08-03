@@ -14,7 +14,7 @@
             <input type="search" ng-model="query.search" placeholder="Buscar">
         </label>
 		<ion-list>
-            <ion-item class="item-remove-animate item-icon-right" ng-repeat="empresa in empresas | filter:query.search" type="item-text-wrap" href="#/app/empresas-detalle/{{empresa.id_empresa}}" ng-click="id_empresa({{ empresa.id_empresa }})">
+            <ion-item class="item-remove-animate item-icon-right" ng-repeat="empresa in empresas | filter:query.search" type="item-text-wrap" href="#/tab/empresas-detalle/{{empresa.id_empresa}}" ng-click="id_empresa({{ empresa.id_empresa }})">
                 <h2 style="text-transform: capitalize;">{{ empresa.nombre_empresa }}</h2>
                 <i class="icon ion-chevron-right icon-accessory"></i>
             </ion-item>
