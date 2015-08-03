@@ -4,9 +4,10 @@
 // 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)
 // the 2nd parameter is an array of 'requires'
 // 'starter.controllers' is found in controllers.js
-angular.module('starter', [ 'ionic', 
-                            'starter.controllers', 
-                            'starter.services',
+angular.module('tulocalidad', [ 'ionic', 
+                            'tulocalidad.controllers', 
+                            'tulocalidad.services',
+                            'tulocalidad.directives',
                             'uiGmapgoogle-maps',
                             'ngResource', 
                             'ngCordova', 
@@ -101,21 +102,4 @@ angular.module('starter', [ 'ionic',
     });
   // if none of the above states are matched, use this as the fallback
   $urlRouterProvider.otherwise('/tab/recomendados');
-})
-
-.directive('browseTo', function ($ionicGesture) {
- return {
-  restrict: 'A',
-  link: function ($scope, $element, $attrs) {
-   var handleTap = function (e) {
-    // todo: capture Google Analytics here
-    var inAppBrowser = window.open(encodeURI($attrs.browseTo), '_system');
-   };
-   var tapGesture = $ionicGesture.on('tap', handleTap, $element);
-   $scope.$on('$destroy', function () {
-    // Clean up - unbind drag gesture handler
-    $ionicGesture.off(tapGesture, 'tap', handleTap);
-   });
-  }
- }
 });

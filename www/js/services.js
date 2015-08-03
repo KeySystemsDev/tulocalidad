@@ -1,4 +1,4 @@
-angular.module('starter.services', [])
+angular.module('tulocalidad.services', [])
 
 .factory("MyService", function() {
   return {
