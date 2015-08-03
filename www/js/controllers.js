@@ -4,7 +4,7 @@ angular.module('starter.controllers', [])
 
 })
 
-.controller('tulocalidadCtrl', function($scope, $http, $rootScope, $state, $window, $ionicModal, $cordovaGeolocation, publicidad, estados, MyService) {
+.controller('RecomendadosCtrl', function($scope, $http, $rootScope, $state, $window, $ionicModal, $cordovaGeolocation, publicidad, estados, MyService) {
 
     var posOptions = {timeout: 10000, enableHighAccuracy: true};
     

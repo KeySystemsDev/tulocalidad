@@ -32,10 +32,10 @@ angular.module('starter', [ 'ionic',
 
   $stateProvider
 
-  .state('app', {
-    url: "/app",
+  .state('tab', {
+    url: "/tab",
     abstract: true,
-    templateUrl: "templates/menu.html",
+    templateUrl: "templates/tabs.html",
     //controller: 'AppCtrl'
   })
 
@@ -49,30 +49,30 @@ angular.module('starter', [ 'ionic',
       }
     })
 
-    .state('app.tulocalidad', {
-      url: "/tulocalidad",
+    .state('tab.recomendados', {
+      url: "/recomendados",
       views: {
-        'menuContent': {
-          templateUrl: "templates/tulocalidad.html",
-          controller: 'tulocalidadCtrl'
+        'tab-recomendados': {
+          templateUrl: "templates/recomendados.html",
+          controller: 'RecomendadosCtrl'
         }
       }
     })
 
-    .state('app.configuracion', {
+    .state('tab.configuracion', {
       url: "/configuracion",
       views: {
-        'menuContent': {
+        'tab-recomendados': {
           templateUrl: "templates/configuracion.html",
           controller: 'ConfiguracionCtrl'
         }
       }
     })
 
-    .state('app.categoria', {
+    .state('tab.categoria', {
       url: "/categoria",
       views: {
-        'menuContent': {
+        'tab-categoria': {
           templateUrl: "templates/categoria.html",
           controller: 'CategoriasCtrl'
         }
@@ -99,7 +99,7 @@ angular.module('starter', [ 'ionic',
       }
     });
   // if none of the above states are matched, use this as the fallback
-  $urlRouterProvider.otherwise('/app/tulocalidad');
+  $urlRouterProvider.otherwise('/tab/recomendados');
 })
 
 .directive('browseTo', function ($ionicGesture) {
