@@ -1,10 +1,10 @@
 angular.module('tulocalidad.controllers')
 
-.controller('EmpresaCtrl', function($scope, $http, $ionicScrollDelegate, empresas_categorias, MyService) {      
+.controller('EmpresaCtrl', function($scope, $rootScope, $http, $ionicScrollDelegate, empresas_categorias) {      
     console.log('EmpresaCtrl');
 
     $scope.empresas = empresas_categorias.get({ 'id_estado': localStorage.getItem('id_estado'),
-                                               'id_categoria': MyService.id_categoria});
+                                               'id_categoria': $rootScope.id_categoria});
 
     $scope.RecargarEmpresas = function(){
         $http.get('http://www.tulocalidad.com.ve/movil/empresa/empresa-categoria', {
@@ -32,6 +32,6 @@ angular.module('tulocalidad.controllers')
     };
 
     $scope.id_empresa = function(id_empresa) {
-        MyService.id_empresa = id_empresa;
+        $rootScope.id_empresa = id_empresa;
     }
 });

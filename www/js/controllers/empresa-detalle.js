@@ -1,13 +1,13 @@
 angular.module('tulocalidad.controllers')
 
-.controller('EmpresaDetalleCtrl', function($scope, $window, detalle_empresa, MyService) {
+.controller('EmpresaDetalleCtrl', function($scope, $rootScope, $window, detalle_empresa, MyService) {
     console.log('EmpresaDetalleCtrl');
 
     $scope.openGeo = function(latitude, longitude) {
         $window.open('geo:' + latitude + ',' + longitude + '?z=11&q=10.349653,-67.022355(Treasure)', '_system', 'location=yes');
     };
 
-    $scope.empresa = detalle_empresa.get({'id_empresa': MyService.id_empresa},
+    $scope.empresa = detalle_empresa.get({'id_empresa': $rootScope.id_empresa},
         
         function (empresa) {
             

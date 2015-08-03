@@ -1,6 +1,6 @@
 angular.module('tulocalidad.controllers', [])
 
-.controller('RecomendadosCtrl', function($scope, $http, $rootScope, $state, $window, $ionicModal, $cordovaGeolocation, publicidad, estados, MyService) {
+.controller('RecomendadosCtrl', function($scope, $http, $rootScope, $state, $window, $ionicModal, $cordovaGeolocation, publicidad, estados) {
 
     var posOptions = {timeout: 10000, enableHighAccuracy: true};
     
@@ -35,6 +35,6 @@ angular.module('tulocalidad.controllers', [])
     }
 
     $scope.id_empresa = function(id_empresa) {
-        MyService.id_empresa = id_empresa;
+        $rootScope.id_empresa = id_empresa;
     }
 });

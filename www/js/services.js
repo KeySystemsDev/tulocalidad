@@ -1,11 +1,5 @@
 angular.module('tulocalidad.services', [])
 
-.factory("MyService", function() {
-  return {
-    data: {}
-  };
-})
-
 .factory("publicidad", function ($resource) {
     return $resource("http://www.tulocalidad.com.ve/movil/empresa/publicidad", //la url donde queremos consumir
         {}, //aquí podemos pasar variables que queramos pasar a la consulta

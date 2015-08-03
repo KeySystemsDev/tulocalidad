@@ -1,6 +1,6 @@
 angular.module('tulocalidad.controllers')
 
-.controller('CategoriasCtrl', function($scope, $http, $ionicScrollDelegate, categoria_estado, MyService) {
+.controller('CategoriasCtrl', function($scope, $rootScope, $http, $ionicScrollDelegate, categoria_estado) {
     console.log('CategoriasCtrl');
     
     $scope.estado = localStorage.getItem('estado');
@@ -25,6 +25,6 @@ angular.module('tulocalidad.controllers')
     };
 
     $scope.id_categoria = function(id_categoria) {
-        MyService.id_categoria = id_categoria;
+        $rootScope.id_categoria = id_categoria;
     }
 })
