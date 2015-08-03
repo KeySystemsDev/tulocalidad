@@ -141,7 +141,7 @@
 	border-bottom: solid #721520;
 	border-color: #721520;
 }
-.bar .bar-stable {
+.bar.bar-stable {
 	background: url("../img/bar.png");
 }
 .bar.bar-stable .title {

@@ -39,16 +39,6 @@ angular.module('starter', [ 'ionic',
     //controller: 'AppCtrl'
   })
 
-    .state('app.acerca', {
-      url: "/acerca",
-      views: {
-        'menuContent': {
-          templateUrl: "templates/acerca.html",
-          //controller: 'acercaCtrl'
-        }
-      }
-    })
-
     .state('tab.recomendados', {
       url: "/recomendados",
       views: {
@@ -58,7 +48,18 @@ angular.module('starter', [ 'ionic',
         }
       }
     })
+    
+    .state('tab.acerca', {
+      url: "/acerca",
+      views: {
+        'tab-recomendados': {
+          templateUrl: "templates/acerca.html",
+          //controller: 'acercaCtrl'
+        }
+      }
+    })
 
+    
     .state('tab.configuracion', {
       url: "/configuracion",
       views: {

@@ -1,36 +1,6 @@
 angular.module('starter.controllers', [])
 
-.controller('ConfiguracionCtrl', function(){
-
-})
-
-.controller('RecomendadosCtrl', function($scope, $http, $rootScope, $state, $window, $ionicModal, $cordovaGeolocation, publicidad, estados, MyService) {
-
-    var posOptions = {timeout: 10000, enableHighAccuracy: true};
-    
-    $cordovaGeolocation.getCurrentPosition(posOptions)
-        .then(function (position) {
-              $rootScope.lat  = position.coords.latitude;
-              $rootScope.long = position.coords.longitude;
-        }, function(err) {
-            // error
-    });
-
-    $scope.gocategoria = function() {
-        $state.go('categoria');
-    };
-    $scope.goestados = function() {
-        $state.go('estados');
-    };
-    
-    if (localStorage.getItem('estado') != null) {
-        localStorage.getItem('estado');
-        localStorage.getItem('id_estado');
-    }else{
-        localStorage.setItem('estado', 'Miranda');
-        localStorage.setItem('id_estado', '0');
-    }
-
+.controller('ConfiguracionCtrl', function($scope, $ionicModal, estados){
     $scope.estado = localStorage.getItem('estado');
     $scope.id_estado = localStorage.getItem('id_estado');
 
@@ -60,10 +30,29 @@ angular.module('starter.controllers', [])
         $scope.estado = localStorage.getItem('estado');
         document.location.reload();
     };
+})
 
-    $scope.acerca = function(){
-        $state.go('acerca');
+.controller('RecomendadosCtrl', function($scope, $http, $rootScope, $state, $window, $ionicModal, $cordovaGeolocation, publicidad, estados, MyService) {
+
+    var posOptions = {timeout: 10000, enableHighAccuracy: true};
+    
+    $cordovaGeolocation.getCurrentPosition(posOptions)
+        .then(function (position) {
+              $rootScope.lat  = position.coords.latitude;
+              $rootScope.long = position.coords.longitude;
+        }, function(err) {
+            // error
+    });
+    
+    if (localStorage.getItem('estado') != null) {
+        localStorage.getItem('estado');
+        localStorage.getItem('id_estado');
+    }else{
+        localStorage.setItem('estado', 'Miranda');
+        localStorage.setItem('id_estado', '0');
     }
+
+    $scope.estado = localStorage.getItem('estado');
 
     $scope.publicidades = publicidad.get({'id_estado': localStorage.getItem('id_estado')});
 
