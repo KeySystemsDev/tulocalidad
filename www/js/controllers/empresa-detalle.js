@@ -1,6 +1,6 @@
 angular.module('tulocalidad.controllers')
 
-.controller('EmpresaDetalleCtrl', function($scope, $rootScope, $window, detalle_empresa, MyService) {
+.controller('EmpresaDetalleCtrl', function($scope, $rootScope, $window, detalle_empresa) {
     console.log('EmpresaDetalleCtrl');
 
     $scope.openGeo = function(latitude, longitude) {

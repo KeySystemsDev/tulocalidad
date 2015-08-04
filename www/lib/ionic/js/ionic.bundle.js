@@ -43680,7 +43680,7 @@ IonicModule
 
     tabs: {
       style: 'striped',
-      position: 'top'
+      position: 'bottom'
     }
 
   });

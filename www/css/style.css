@@ -303,15 +303,15 @@
 	height:35px;
 }
 #loading-bar .bar {
-  background: #721520;
-  margin-top: 44px;
+  background: #FFF;
+  margin-top: 67px;
   height: 2px;
   padding: 0px;
 }
 #loading-bar-spinner .spinner-icon {
-  border-top-color:  #721520;
-  border-left-color: #721520;
-  margin-top: 40px;
+  border-top-color:  #FFF;
+  border-left-color: #FFF;
+  margin-top: 41px;
 }
 #loading-bar .peg {
   -moz-box-shadow: #5f1d12 1px 0 6px 1px;
@@ -321,4 +321,14 @@
 }
 ion-tabs.tabs-color-active-positive .tab-item.tab-item-active, ion-tabs.tabs-color-active-positive .tab-item.active, ion-tabs.tabs-color-active-positive .tab-item.activated {
     color: #841725;
+}
+
+.bar-header {
+  height: 65px !important;
+}
+.bar-header > *{
+  margin-top: 5px !important;
+}
+.has-header {
+   top: 70px;
 }
