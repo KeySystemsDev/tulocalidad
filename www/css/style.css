@@ -157,12 +157,13 @@
 	text-align: center;
 	width: 100%;
 	margin-top: 0px;
-	background: #f8f8f8;
+	background: url("../img/fondo-conf.jpg") center ;
 	border-bottom: solid #721520;
 }
 .icon-side-menu{
-	width: 110px;
 	height: 110px;
+	padding-top: 10px;
+    padding-bottom: 10px;
 }
 .footer-side-menu{
 	width: 100%;
