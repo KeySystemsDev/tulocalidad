@@ -333,3 +333,66 @@ ion-tabs.tabs-color-active-positive .tab-item.tab-item-active, ion-tabs.tabs-col
 .has-header {
    top: 70px;
 }
+
+#banner{
+  	width: 100%;
+  	height: 250px;
+  	padding: 0px;
+  	margin: 0px;
+  	background: #387ef5;
+  	position: absolute;
+  	top: 0px;
+}
+#banner img{
+  	width: 100%;
+  	height: 250px;
+  	padding: 0px;
+  	margin: 0px;
+  	background: #387ef5;
+  	position: absolute;
+  	top: 0px;
+  	left: 0px;
+}
+
+.profile-picture img{
+    border: 5px solid #fff;
+    display: inline-block;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    vertical-align: middle;
+}
+
+
+.slider {
+    height: 250px;
+}
+.slider-slide {
+    padding-top: 60px;
+    color: #000;
+    background-color: transparent;
+    text-align: center;
+
+    /*font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+    font-weight: 300;*/
+}
+
+.slider-pager .slider-pager-page{
+    color: #fff;
+    width: 7px;
+}
+.slider-pager-page i{
+    font-size: 7px;
+}
+
+.box-white h2, p, h4{
+    color: white;
+    margin-top: 10px;
+    /*text-shadow: 2px 0px 0px #000;*/
+}
+
+.boby-text{
+	white-space: normal;
+	text-align: center;
+	padding-left: 10px;
+}
