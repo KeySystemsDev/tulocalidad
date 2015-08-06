@@ -50,6 +50,16 @@ angular.module('tulocalidad', [ 'ionic',
       }
     })
 
+    .state('tab.recomendados-detalle', {
+      url: "/recomendados-detalle",
+      views: {
+        'tab-recomendados': {
+          templateUrl: "templates/recomendados-detalle.html",
+          controller: 'RecomendadosDetalleCtrl'
+        }
+      }
+    })
+
     .state('tab.acerca', {
       url: "/acerca",
       views: {

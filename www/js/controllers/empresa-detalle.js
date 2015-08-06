@@ -26,6 +26,4 @@ angular.module('tulocalidad.controllers')
         }
     );
 
-    console.log($scope.empresa);
-
 });

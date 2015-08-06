@@ -37,4 +37,5 @@ angular.module('tulocalidad.controllers', [])
     $scope.id_empresa = function(id_empresa) {
         $rootScope.id_empresa = id_empresa;
     }
+
 });
