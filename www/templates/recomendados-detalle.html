@@ -1,4 +1,4 @@
-<ion-view view-title="Publicidad Detalle">
+<ion-view view-title="{{publicidad_detalle[0].titulo_publicidad}}">
     <ion-content>
         <div class="list card">
 
@@ -8,22 +8,18 @@
 
             <div class="item item-body">
                 <p>
-                  This is a "Facebook" styled Card. The header is created from a Thumbnail List item,
-                  the content is from a card-body consisting of an image and paragraph text. The footer
-                  consists of tabs, icons aligned left, within the card-footer.
+                  {{publicidad_detalle[0].descripcion_publicidad}}
                 </p>
             </div>
 
             <div class="item tabs tabs-secondary tabs-icon-left">
-                <a class="tab-item" href="#">
-                    <i class="icon ion-social-facebook"></i>
-                        Facebook
-                </a>
-                <a class="tab-item" href="#">
-                    <i class="icon ion-social-twitter"></i>
-                        Twitter
-                </a>
-                <a class="tab-item" href="#">
+                <button class="button button-clear" ng-click="compartir(publicidad_detalle[0].titulo_publicidad, publicidad_detalle[0].url_imagen_publicidad)">
+                    <a class="tab-item" href="#">
+                        <i class="icon ion-android-share-alt"></i>
+                            Compartir
+                    </a>
+                </button>
+                <a class="tab-item" ng-click="id_empresa(publicidad_detalle[0].id_empresa)" href="#/tab/empresas-detalle-recomendados/{{publicidad_detalle[0].id_empresa}}" >
                     <i class="icon ion-share"></i>
                         Ver Empresa
                 </a>

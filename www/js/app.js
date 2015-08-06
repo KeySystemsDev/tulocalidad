@@ -60,6 +60,16 @@ angular.module('tulocalidad', [ 'ionic',
       }
     })
 
+    .state('tab.empresas-detalle-recomendados', {
+      url: "/empresas-detalle-recomendados/:id_empresa",
+      views: {
+        'tab-recomendados': {
+          templateUrl: "templates/empresas-detalle.html",
+          controller: 'EmpresaDetalleCtrl'
+        }
+      }
+    })
+
     .state('tab.acerca', {
       url: "/acerca",
       views: {

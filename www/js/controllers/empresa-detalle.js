@@ -10,7 +10,7 @@ angular.module('tulocalidad.controllers')
     $scope.empresa = detalle_empresa.get({'id_empresa': $rootScope.id_empresa},
         
         function (empresa) {
-            
+
             $scope.map = {  center: 
                                 {   latitude: empresa[0].positionmap_empresa_latitude, 
                                     longitude:  empresa[0].positionmap_empresa_longitude
