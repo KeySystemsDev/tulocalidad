@@ -9,6 +9,15 @@ angular.module('tulocalidad.services', [])
     })
 })
 
+.factory("publicidad_detalle", function ($resource) {
+    return $resource("http://www.tulocalidad.com.ve/movil/detalle_publicidad", //la url donde queremos consumir
+        {}, //aquí podemos pasar variables que queramos pasar a la consulta
+        //a la función get le decimos el método, y, si es un array lo que devuelve
+        //ponemos isArray en true
+        { get: { method: "GET", isArray: true }
+    })
+})
+
 .factory("estados", function ($resource) {
     return $resource("http://www.tulocalidad.com.ve/movil/empresa/estados", //la url donde queremos consumir
         {}, //aquí podemos pasar variables que queramos pasar a la consulta

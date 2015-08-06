@@ -1,7 +1,8 @@
 angular.module('tulocalidad.controllers', [])
 
 .controller('RecomendadosCtrl', function($scope, $http, $rootScope, $state, $window, $ionicModal, $cordovaGeolocation, publicidad, estados) {
-
+    console.log('RecomendadosCtrl');
+    
     var posOptions = {timeout: 10000, enableHighAccuracy: true};
     
     $cordovaGeolocation.getCurrentPosition(posOptions)
@@ -34,8 +35,8 @@ angular.module('tulocalidad.controllers', [])
             });
     }
 
-    $scope.id_empresa = function(id_empresa) {
-        $rootScope.id_empresa = id_empresa;
+    $scope.id_publicidad = function(id_publicidad) {
+        $rootScope.id_publicidad = id_publicidad;
     }
-
+    
 });
