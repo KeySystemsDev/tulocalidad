@@ -1,5 +1,8 @@
 <ion-view view-title="{{publicidad_detalle[0].titulo_publicidad}}">
     <ion-content>
+
+        <ion-refresher on-refresh="RecargarPublicidad()"></ion-refresher>
+
         <div class="list card">
 
             <div class="item item-image">

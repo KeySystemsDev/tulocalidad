@@ -1,10 +1,10 @@
 angular.module('tulocalidad.controllers')
 
-.controller('RecomendadosDetalleCtrl', function($scope, $rootScope, $cordovaSocialSharing, publicidad_detalle) {
+.controller('RecomendadosDetalleCtrl', function($scope, $rootScope, $http, $cordovaSocialSharing, publicidad_detalle) {
     console.log("RecomendadosDetalleCtrl");
     
     $scope.publicidad_detalle = publicidad_detalle.get({'id_publicidad':$rootScope.id_publicidad});
-    console.log($scope.publicidad_detalle);
+
     $scope.compartir = function(mensaje, img) {
         $cordovaSocialSharing.share(mensaje, mensaje, img, "http://tulocalidad.com.ve");
     };
@@ -12,5 +12,20 @@ angular.module('tulocalidad.controllers')
     $scope.id_empresa = function(id_empresa) {
     	console.log(id_empresa);
         $rootScope.id_empresa = id_empresa;
+    }
+
+    $scope.RecargarPublicidad = function(){
+        $http.get('http://www.tulocalidad.com.ve/movil/detalle_publicidad',{
+            params: {
+                id_publicidad: $rootScope.id_publicidad
+                }
+            })
+            .success(function(publicidad) {
+                $scope.publicidad_detalle= publicidad;
+                console.log(publicidad);
+            })
+            .finally(function() {
+                $scope.$broadcast('scroll.refreshComplete');
+            });
     }
 });
