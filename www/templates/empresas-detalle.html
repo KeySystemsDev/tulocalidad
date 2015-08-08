@@ -29,13 +29,22 @@
                 </ion-slide>
             </ion-slide-box>
 
-            <list class="list">
+            <md-tabs class="md-accent tabcolor" md-center-tabs="true">
+                
+                <md-tab id="tab1">
+                    <md-tab-label>
+                        <button class="button-clear">
+                            <i class="fa fa-building-o"></i>
+                        </button>
+                    </md-tab-label>
+                    <md-tab-body>
+                        <list class="list">
 
-            	<item class="item item-icon-left boby-text" ng-if="empresa[0].descripcion_empresa != ''" >
+                <item class="item item-icon-left boby-text" ng-if="empresa[0].descripcion_empresa != ''" >
                         {{ empresa[0].descripcion_empresa }}
                 </item>
 
-            	<item class="item item-icon-left" ng-if="empresa[0].url_empresa != ''" ng-href="{{ empresa[0].url_empresa }}">
+                <item class="item item-icon-left" ng-if="empresa[0].url_empresa != ''" ng-href="{{ empresa[0].url_empresa }}">
                     <i class="icon ion-link"></i>
                         {{ empresa[0].url_empresa }}
                 </item>
@@ -49,32 +58,53 @@
                 <item class="item item-icon-left" ng-if="empresa[0].telefono_empresa != ''" ng-href="tel:{{ empresa[0].telefono_empresa }}">
                     <i class="icon ion-android-call"></i>
                         Local : {{ empresa[0].telefono_empresa }}
-                    </div>
                 </item>
 
                 <item class="item item-icon-left" ng-if="empresa[0].telefono_movil_empresa != ''" ng-href="tel:{{ empresa[0].telefono_movil_empresa }}">
                     <i class="icon ion-android-call"></i>
                         Móvil : {{ empresa[0].telefono_movil_empresa }}
-                    </div>
                 </item>
 
             </list>
+                    </md-tab-body>
+                </md-tab>
+      
+                <md-tab id="tab2">
+                    <md-tab-label>
+                        <button class="button-clear">
+                            <i class="fa fa-bullhorn"></i>
+                        </button>
+                    </md-tab-label>
+                    <md-tab-body>
+                        <h1>no disponibles</h1>
+                    </md-tab-body>
+                </md-tab>
 
-            <div id="map_canvas">
-			    <ui-gmap-google-map ng-if="empresa[0].privacidad_empresa != 0"
-			    	center="map.center" 
-			    	zoom="map.zoom"
-			    	draggable="false"
-			    	options="map.options">
-				        <ui-gmap-marker 
-				        		coords="map.marker"
-				        		idkey="map.id"
-				        		options="map.options"
-				        		draggable="true">
-				        </ui-gmap-marker>
-			    </ui-gmap-google-map>
-			    <img width="100%" src="img/mapa-no-dis.jpg" ng-cloak ng-if="empresa[0].privacidad_empresa != 1">
-			</div>
+                <md-tab id="tab3">
+                    <md-tab-label>
+                        <button class="button-clear">
+                            <i class="fa fa-map-marker"></i>
+                        </button>
+                    </md-tab-label>
+                    <md-tab-body>
+                        <div id="map_canvas">
+                            <ui-gmap-google-map ng-if="empresa[0].privacidad_empresa != 0"
+                                center="map.center" 
+                                zoom="map.zoom"
+                                draggable="false"
+                                options="map.options">
+                                    <ui-gmap-marker 
+                                            coords="map.marker"
+                                            idkey="map.id"
+                                            options="map.options"
+                                            draggable="true">
+                                    </ui-gmap-marker>
+                            </ui-gmap-google-map>
+                            <img width="100%" src="img/mapa-no-dis.jpg" ng-cloak ng-if="empresa[0].privacidad_empresa != 1">
+                        </div>
+                    </md-tab-body>
+                </md-tab>
+            </md-tabs>
 
 	</ion-content>
 </ion-view>

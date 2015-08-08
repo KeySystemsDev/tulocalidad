@@ -1,6 +1,6 @@
 angular.module('tulocalidad.controllers')
 
-.controller('EmpresaDetalleCtrl', function($scope, $rootScope, $window, detalle_empresa) {
+.controller('EmpresaDetalleCtrl', function($scope, $ionicScrollDelegate, $rootScope, $window, detalle_empresa) {
     console.log('EmpresaDetalleCtrl');
 
     $scope.openGeo = function(latitude, longitude) {
@@ -25,5 +25,13 @@ angular.module('tulocalidad.controllers')
                         };
         }
     );
+
+    $scope.scrollbotton = function(){
+        $ionicScrollDelegate.scrollBottom();
+    };
+
+    $scope.scrolltop = function(){
+        $ionicScrollDelegate.scrollTop();
+    };
 
 });

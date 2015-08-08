@@ -286,7 +286,7 @@
     margin-right: 5px;
 }
 #map_canvas {
-    height: 200px;
+    height: 510px;
     width: 100%;
     margin: 0px;
 }
@@ -324,6 +324,12 @@
 }
 ion-tabs.tabs-color-active-positive .tab-item.tab-item-active, ion-tabs.tabs-color-active-positive .tab-item.active, ion-tabs.tabs-color-active-positive .tab-item.activated {
     color: #841725;
+}
+.tabs-striped .tab-item.tab-item-active, .tabs-striped .tab-item.active, .tabs-striped .tab-item.activated {
+  margin-top: -2px;
+  border-style: solid;
+  border-width: 2px 0 0 0;
+  border-color: #841725;
 }
 /* barra tamaño*/
 .bar-header {
@@ -404,4 +410,30 @@ ion-tabs.tabs-color-active-positive .tab-item.tab-item-active, ion-tabs.tabs-col
 }
 .bar .buttons-left span {
   margin-left: 10px;
+}
+.item.tabs.tabs-secondary.tabs-icon-left.tabs-custon-detalle-publcidad{
+	background-color: #fff;
+}
+.item{
+	margin: -1px 0px -1px -1px;
+}
+md-tabs:not(.md-no-tab-content):not(.md-dynamic-height) {
+    min-height: 560px; 
+}
+md-tabs.md-accent md-tabs-wrapper {
+  	background-color: #FBFBFB;
+}
+md-tabs .md-tab.md-active, md-tabs .md-tab.md-focused {
+  color: red;
+}
+md-tabs.md-accent md-ink-bar {
+  color: #212121;
+  background: #212121;
+}
+.tabs-striped .tabs {
+  background-color: black;
+  background-image: none;
+  border: none;
+  border-bottom: 1px solid black;
+  padding-top: 2px;
 }

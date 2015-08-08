@@ -5,13 +5,14 @@
 // the 2nd parameter is an array of 'requires'
 // 'starter.controllers' is found in controllers.js
 angular.module('tulocalidad', [ 'ionic', 
-                            'tulocalidad.controllers', 
-                            'tulocalidad.services',
-                            'tulocalidad.directives',
-                            'uiGmapgoogle-maps',
-                            'ngResource', 
-                            'ngCordova', 
-                            'chieffancypants.loadingBar'])
+                                'tulocalidad.controllers', 
+                                'tulocalidad.services',
+                                'tulocalidad.directives',
+                                'uiGmapgoogle-maps',
+                                'ngResource', 
+                                'ngCordova', 
+                                'chieffancypants.loadingBar',
+                                'ngMaterial'])
 
 .run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
