@@ -437,3 +437,8 @@ md-tabs.md-accent md-ink-bar {
   border-bottom: 1px solid black;
   padding-top: 2px;
 }
+.button.button-positive {
+  border-color: black;
+  background: url("../img/bar.png");
+  color: #fff;
+}

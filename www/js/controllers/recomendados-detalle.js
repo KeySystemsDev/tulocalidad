@@ -6,7 +6,7 @@ angular.module('tulocalidad.controllers')
     $scope.publicidad_detalle = publicidad_detalle.get({'id_publicidad':$rootScope.id_publicidad});
 
     $scope.compartir = function(mensaje, img) {
-        $cordovaSocialSharing.share(mensaje, mensaje, img, "http://tulocalidad.com.ve");
+        $cordovaSocialSharing.share(mensaje, mensaje, img, $rootScope.HOST_NAME);
     };
 
     $scope.id_empresa = function(id_empresa) {
@@ -15,7 +15,7 @@ angular.module('tulocalidad.controllers')
     }
 
     $scope.RecargarPublicidad = function(){
-        $http.get('http://www.tulocalidad.com.ve/movil/detalle_publicidad',{
+        $http.get( $rootScope.HOST_NAME + 'movil/detalle_publicidad',{
             params: {
                 id_publicidad: $rootScope.id_publicidad
                 }

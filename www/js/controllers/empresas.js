@@ -7,7 +7,7 @@ angular.module('tulocalidad.controllers')
                                                'id_categoria': $rootScope.id_categoria});
 
     $scope.RecargarEmpresas = function(){
-        $http.get('http://www.tulocalidad.com.ve/movil/empresa/empresa-categoria', {
+        $http.get( $rootScope.HOST_NAME + 'movil/empresa/empresa-categoria', {
             params: {
                 id_estado: localStorage.getItem('id_estado'),
                 id_categoria: MyService.id_categoria

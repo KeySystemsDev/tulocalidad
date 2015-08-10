@@ -1,7 +1,7 @@
 angular.module('tulocalidad.services', [])
 
-.factory("publicidad", function ($resource) {
-    return $resource("http://www.tulocalidad.com.ve/movil/empresa/publicidad", //la url donde queremos consumir
+.factory("publicidad", function ($resource, HOST_NAME) {
+    return $resource( HOST_NAME + "movil/empresa/publicidad", //la url donde queremos consumir
         {}, //aquí podemos pasar variables que queramos pasar a la consulta
         //a la función get le decimos el método, y, si es un array lo que devuelve
         //ponemos isArray en true
@@ -9,8 +9,8 @@ angular.module('tulocalidad.services', [])
     })
 })
 
-.factory("publicidad_detalle", function ($resource) {
-    return $resource("http://www.tulocalidad.com.ve/movil/detalle_publicidad", //la url donde queremos consumir
+.factory("publicidad_detalle", function ($resource, HOST_NAME) {
+    return $resource( HOST_NAME + "movil/detalle_publicidad", //la url donde queremos consumir
         {}, //aquí podemos pasar variables que queramos pasar a la consulta
         //a la función get le decimos el método, y, si es un array lo que devuelve
         //ponemos isArray en true
@@ -18,8 +18,8 @@ angular.module('tulocalidad.services', [])
     })
 })
 
-.factory("estados", function ($resource) {
-    return $resource("http://www.tulocalidad.com.ve/movil/empresa/estados", //la url donde queremos consumir
+.factory("estados", function ($resource, HOST_NAME) {
+    return $resource( HOST_NAME + "movil/empresa/estados", //la url donde queremos consumir
         {}, //aquí podemos pasar variables que queramos pasar a la consulta
         //a la función get le decimos el método, y, si es un array lo que devuelve
         //ponemos isArray en true
@@ -27,8 +27,8 @@ angular.module('tulocalidad.services', [])
     })
 })
 
-.factory("categoria_estado", function ($resource) {
-    return $resource("http://www.tulocalidad.com.ve/movil/empresa/categoria-estado", //la url donde queremos consumir
+.factory("categoria_estado", function ($resource, HOST_NAME) {
+    return $resource( HOST_NAME + "movil/empresa/categoria-estado", //la url donde queremos consumir
         {}, //aquí podemos pasar variables que queramos pasar a la consulta
         //a la función get le decimos el método, y, si es un array lo que devuelve
         //ponemos isArray en true
@@ -36,8 +36,8 @@ angular.module('tulocalidad.services', [])
     })
 })
 
-.factory("empresas_categorias", function ($resource) {
-    return $resource("http://www.tulocalidad.com.ve/movil/empresa/empresa-categoria", //la registrar/url donde queremos consumir
+.factory("empresas_categorias", function ($resource, HOST_NAME) {
+    return $resource( HOST_NAME + "movil/empresa/empresa-categoria", //la registrar/url donde queremos consumir
         {}, //aquí podemos pasar variables que queramos pasar a la consulta
         //a la función get le decimos el método, y, si es un array lo que devuelve
         //ponemos isArray en true
@@ -45,8 +45,8 @@ angular.module('tulocalidad.services', [])
     })
 })
 
-.factory("detalle_empresa", function ($resource) {
-    return $resource("http://www.tulocalidad.com.ve/movil/empresa/empresa-detalle", //la url donde queremos consumir
+.factory("detalle_empresa", function ($resource, HOST_NAME) {
+    return $resource( HOST_NAME + "movil/empresa/empresa-detalle", //la url donde queremos consumir
         {}, //aquí podemos pasar variables que queramos pasar a la consulta
         //a la función get le decimos el método, y, si es un array lo que devuelve
         //ponemos isArray en true
