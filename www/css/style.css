@@ -286,7 +286,7 @@
     margin-right: 5px;
 }
 #map_canvas {
-    height: 510px;
+    height: 450px;
     width: 100%;
     margin: 0px;
 }
@@ -323,12 +323,12 @@
   box-shadow: #5f1d12 1px 0 6px 1px;
 }
 ion-tabs.tabs-color-active-positive .tab-item.tab-item-active, ion-tabs.tabs-color-active-positive .tab-item.active, ion-tabs.tabs-color-active-positive .tab-item.activated {
-    color: #841725;
+    color: #FFF;
 }
 .tabs-striped .tab-item.tab-item-active, .tabs-striped .tab-item.active, .tabs-striped .tab-item.activated {
   margin-top: -2px;
   border-style: solid;
-  border-width: 2px 0 0 0;
+  border-width: 0px 0 0 0;
   border-color: #841725;
 }
 /* barra tamaño*/
@@ -373,7 +373,7 @@ ion-tabs.tabs-color-active-positive .tab-item.tab-item-active, ion-tabs.tabs-col
 
 
 .slider {
-    height: 250px;
+    height: 220px;
 }
 .slider-slide {
     padding-top: 60px;
@@ -393,7 +393,7 @@ ion-tabs.tabs-color-active-positive .tab-item.tab-item-active, ion-tabs.tabs-col
     font-size: 7px;
 }
 
-.box-white h2, p, h4{
+.box-white h2, p, h4, h5{
     color: white;
     margin-top: 10px;
     /*text-shadow: 2px 0px 0px #000;*/

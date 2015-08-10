@@ -18,14 +18,13 @@
                     </div>
                     <div class="box-white">
                     	<h4>{{ empresa[0].nombre_empresa }}</h4>
-                    	<p>RIF:</b> {{ empresa[0].rif_empresa }}</p>
                     </div>
                 </ion-slide>
                 <ion-slide>
                     <div class="box-white">
-                    	<p>{{ empresa[0].direccion_empresa }}</p>
+                    	<p>{{ empresa[0].descripcion_empresa }}</p>
                     </div>
-                    <div class="box-white"><h4>Venezuela</h4></div>
+                    <div class="box-white"><h5>RIF:</b> {{ empresa[0].rif_empresa }}</h5></div>
                 </ion-slide>
             </ion-slide-box>
 
@@ -40,47 +39,35 @@
                     <md-tab-body>
                         <list class="list">
 
-                <item class="item item-icon-left boby-text" ng-if="empresa[0].descripcion_empresa != ''" >
-                        {{ empresa[0].descripcion_empresa }}
-                </item>
+                            <item class="item item-icon-left boby-text" ng-if="empresa[0].descripcion_empresa != ''" >
+                                    {{ empresa[0].direccion_empresa }}
+                            </item>
 
-                <item class="item item-icon-left" ng-if="empresa[0].url_empresa != ''" ng-href="{{ empresa[0].url_empresa }}">
-                    <i class="icon ion-link"></i>
-                        {{ empresa[0].url_empresa }}
-                </item>
+                            <item class="item item-icon-left" ng-if="empresa[0].url_empresa != ''" ng-href="{{ empresa[0].url_empresa }}">
+                                <i class="icon ion-link"></i>
+                                    {{ empresa[0].url_empresa }}
+                            </item>
 
+                            <item class="item item-icon-left" ng-if="empresa[0].correo_empresa != ''" ng-href="mailto:{{ empresa[0].correo_empresa }}">
+                                <i class="icon ion-email"></i>
+                                    {{ empresa[0].correo_empresa }}
+                            </item>
 
-                <item class="item item-icon-left" ng-if="empresa[0].correo_empresa != ''" ng-href="mailto:{{ empresa[0].correo_empresa }}">
-                    <i class="icon ion-email"></i>
-                        {{ empresa[0].correo_empresa }}
-                </item>
+                            <item class="item item-icon-left" ng-if="empresa[0].telefono_empresa != ''" ng-href="tel:{{ empresa[0].telefono_empresa }}">
+                                <i class="icon ion-android-call"></i>
+                                    Local : {{ empresa[0].telefono_empresa }}
+                            </item>
 
-                <item class="item item-icon-left" ng-if="empresa[0].telefono_empresa != ''" ng-href="tel:{{ empresa[0].telefono_empresa }}">
-                    <i class="icon ion-android-call"></i>
-                        Local : {{ empresa[0].telefono_empresa }}
-                </item>
+                            <item class="item item-icon-left" ng-if="empresa[0].telefono_movil_empresa != ''" ng-href="tel:{{ empresa[0].telefono_movil_empresa }}">
+                                <i class="icon ion-android-call"></i>
+                                    Móvil : {{ empresa[0].telefono_movil_empresa }}
+                            </item>
 
-                <item class="item item-icon-left" ng-if="empresa[0].telefono_movil_empresa != ''" ng-href="tel:{{ empresa[0].telefono_movil_empresa }}">
-                    <i class="icon ion-android-call"></i>
-                        Móvil : {{ empresa[0].telefono_movil_empresa }}
-                </item>
-
-            </list>
+                        </list>
                     </md-tab-body>
                 </md-tab>
-      
+
                 <md-tab id="tab2">
-                    <md-tab-label>
-                        <button class="button-clear">
-                            <i class="fa fa-bullhorn"></i>
-                        </button>
-                    </md-tab-label>
-                    <md-tab-body>
-                        <h1>no disponibles</h1>
-                    </md-tab-body>
-                </md-tab>
-
-                <md-tab id="tab3">
                     <md-tab-label>
                         <button class="button-clear">
                             <i class="fa fa-map-marker"></i>
@@ -104,6 +91,18 @@
                         </div>
                     </md-tab-body>
                 </md-tab>
+
+                <md-tab id="tab3">
+                    <md-tab-label>
+                        <button class="button-clear">
+                            <i class="fa fa-bullhorn"></i>
+                        </button>
+                    </md-tab-label>
+                    <md-tab-body>
+                        <h1>no disponibles</h1>
+                    </md-tab-body>
+                </md-tab>
+
             </md-tabs>
 
 	</ion-content>
