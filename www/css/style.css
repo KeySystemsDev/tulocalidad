@@ -311,10 +311,21 @@
   padding: 0px;
 }
 #loading-bar-spinner .spinner-icon {
-  border-top-color:  #FFF;
-  border-left-color: #FFF;
-  margin-top: 30px;
-  margin-left: 10px;
+  border:  solid 2px transparent;
+  border-top-color:  #721520;
+  border-left-color: #721520;
+  width: 45px;
+  height: 45px;
+  
+}
+#loading-bar-spinner {
+  	display: block;
+  	position: absolute;
+  	z-index: 10002;
+  	left: 50%;
+  	top:50%;
+  	margin-left: -22.5px;
+  	margin-top: -22.5px;
 }
 #loading-bar .peg {
   -moz-box-shadow: #5f1d12 1px 0 6px 1px;
@@ -423,7 +434,8 @@ ion-tabs.tabs-color-active-positive .tab-item.tab-item-active, ion-tabs.tabs-col
 	margin: -1px 0px -1px -1px;
 }
 md-tabs:not(.md-no-tab-content):not(.md-dynamic-height) {
-    min-height: 560px; 
+    /*min-height: 560px; */
+    height: auto;
 }
 md-tabs.md-accent md-tabs-wrapper {
   	background-color: #FBFBFB;
