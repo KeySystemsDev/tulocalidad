@@ -363,11 +363,11 @@ ion-tabs.tabs-color-active-positive .tab-item.tab-item-active, ion-tabs.tabs-col
 }
 
 .profile-picture img{
-    border: 5px solid #fff;
+    border: 2px solid #fff;
     display: inline-block;
     width: 80px;
     height: 80px;
-    border-radius: 50%;
+    border-radius: 5%;
     vertical-align: middle;
 }
 
@@ -405,14 +405,19 @@ ion-tabs.tabs-color-active-positive .tab-item.tab-item-active, ion-tabs.tabs-col
 	padding-left: 10px;
 }
 .tab-item .icon {
-  	padding-top: 4px;
-  	font-size: 25px;
+  	padding-top: 7px;
+  	font-size:30px;
+  	color: #fff;
 }
 .bar .buttons-left span {
   margin-left: 10px;
 }
 .item.tabs.tabs-secondary.tabs-icon-left.tabs-custon-detalle-publcidad{
 	background-color: #fff;
+}
+.tab-item.tab-icon-recomendado i{
+	padding-top: 0px;
+	color: #444;
 }
 .item{
 	margin: -1px 0px -1px -1px;
@@ -438,7 +443,19 @@ md-tabs.md-accent md-ink-bar {
   padding-top: 2px;
 }
 .button.button-positive {
-  border-color: black;
+  border-color: transparent;
   background: url("../img/bar.png");
   color: #fff;
+}
+.button-conf i{
+	padding-top: 5px;
+	color: #fff;
+	font-size: 25px;
+}
+.bar-stable .button.button-clear {
+  border-color: transparent;
+  background: none;
+  box-shadow: none;
+  color: #fff;
+  font-size: 17px;
 }

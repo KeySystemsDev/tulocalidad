@@ -27,14 +27,33 @@ angular.module('tulocalidad.controllers', [])
 
     $scope.estado = localStorage.getItem('estado');
 
-    $scope.publicidades = publicidad.get({'id_estado': localStorage.getItem('id_estado')});
+    publicidad.get({'id_estado': localStorage.getItem('id_estado')})
+       .$promise.then(function(data) {
+            /*if (data.success){
+                $scope.publicidades = data.consulta;
+            }else{
+                $ionicPopup.alert({ title:    'Mensaje de Error',
+                                    template: data.msj});
+            }*/
+           $scope.publicidades = data;
+       }, function(error) {
+            if ( error.status === 0 || error.status === 404 ) {
+                $ionicPopup.alert({ title:    'Error de Conexión',
+                                    template: 'No es posible establecer conexión a Internet.'});
+            }
+       });
 
     $scope.RecargarPublicidad = function(){
         $http.get( $rootScope.HOST_NAME + 'movil/empresa/publicidad', {id_estado: localStorage.getItem('id_estado')})
             .success(function(publicidad) {
                 $scope.publicidades = publicidad;
             })
-            .finally(function() {
+            .error(function (data, status) {
+                if ( status === 0 || status === 404 ) {
+                    $ionicPopup.alert({ title:    'Mensaje de Error',
+                                        template: 'Error de Conección'});
+                }
+            }).finally(function() {
                 $scope.$broadcast('scroll.refreshComplete');
             });
     }
@@ -43,20 +62,18 @@ angular.module('tulocalidad.controllers', [])
         $rootScope.id_publicidad = id_publicidad;
     }
 
-    if( "0.0.9" == "0.1.0"){
-        var confirmPopup = $ionicPopup.confirm({
-            title: 'Nueva Actulizar',
-            template: 'Porfavor Actulice Tulocalidad para disfrutar de nuetros servicios.'
-        });
-       
-        confirmPopup.then(function(resultado) {
-            if(resultado) {
-                window.open("https://play.google.com/store/apps/details?id=com.ionicframework.tulocalidad511234", '_system');
-            } else {
-                console.log('Cancel');
-            }
-        });
-        
-   };
+    // Validar la versión que esta instalada.
+    if( "0.0.9" == "0.1.9"){        
+        var alertPopup = $ionicPopup.alert({
+            title: 'Nueva actualización diponible',
+            template: 'Presione actualizar para disfrutar de la nueva versión.',
+            buttons: [{ text: 'Actualizar' , 
+                        type: 'button-positive',
+                        onTap: function() {
+                            window.open("https://play.google.com/store/apps/details?id=com.ionicframework.tulocalidad511234", '_system');
+                        }
+                    }]
+        });   
+    };
     
 });
