@@ -106,10 +106,6 @@
 	text-align: center;
 	color:#555555;
 	font: bold 14px Tahoma;
-	text-shadow: 2px 2px white,
-				 -2px -2px white,
-				 2px -2px white,
-				 -2px 2px white;
 }
 .acerca-img {
   	display: block;
@@ -119,7 +115,7 @@
 	height: 150px;
  }
 .acerca{
- 	background-image: url(../img/fondo_acerca.jpg);
+ 	background-image: url(../img/fondo-acerca.jpg);
 }
 .img-size-redes{
 	width: 50px;
@@ -286,7 +282,7 @@
     margin-right: 5px;
 }
 #map_canvas {
-    height: 450px;
+    height: 350px;
     width: 100%;
     margin: 0px;
 }
@@ -432,10 +428,6 @@ ion-tabs.tabs-color-active-positive .tab-item.tab-item-active, ion-tabs.tabs-col
 }
 .item{
 	margin: -1px 0px -1px -1px;
-}
-md-tabs:not(.md-no-tab-content):not(.md-dynamic-height) {
-    /*min-height: 560px; */
-    height: auto;
 }
 md-tabs.md-accent md-tabs-wrapper {
   	background-color: #FBFBFB;

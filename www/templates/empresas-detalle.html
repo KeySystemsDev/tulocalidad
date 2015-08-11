@@ -28,7 +28,7 @@
                 </ion-slide>
             </ion-slide-box>
 
-            <md-tabs class="md-accent tabcolor" md-center-tabs="true">
+            <md-tabs class="md-accent tabcolor" md-dynamic-height="true" md-center-tabs="true">
                 
                 <md-tab id="tab1">
                     <md-tab-label>
@@ -43,25 +43,25 @@
                                     {{ empresa[0].direccion_empresa }}
                             </item>
 
-                            <item class="item item-icon-left" ng-if="empresa[0].url_empresa != ''" ng-href="{{ empresa[0].url_empresa }}">
+                            <a class="item item-icon-left" ng-if="empresa[0].url_empresa != ''" browse-to="{{ empresa[0].url_empresa }}">
                                 <i class="icon ion-link"></i>
                                     {{ empresa[0].url_empresa }}
-                            </item>
+                            </a>
 
-                            <item class="item item-icon-left" ng-if="empresa[0].correo_empresa != ''" ng-href="mailto:{{ empresa[0].correo_empresa }}">
+                            <a class="item item-icon-left" ng-if="empresa[0].correo_empresa != ''" ng-href="mailto:{{ empresa[0].correo_empresa }}">
                                 <i class="icon ion-email"></i>
                                     {{ empresa[0].correo_empresa }}
-                            </item>
+                            </a>
 
-                            <item class="item item-icon-left" ng-if="empresa[0].telefono_empresa != ''" ng-href="tel:{{ empresa[0].telefono_empresa }}">
+                            <a class="item item-icon-left" ng-if="empresa[0].telefono_empresa != ''" ng-href="tel:{{ empresa[0].telefono_empresa }}">
                                 <i class="icon ion-android-call"></i>
                                     Local : {{ empresa[0].telefono_empresa }}
-                            </item>
+                            </a>
 
-                            <item class="item item-icon-left" ng-if="empresa[0].telefono_movil_empresa != ''" ng-href="tel:{{ empresa[0].telefono_movil_empresa }}">
+                            <a class="item item-icon-left" ng-if="empresa[0].telefono_movil_empresa != ''" ng-href="tel:{{ empresa[0].telefono_movil_empresa }}">
                                 <i class="icon ion-android-call"></i>
                                     Móvil : {{ empresa[0].telefono_movil_empresa }}
-                            </item>
+                            </a>
 
                         </list>
                     </md-tab-body>
@@ -99,7 +99,11 @@
                         </button>
                     </md-tab-label>
                     <md-tab-body>
-                        <h1>no disponibles</h1>
+                        <a class="col col-33 button-clear box-publicidad" href="#/tab/recomendados-detalle" ng-repeat="publicidad in publicidades" ng-click="id_publicidad( publicidad.id_publicidad )">
+                            <div class="item item-image">
+                                <img ng-src="{{HOST_NAME}}uploads/publicidades_low/{{ publicidad.url_imagen_publicidad }}">
+                            </div>
+                        </a>
                     </md-tab-body>
                 </md-tab>
 

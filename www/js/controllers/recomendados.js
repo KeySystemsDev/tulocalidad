@@ -1,9 +1,32 @@
 angular.module('tulocalidad.controllers', [])
 
-.controller('RecomendadosCtrl', function($scope, $http, $ionicPopup, $rootScope, $state, $window, $ionicModal, $cordovaGeolocation, publicidad, estados, HOST_NAME) {
+.controller('RecomendadosCtrl', function($scope, $http, $ionicPopup, $rootScope, $state, $window, $ionicModal, $cordovaGeolocation, publicidad, estados, version, HOST_NAME, VERSION) {
     console.log('RecomendadosCtrl');
 
+    // Validar la versión que esta instalada.
+    version.get( {version: VERSION} ).$promise.then(function(data) {
+        if(data.consulta == true){
+            var alertPopup = $ionicPopup.alert({
+                title: 'Nueva actualización diponible',
+                template: 'Presione actualizar para disfrutar de la nueva versión.',
+                buttons: [{ text: 'Actualizar' , 
+                            type: 'button-positive',
+                            onTap: function() {
+                                window.open("https://play.google.com/store/apps/details?id=com.ionicframework.tulocalidad511234", '_system');
+                            }
+                        }]
+            });
+        }else{
+            console.log("cancel")
+        }
+    }, function(error) {
+        if ( error.status === 0 || error.status === 404 ) {
+            console.log("error");
+        }
+    });
+
     $rootScope.HOST_NAME = HOST_NAME;
+    $rootScope.VERSION = VERSION;
     
     //Encuentra pocion de la persona al entrar
     var posOptions = {timeout: 10000, enableHighAccuracy: true};
@@ -60,20 +83,6 @@ angular.module('tulocalidad.controllers', [])
 
     $scope.id_publicidad = function(id_publicidad) {
         $rootScope.id_publicidad = id_publicidad;
-    }
-
-    // Validar la versión que esta instalada.
-    if( "0.0.9" == "0.1.9"){        
-        var alertPopup = $ionicPopup.alert({
-            title: 'Nueva actualización diponible',
-            template: 'Presione actualizar para disfrutar de la nueva versión.',
-            buttons: [{ text: 'Actualizar' , 
-                        type: 'button-positive',
-                        onTap: function() {
-                            window.open("https://play.google.com/store/apps/details?id=com.ionicframework.tulocalidad511234", '_system');
-                        }
-                    }]
-        });   
-    };
+    }    
     
 });
