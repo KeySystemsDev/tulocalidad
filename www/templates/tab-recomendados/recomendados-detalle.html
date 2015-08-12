@@ -1,0 +1,33 @@
+<ion-view view-title="{{publicidad_detalle[0].titulo_publicidad}}">
+    <ion-content>
+
+        <ion-refresher on-refresh="RecargarPublicidad()"></ion-refresher>
+
+        <div class="list card">
+
+            <div class="item item-image">
+                <img ng-src="{{HOST_NAME}}uploads/publicidades_high/{{publicidad_detalle[0].url_imagen_publicidad}}">
+            </div>
+
+            <div class="item item-body">
+                <p>
+                  {{publicidad_detalle[0].descripcion_publicidad}}
+                </p>
+            </div>
+
+            <div class="item tabs tabs-secondary tabs-icon-left tabs-custon-detalle-publcidad">
+                <button class="button button-clear" ng-click="compartir(publicidad_detalle[0].titulo_publicidad, publicidad_detalle[0].url_imagen_publicidad)">
+                    <a class="tab-item tab-icon-recomendado" href="#">
+                        <i class="icon ion-android-share-alt"></i>
+                            Compartir
+                    </a>
+                </button>
+                <a class="tab-item tab-icon-recomendado" ng-click="id_empresa(publicidad_detalle[0].id_empresa)" href="#/tab/recomendados-empresas-detalle/{{publicidad_detalle[0].id_empresa}}" >
+                    <i class="icon ion-share tab-icon-recomendado"></i>
+                        Ver Empresa
+                </a>
+            </div>
+
+        </div>
+	</ion-content>
+</ion-view>

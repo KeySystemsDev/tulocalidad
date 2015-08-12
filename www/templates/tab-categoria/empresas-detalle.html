@@ -1,0 +1,113 @@
+<ion-view view-title="Empresa {{ empresa[0].nombre_empresa }}">
+	<ion-content>
+
+		<!--<a ng-click="openGeo( {{lat}} , {{long}} )" ng-href="geo:{{lat}},{{long}}?z=6&q=10.349653,-67.022355(Treasure)"><h1>hola</h1></a>
+        <p>{{lat}},{{long}}</p>-->
+
+	    <div class="jr-card-theme-default">
+            <div class="jr-card">
+        
+                <div id="banner"/>
+                    <img ng-src="img/fondo-perfil.jpg" alt="">
+                </div>
+
+            <ion-slide-box show-pager="true">
+                <ion-slide>
+                    <div class="profile-picture">
+                        <img ng-src="{{HOST_NAME}}uploads/empresas_low/{{ empresa[0].icon_empresa }}"/>
+                    </div>
+                    <div class="box-white">
+                    	<h5>{{ empresa[0].nombre_empresa }}</h5>
+                    </div>
+                </ion-slide>
+                <ion-slide>
+                    <div class="box-white">
+                    	<p>{{ empresa[0].descripcion_empresa | limitTo:numLimit }}...</p>
+                    </div>
+                    <div class="box-white"><h5>RIF:</b> {{ empresa[0].rif_empresa }}</h5></div>
+                </ion-slide>
+            </ion-slide-box>
+
+            <md-tabs class="md-accent tabcolor" md-dynamic-height="true" md-center-tabs="true">
+                
+                <md-tab id="tab1">
+                    <md-tab-label>
+                        <button class="button-clear">
+                            <i class="fa fa-building-o"></i>
+                        </button>
+                    </md-tab-label>
+                    <md-tab-body>
+                        <list class="list">
+
+                            <item class="item item-icon-left boby-text" ng-if="empresa[0].descripcion_empresa != ''" >
+                                    {{ empresa[0].direccion_empresa }}
+                            </item>
+
+                            <a class="item item-icon-left" ng-if="empresa[0].url_empresa != ''" browse-to="{{ empresa[0].url_empresa }}">
+                                <i class="icon ion-link"></i>
+                                    {{ empresa[0].url_empresa }}
+                            </a>
+
+                            <a class="item item-icon-left" ng-if="empresa[0].correo_empresa != ''" ng-href="mailto:{{ empresa[0].correo_empresa }}">
+                                <i class="icon ion-email"></i>
+                                    {{ empresa[0].correo_empresa }}
+                            </a>
+
+                            <a class="item item-icon-left" ng-if="empresa[0].telefono_empresa != ''" ng-href="tel:{{ empresa[0].telefono_empresa }}">
+                                <i class="icon ion-android-call"></i>
+                                    Local : {{ empresa[0].telefono_empresa }}
+                            </a>
+
+                            <a class="item item-icon-left" ng-if="empresa[0].telefono_movil_empresa != ''" ng-href="tel:{{ empresa[0].telefono_movil_empresa }}">
+                                <i class="icon ion-android-call"></i>
+                                    Móvil : {{ empresa[0].telefono_movil_empresa }}
+                            </a>
+
+                        </list>
+                    </md-tab-body>
+                </md-tab>
+
+                <md-tab id="tab2">
+                    <md-tab-label>
+                        <button class="button-clear">
+                            <i class="fa fa-map-marker"></i>
+                        </button>
+                    </md-tab-label>
+                    <md-tab-body>
+                        <div id="map_canvas">
+                            <ui-gmap-google-map ng-if="empresa[0].privacidad_empresa != 0"
+                                center="map.center" 
+                                zoom="map.zoom"
+                                draggable="false"
+                                options="map.options">
+                                    <ui-gmap-marker 
+                                            coords="map.marker"
+                                            idkey="map.id"
+                                            options="map.options"
+                                            draggable="true">
+                                    </ui-gmap-marker>
+                            </ui-gmap-google-map>
+                            <img width="100%" src="img/mapa-no-dis.jpg" ng-cloak ng-if="empresa[0].privacidad_empresa != 1">
+                        </div>
+                    </md-tab-body>
+                </md-tab>
+
+                <md-tab id="tab3">
+                    <md-tab-label>
+                        <button class="button-clear">
+                            <i class="fa fa-bullhorn"></i>
+                        </button>
+                    </md-tab-label>
+                    <md-tab-body>
+                        <a class="col col-33 button-clear box-publicidad" href="#/tab/categoria-recomendados-detalle" ng-repeat="publicidad in publicidades" ng-click="id_publicidad( publicidad.id_publicidad )">
+                            <div class="item item-image">
+                                <img ng-src="{{HOST_NAME}}uploads/publicidades_low/{{ publicidad.url_imagen_publicidad }}">
+                            </div>
+                        </a>
+                    </md-tab-body>
+                </md-tab>
+
+            </md-tabs>
+
+	</ion-content>
+</ion-view>

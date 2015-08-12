@@ -4,7 +4,7 @@ angular.module('tulocalidad.controllers')
     $scope.estado = localStorage.getItem('estado');
     $scope.id_estado = localStorage.getItem('id_estado');
 
-    $ionicModal.fromTemplateUrl('templates/estados-modal.html', {
+    $ionicModal.fromTemplateUrl('templates/tab-recomendados/estados-modal.html', {
         scope: $scope,
         animation: 'slide-in-up'
         }).then(function(modal) {
