@@ -10,7 +10,7 @@ angular.module('tulocalidad.controllers')
         $http.get( $rootScope.HOST_NAME + 'movil/empresa/empresa-categoria', {
             params: {
                 id_estado: localStorage.getItem('id_estado'),
-                id_categoria: MyService.id_categoria
+                id_categoria: $rootScope.id_categoria
                 }
             })
             .success(function(empresas) {

@@ -22,7 +22,7 @@
                 </ion-slide>
                 <ion-slide>
                     <div class="box-white">
-                    	<p>{{ empresa[0].descripcion_empresa }}</p>
+                    	<p>{{ empresa[0].descripcion_empresa | limitTo:numLimit }}...</p>
                     </div>
                     <div class="box-white"><h5>RIF:</b> {{ empresa[0].rif_empresa }}</h5></div>
                 </ion-slide>
