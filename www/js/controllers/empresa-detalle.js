@@ -17,7 +17,6 @@ angular.module('tulocalidad.controllers')
         .$promise.then(function(data) {
             if (data.success == true){
                 $scope.empresa  = data.consulta.detalle;
-                console.log($scope.empresa);
                 $scope.map = {  center: 
                                 {   latitude: data.consulta.detalle[0].positionmap_empresa_latitude, 
                                     longitude:  data.consulta.detalle[0].positionmap_empresa_longitude

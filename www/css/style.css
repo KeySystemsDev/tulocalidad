@@ -112,7 +112,7 @@
 	margin-left: auto;
 	margin-right: auto;
 	width: 110px;
-	height: 150px;
+	height: 145px;
  }
 .acerca{
  	background-image: url(../img/fondo-acerca.jpg);
@@ -282,7 +282,7 @@
     margin-right: 5px;
 }
 #map_canvas {
-    height: 350px;
+    height: 275px;
     width: 100%;
     margin: 0px;
 }
