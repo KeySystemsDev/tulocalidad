@@ -38,8 +38,7 @@ angular.module('tulocalidad', [ 'ionic',
     .state('tab', {
       url: "/tab",
       abstract: true,
-      templateUrl: "templates/tabs.html",
-      //controller: 'AppCtrl'
+      templateUrl: "templates/tabs.html"
     })
 
     .state('tab.recomendados', {
