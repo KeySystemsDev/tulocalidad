@@ -1,7 +1,11 @@
 angular.module('tulocalidad.controllers', [])
 
-.controller('RecomendadosCtrl', function($scope, $http, $ionicPopup, $rootScope, $state, $window, $ionicModal, $cordovaGeolocation, publicidad, estados, version, HOST_NAME, VERSION) {
+.controller('RecomendadosCtrl', function($scope, $ionicHistory, $http, $ionicPopup, $rootScope, $state, $window, $ionicModal, $cordovaGeolocation, publicidad, estados, version, HOST_NAME, VERSION) {
     console.log('RecomendadosCtrl');
+
+    $scope.myGoBack = function() {
+        $ionicHistory.goBack();
+    };
 
     // Validar la versión que esta instalada.
     version.get( {version: VERSION} ).$promise.then(function(data) {

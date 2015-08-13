@@ -86,7 +86,7 @@ angular.module('tulocalidad', [ 'ionic',
       views: {
         'tab-recomendados': {
           templateUrl: "templates/tab-recomendados/acerca.html",
-          //controller: 'acercaCtrl'
+          controller: 'AcercaCtrl'
         }
       }
     })

@@ -1,7 +1,11 @@
 angular.module('tulocalidad.controllers')
 
-.controller('EmpresaDetalleCtrl', function($scope, $ionicPopup, $ionicScrollDelegate, $rootScope, $window, detalle_empresa) {
+.controller('EmpresaDetalleCtrl', function($scope, $ionicHistory, $ionicPopup, $ionicScrollDelegate, $rootScope, $window, detalle_empresa) {
     console.log('EmpresaDetalleCtrl');
+
+    $scope.myGoBack = function() {
+        $ionicHistory.goBack();
+    };
 
     $scope.openGeo = function(latitude, longitude) {
         $window.open('geo:' + latitude + ',' + longitude + '?z=11&q=10.349653,-67.022355(Treasure)', '_system', 'location=yes');

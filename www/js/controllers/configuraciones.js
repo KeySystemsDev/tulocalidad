@@ -1,6 +1,11 @@
 angular.module('tulocalidad.controllers')
 
-.controller('ConfiguracionCtrl', function($scope, $ionicModal, estados){
+.controller('ConfiguracionCtrl', function($scope, $ionicHistory, $ionicModal, estados){
+   
+    $scope.myGoBack = function() {
+        $ionicHistory.goBack();
+    };
+
     $scope.estado = localStorage.getItem('estado');
     $scope.id_estado = localStorage.getItem('id_estado');
 

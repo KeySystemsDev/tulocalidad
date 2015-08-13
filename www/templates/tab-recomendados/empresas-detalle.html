@@ -1,5 +1,16 @@
 <ion-view view-title="Empresa {{ empresa[0].nombre_empresa }}">
-	<ion-content>
+	
+    <ion-nav-buttons>
+        <div class="row button-tulocalidad">
+            <div class="col button-tulocalidad">
+                <a class="button button-icon button-clear button-conf" ng-click="myGoBack()">
+                    <i class="ion-arrow-left-c"></i>
+                </a>
+            </div>
+        </div>  
+    </ion-nav-buttons>
+
+    <ion-content>
 
 		<!--<a ng-click="openGeo( {{lat}} , {{long}} )" ng-href="geo:{{lat}},{{long}}?z=6&q=10.349653,-67.022355(Treasure)"><h1>hola</h1></a>
         <p>{{lat}},{{long}}</p>-->

@@ -1,7 +1,11 @@
 angular.module('tulocalidad.controllers')
 
-.controller('EmpresaCtrl', function($scope, $rootScope, $http, $ionicScrollDelegate, empresas_categorias) {      
+.controller('EmpresaCtrl', function($scope, $ionicHistory, $rootScope, $http, $ionicScrollDelegate, empresas_categorias) {      
     console.log('EmpresaCtrl');
+
+    $scope.myGoBack = function() {
+        $ionicHistory.goBack();
+    };
 
     $scope.empresas = empresas_categorias.get({ 'id_estado': localStorage.getItem('id_estado'),
                                                'id_categoria': $rootScope.id_categoria});

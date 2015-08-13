@@ -1,8 +1,12 @@
 angular.module('tulocalidad.controllers')
 
-.controller('RecomendadosDetalleCtrl', function($scope, $rootScope, $http, $cordovaSocialSharing, publicidad_detalle) {
+.controller('RecomendadosDetalleCtrl', function($scope, $ionicHistory, $rootScope, $http, $cordovaSocialSharing, publicidad_detalle) {
     console.log("RecomendadosDetalleCtrl");
-    
+      
+    $scope.myGoBack = function() {
+        $ionicHistory.goBack();
+    };
+
     $scope.publicidad_detalle = publicidad_detalle.get({'id_publicidad':$rootScope.id_publicidad});
 
     $scope.compartir = function(mensaje, img) {
