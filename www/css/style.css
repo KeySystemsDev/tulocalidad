@@ -411,7 +411,7 @@ ion-tabs.tabs-color-active-positive .tab-item.tab-item-active, ion-tabs.tabs-col
 
 .boby-text{
 	white-space: normal;
-	text-align: center;
+	text-align: justify;
 	padding-left: 10px;
 }
 .tab-item .icon {

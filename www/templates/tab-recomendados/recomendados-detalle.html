@@ -10,6 +10,16 @@
         </div>  
     </ion-nav-buttons>
 
+     <ion-nav-buttons side="right">
+        <div class="row button-tulocalidad">
+            <div class="col button-tulocalidad">
+                <a class="button button-icon button-clear button-conf" ng-click="compartir(publicidad_detalle[0].titulo_publicidad, publicidad_detalle[0].url_imagen_publicidad)">
+                    <i class="icon ion-android-share-alt"></i>
+                </a>
+            </div>
+        </div>  
+    </ion-nav-buttons>
+
     <ion-content>
 
         <ion-refresher on-refresh="RecargarPublicidad()"></ion-refresher>
@@ -27,18 +37,19 @@
             </div>
 
             <div class="item tabs tabs-secondary tabs-icon-left tabs-custon-detalle-publcidad">
-                <button class="button button-clear" ng-click="compartir(publicidad_detalle[0].titulo_publicidad, publicidad_detalle[0].url_imagen_publicidad)">
+                
+                <!--<button class="button button-clear" ng-click="compartir(publicidad_detalle[0].titulo_publicidad, publicidad_detalle[0].url_imagen_publicidad)">
                     <a class="tab-item tab-icon-recomendado" href="#">
                         <i class="icon ion-android-share-alt"></i>
                             Compartir
                     </a>
-                </button>
-                <a class="tab-item tab-icon-recomendado" ng-click="id_empresa(publicidad_detalle[0].id_empresa)" href="#/tab/recomendados-empresas-detalle/{{publicidad_detalle[0].id_empresa}}" >
-                    <i class="icon ion-share tab-icon-recomendado"></i>
-                        Ver Empresa
+                </button>-->
+                <a class="tab-item tab-icon-recomendado" ng-click="id_empresa(publicidad_detalle[0].id_empresa)" href="#/tab/recomendados-empresas-detalle/{{publicidad_detalle[0].id_empresa}}" style="font-size:14px;">
+                    <i class="fa fa-building tab-icon-recomendado"></i>
+                        Ver empresa
                 </a>
-            </div>
-
+            </div>            
         </div>
+
 	</ion-content>
 </ion-view>
