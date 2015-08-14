@@ -7,7 +7,9 @@ angular.module('tulocalidad.controllers')
     $scope.categorias = categoria_estado.get({'id_estado': localStorage.getItem('id_estado')});
 
     $scope.RecargarCategorias = function(){
-        $http.get($rootScope.HOST_NAME + 'movil/empresa/categoria-estado', {id_estado: localStorage.getItem('id_estado')})
+        $http.get($rootScope.HOST_NAME + 'movil/empresa/categoria-estado', {
+            params: {id_estado: localStorage.getItem('id_estado')}
+            })
             .success(function(categorias) {
                 $scope.categorias = categorias;
             })

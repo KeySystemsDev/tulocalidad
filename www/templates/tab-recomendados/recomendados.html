@@ -12,7 +12,7 @@
    
     <ion-content class="publicidad">
         
-        <ion-refresher on-refresh="RecargarPublicidad()"></ion-refresher>
+        <ion-refresher refreshing-icon="dots" on-refresh="RecargarPublicidad()"></ion-refresher>
 
         <a class="col col-50 button-clear box-publicidad" href="#/tab/recomendados-detalle" ng-repeat="publicidad in publicidades" ng-click="id_publicidad( publicidad.id_publicidad )">
             <div class="item item-image">
