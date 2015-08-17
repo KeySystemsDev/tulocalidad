@@ -13,7 +13,7 @@
     <ion-nav-buttons side="right">
         <div class="row button-tulocalidad">
             <div class="col button-tulocalidad">
-                <a class="button button-icon button-clear button-conf" ng-click="openGeo( lat , long )" ng-href="geo:{{lat}},{{long}}?z=6&q=10.349653,-67.022355(Treasure)">
+                <a class="button button-icon button-clear button-conf" ng-click="openGeo( lat, long, map.marker.latitude, map.marker.longitude)" ng-href="geo:{{lat}},{{long}}?z=6&q={{map.marker.latitude}},{{map.marker.longitude}}(Treasure)">
                     <i class="icon ion-android-locate"></i>
                 </a>
             </div>
@@ -21,7 +21,6 @@
     </ion-nav-buttons>
 
     <ion-content scroll="false" >
-        
         <div id="map_canvas_detalle">
             <ui-gmap-google-map
                 center="map.center" 

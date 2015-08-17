@@ -7,8 +7,8 @@ angular.module('tulocalidad.controllers')
         $ionicHistory.goBack();
     };
 
-    $scope.openGeo = function(latitude, longitude) {
-        $window.open('geo:' + latitude + ',' + longitude + '?z=11&q=10.349653,-67.022355(Treasure)', '_system', 'location=yes');
+    $scope.openGeo = function(latitude, longitude, latitude_go, longitude_go) {
+        $window.open('geo:' + latitude + ',' + longitude + '?z=11&q=' + latitude_go + ',' + longitude_go + '(Treasure)', '_system', 'location=yes');
     };
 
     $scope.id_publicidad = function(id_publicidad) {
