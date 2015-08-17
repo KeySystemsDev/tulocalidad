@@ -81,6 +81,16 @@ angular.module('tulocalidad', [ 'ionic',
       }
     })
 
+    .state('tab.empresa-detalle-mapa-recomendado', {
+      url: "/empresa-detalle-mapa-recomendado",
+      views: {
+        'tab-recomendados': {
+          templateUrl: "templates/tab-recomendados/empresa-detalle-mapa.html",
+          controller: 'EmpresaDetalleCtrl'
+        }
+      }
+    })
+
     .state('tab.acerca', {
       url: "/acerca",
       views: {
@@ -138,6 +148,16 @@ angular.module('tulocalidad', [ 'ionic',
         'tab-categoria': {
           templateUrl: "templates/tab-categoria/recomendados-detalle.html",
           controller: 'RecomendadosDetalleCtrl'
+        }
+      }
+    })
+
+    .state('tab.empresa-detalle-mapa', {
+      url: "/empresa-detalle-mapa",
+      views: {
+        'tab-categoria': {
+          templateUrl: "templates/tab-categoria/empresa-detalle-mapa.html",
+          controller: 'EmpresaDetalleCtrl'
         }
       }
     });
