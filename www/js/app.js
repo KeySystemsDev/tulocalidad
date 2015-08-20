@@ -41,6 +41,7 @@ angular.module('tulocalidad', [ 'ionic',
       templateUrl: "templates/tabs.html"
     })
 
+    /*--------------------------Tab Recomendado ---------------------------------*/
     .state('tab.recomendados', {
       url: "/recomendados",
       views: {
@@ -91,6 +92,16 @@ angular.module('tulocalidad', [ 'ionic',
       }
     })
 
+    .state('tab.empresa-caracteristicas-recomendado', {
+      url: "/empresa-caracteristicas-recomendado",
+      views: {
+        'tab-recomendados': {
+          templateUrl: "templates/tab-recomendados/empresa-caracteristicas.html",
+          controller: 'EmpresaDetalleCtrl'
+        }
+      }
+    })
+
     .state('tab.acerca', {
       url: "/acerca",
       views: {
@@ -112,6 +123,8 @@ angular.module('tulocalidad', [ 'ionic',
       }
     })
 
+
+    /*-----------------------------------Tab Categoria----------------------------------------*/
     .state('tab.categoria', {
       url: "/categoria",
       views: {
@@ -157,6 +170,16 @@ angular.module('tulocalidad', [ 'ionic',
       views: {
         'tab-categoria': {
           templateUrl: "templates/tab-categoria/empresa-detalle-mapa.html",
+          controller: 'EmpresaDetalleCtrl'
+        }
+      }
+    })
+
+    .state('tab.empresa-caracteristicas', {
+      url: "/empresa-caracteristicas",
+      views: {
+        'tab-categoria': {
+          templateUrl: "templates/tab-categoria/empresa-caracteristicas.html",
           controller: 'EmpresaDetalleCtrl'
         }
       }

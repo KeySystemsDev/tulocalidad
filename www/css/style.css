@@ -277,6 +277,11 @@
 	float: left; 
 	text-decoration:none;
 }
+.box-caracteristica{
+  max-height: none;
+  float: left; 
+  text-decoration:none;
+}
 .pad-sides {
     margin-left: 5px;
     margin-right: 5px;
@@ -474,4 +479,12 @@ md-tabs.md-accent md-ink-bar {
 }
 .item-image-publicidad{
   text-align: center;
+}
+.icon-custon-detalle i {
+  font-size: 13px;
+  position: absolute;
+}
+.icon-custon-detalle{
+  border-radius: 5px;
+  border-color: #721520;
 }

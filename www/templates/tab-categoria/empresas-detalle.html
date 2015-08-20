@@ -12,9 +12,6 @@
 
     <ion-content>
 
-		<!--<a ng-click="openGeo( {{lat}} , {{long}} )" ng-href="geo:{{lat}},{{long}}?z=6&q=10.349653,-67.022355(Treasure)"><h1>hola</h1></a>
-        <p>{{lat}},{{long}}</p>-->
-
 	    <div class="jr-card-theme-default">
             <div class="jr-card">
         
@@ -48,37 +45,46 @@
                         </button>
                     </md-tab-label>
                     <md-tab-body>
-                        <list class="list">
-
-                            <item class="item item-icon-left boby-text" ng-if="empresa[0].descripcion_empresa != ''" >
-                                    {{ empresa[0].direccion_empresa }}
-                            </item>
-
-                            <a class="item item-icon-left" ng-if="empresa[0].url_empresa != ''" browse-to="{{ empresa[0].url_empresa }}">
-                                <i class="icon ion-link"></i>
-                                    {{ empresa[0].url_empresa }}
-                            </a>
-
-                            <a class="item item-icon-left" ng-if="empresa[0].correo_empresa != ''" ng-href="mailto:{{ empresa[0].correo_empresa }}">
-                                <i class="icon ion-email"></i>
-                                    {{ empresa[0].correo_empresa }}
-                            </a>
-
-                            <a class="item item-icon-left" ng-if="empresa[0].telefono_empresa != ''" ng-href="tel:{{ empresa[0].telefono_empresa }}">
+                        <a class="col col-33 button-clear box-caracteristica" href="#/tab/empresa-caracteristicas">
+                            <div class="item item-image icon-custon-detalle">
+                                <img src="img/caracteristicas/1.png">
                                 <i class="icon ion-android-call"></i>
-                                    Local : {{ empresa[0].telefono_empresa }}
-                            </a>
-
-                            <a class="item item-icon-left" ng-if="empresa[0].telefono_movil_empresa != ''" ng-href="tel:{{ empresa[0].telefono_movil_empresa }}">
+                            </div>
+                        </a>
+                        <a class="col col-33 button-clear box-caracteristica" ng-if="empresa[0].privacidad_empresa != 0" href="#/tab/empresa-detalle-mapa">
+                            <div class="item item-image icon-custon-detalle">
+                                <img src="img/caracteristicas/2.png">
                                 <i class="icon ion-android-call"></i>
-                                    Móvil : {{ empresa[0].telefono_movil_empresa }}
-                            </a>
-
-                        </list>
+                            </div>
+                        </a>
+                        <a class="col col-33 button-clear box-caracteristica" ng-if="empresa[0].url_empresa != ''" browse-to="{{ empresa[0].url_empresa }}">
+                            <div class="item item-image icon-custon-detalle">
+                                <img src="img/caracteristicas/3.png">
+                                <i class="icon ion-android-call"></i>
+                            </div>
+                        </a>
+                        <a class="col col-33 button-clear box-caracteristica" ng-if="empresa[0].correo_empresa != ''" ng-href="mailto:{{ empresa[0].correo_empresa }}">
+                            <div class="item item-image icon-custon-detalle">
+                                <img src="img/caracteristicas/4.png">
+                                <i class="icon ion-android-call"></i>
+                            </div>
+                        </a>
+                        <a class="col col-33 button-clear box-caracteristica" ng-if="empresa[0].telefono_empresa != ''" ng-href="tel:{{ empresa[0].telefono_empresa }}">
+                            <div class="item item-image icon-custon-detalle">
+                                <img src="img/caracteristicas/5.png">
+                                <i class="icon ion-android-call"></i>
+                            </div>
+                        </a>
+                        <a class="col col-33 button-clear box-caracteristica" ng-if="empresa[0].telefono_movil_empresa != ''" ng-href="tel:{{ empresa[0].telefono_movil_empresa }}">
+                            <div class="item item-image icon-custon-detalle">
+                                <img src="img/caracteristicas/6.png">
+                                <i class="icon ion-android-call"></i>
+                            </div>
+                        </a>
                     </md-tab-body>
                 </md-tab>
 
-                <md-tab id="tab2" ng-if="empresa[0].privacidad_empresa != 0">
+                <!--<md-tab id="tab2" ng-if="empresa[0].privacidad_empresa != 0">
                     <md-tab-label>
                         <a class="button-clear" href="#/tab/empresa-detalle-mapa">
                             <i class="fa fa-map-marker"></i>
@@ -100,7 +106,7 @@
                             </ui-gmap-google-map>
                         </div>
                     </md-tab-body>
-                </md-tab>
+                </md-tab>-->
 
                 <md-tab id="tab3"  ng-cloak ng-if="publicidades.length>0">
                     <md-tab-label>

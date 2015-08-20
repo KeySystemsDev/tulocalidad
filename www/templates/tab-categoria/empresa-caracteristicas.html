@@ -1,0 +1,45 @@
+<ion-view view-title="Empresa {{ empresa[0].nombre_empresa }}">
+	
+    <ion-nav-buttons>
+        <div class="row button-tulocalidad">
+            <div class="col button-tulocalidad">
+                <a class="button button-icon button-clear button-conf" ng-click="myGoBack()">
+                    <i class="ion-arrow-left-c"></i>
+                </a>
+            </div>
+        </div>  
+    </ion-nav-buttons>
+
+    <ion-content>
+        
+        <list class="list">
+
+            <item class="item item-icon-left boby-text" ng-if="empresa[0].direccion_empresa != ''" >
+                    {{ empresa[0].direccion_empresa }}
+            </item>
+
+            <a class="item item-icon-left" ng-if="empresa[0].url_empresa != ''" browse-to="{{ empresa[0].url_empresa }}">
+                <i class="icon ion-link"></i>
+                    {{ empresa[0].url_empresa }}
+            </a>
+
+            <a class="item item-icon-left" ng-if="empresa[0].correo_empresa != ''" ng-href="mailto:{{ empresa[0].correo_empresa }}">
+                <i class="icon ion-email"></i>
+                    {{ empresa[0].correo_empresa }}
+            </a>
+
+            <a class="item item-icon-left" ng-if="empresa[0].telefono_empresa != ''" ng-href="tel:{{ empresa[0].telefono_empresa }}">
+                <i class="icon ion-android-call"></i>
+                    Local : {{ empresa[0].telefono_empresa }}
+            </a>
+
+            <a class="item item-icon-left" ng-if="empresa[0].telefono_movil_empresa != ''" ng-href="tel:{{ empresa[0].telefono_movil_empresa }}">
+                <i class="icon ion-android-call"></i>
+                    Móvil : {{ empresa[0].telefono_movil_empresa }}
+            </a>
+
+        </list>
+
+    </ion-content>
+
+</ion-view>
