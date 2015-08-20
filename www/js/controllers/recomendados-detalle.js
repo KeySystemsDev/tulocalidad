@@ -10,7 +10,10 @@ angular.module('tulocalidad.controllers')
     $scope.publicidad_detalle = publicidad_detalle.get({'id_publicidad':$rootScope.id_publicidad});
 
     $scope.compartir = function(mensaje, img) {
-        $cordovaSocialSharing.share(mensaje, mensaje, img, $rootScope.HOST_NAME);
+        $cordovaSocialSharing.share( mensaje, 
+                                     mensaje, 
+                                     $rootScope.HOST_NAME+"uploads/publicidades_low//"+img, 
+                                     $rootScope.HOST_NAME);
     };
 
     $scope.id_empresa = function(id_empresa) {
