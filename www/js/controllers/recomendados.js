@@ -63,6 +63,7 @@ angular.module('tulocalidad.controllers', [])
                                     template: data.msj});
             }*/
            $scope.publicidades = data;
+           console.log(data);
        }, function(error) {
             if ( error.status === 0 || error.status === 404 ) {
                 $ionicPopup.alert({ title:    'Error de Conexión',
@@ -88,5 +89,9 @@ angular.module('tulocalidad.controllers', [])
     $scope.id_publicidad = function(id_publicidad) {
         $rootScope.id_publicidad = id_publicidad;
     }    
+
+    $scope.id_empresa = function(id_empresa) {
+        $rootScope.id_empresa = id_empresa;
+    }
     
 });

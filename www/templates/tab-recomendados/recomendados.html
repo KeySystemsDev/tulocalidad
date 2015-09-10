@@ -13,26 +13,23 @@
     <ion-content class="publicidad">
         <ion-refresher refreshing-icon="dots" on-refresh="RecargarPublicidad()"></ion-refresher>
 
-        <!--<a class="col col-50 button-clear box-publicidad" href="#/tab/recomendados-detalle" ng-repeat="publicidad in publicidades" ng-click="id_publicidad( publicidad.id_publicidad )">
-            <div class="item item-image">
-                <img ng-src="{{HOST_NAME}}uploads/publicidades_low/{{ publicidad.url_imagen_publicidad }}">
-            </div>
-        </a>-->
-
         <ion-list ng-repeat="publicidad in publicidades">
-            <div class="item item-avatar publicidad-nombre-empresa">
-                <img class="publicidad-img-empresa" src="img/empresa-detalle.png">
-                <h6>Nombre de la Empresa</h6>
-            </div>
-
+            <a ng-href="#/tab/recomendados-empresas-detalle/{{publicidad.id_empresa}}" ng-click="id_empresa(publicidad.id_empresa)" >
+                <div class="item item-avatar publicidad-nombre-empresa">
+                    <img class="publicidad-img-empresa" src="img/empresa-detalle.png">
+                    <h6>Nombre de la Empresa</h6>
+                </div>
+            </a>
             <div class="item item-body" style="padding: 0px;">
                 <img class="full-image" ng-src="{{HOST_NAME}}uploads/publicidades_high/{{ publicidad.url_imagen_publicidad }}">
             </div>
-            <div class="item tabs tabs-secondary tabs-icon-left lol">
-                <a class="tab-item" href="#/tab/recomendados-detalle" ng-click="id_publicidad( publicidad.id_publicidad )">
-                    <i class="icon ion-android-arrow-forward" style="padding-top: 0px"></i>
-                </a>
+
+            <div class="tab-recomendados">
+                <h6> Titulo: {{publicidad.titulo_publicidad}}</h6>
+                <br>
+                <h6>{{publicidad.descripcion_publicidad}}</h6>
             </div>
+
         </ion-list>
     
 	</ion-content>
