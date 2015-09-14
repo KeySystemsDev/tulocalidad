@@ -542,3 +542,7 @@ md-tabs.md-accent md-ink-bar {
   top: 20px;
   font-size: 12px;
 }
+.full-image-recomendados{
+  width: 100%;
+  margin-bottom: -4px;
+}
