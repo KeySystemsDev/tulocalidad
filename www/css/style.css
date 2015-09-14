@@ -348,8 +348,15 @@ ion-tabs.tabs-color-active-positive .tab-item.tab-item-active, ion-tabs.tabs-col
 .tabs-striped .tab-item.tab-item-active, .tabs-striped .tab-item.active, .tabs-striped .tab-item.activated {
   margin-top: -2px;
   border-style: solid;
-  border-width: 0px 0 0 0;
-  border-color: #841725;
+  border-width: 4px 0 0 0;
+  border-color: #FFF;
+}
+.tabs-striped .tabs {
+  background: url("../img/bar.png");
+  border: none;
+  border-bottom: 1px solid black;
+  border-top: 1px solid #ddd;
+  padding-top: 2px;
 }
 /* barra tamaño*/
 .bar-header {
@@ -452,14 +459,6 @@ md-tabs.md-accent md-ink-bar {
   color: #212121;
   background: #212121;
 }
-.tabs-striped .tabs {
-  background-color: black;
-  background-image: none;
-  border: none;
-  border-bottom: 1px solid black;
-  border-top: 1px solid #ddd;
-  padding-top: 2px;
-}
 .button.button-positive {
   border-color: transparent;
   background: url("../img/bar.png");
@@ -505,16 +504,34 @@ md-tabs.md-accent md-ink-bar {
   top: 6px;
   left: 8px;
 }
-.tab-recomendados h6{
+.tab-recomendados h6, h5{
   margin-top: 0px;
   margin-bottom: 0px;
-  color: #444;
+  color: #721520;
   font-size: 15px;
   margin-left: 10px;
+}
+.tab-recomendados h5{
+  color: #444;
 }
 .tab-recomendados{
   background: #fff;
   padding: 5px;
   padding-bottom: 15px;
   padding-top: 15px;
+}
+.tab-recomendados i{
+  color: #bfbfbf;
+  font-size: 20px;
+}
+.titule-tulocalidad p{
+  font-size: 19px;
+  display: inline-block;
+  margin-left: 5px;
+  font-family: Helvetica;
+}
+.tu{
+  margin-right: -8px;
+  font-weight: bold;
+  font-family: Helvetica; 
 }
