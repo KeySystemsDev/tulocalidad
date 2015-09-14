@@ -535,3 +535,10 @@ md-tabs.md-accent md-ink-bar {
   font-weight: bold;
   font-family: Helvetica; 
 }
+.icon-hora{
+  color: #ccc;
+  position: absolute;
+  right: 5px;
+  top: 20px;
+  font-size: 12px;
+}
