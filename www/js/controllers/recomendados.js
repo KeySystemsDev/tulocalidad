@@ -63,7 +63,7 @@ angular.module('tulocalidad.controllers', [])
                                     template: data.msj});
             }*/
            $scope.publicidades = data;
-           console.log(data);
+
        }, function(error) {
             if ( error.status === 0 || error.status === 404 ) {
                 $ionicPopup.alert({ title:    'Error de Conexión',
@@ -79,7 +79,7 @@ angular.module('tulocalidad.controllers', [])
             .error(function (data, status) {
                 if ( status === 0 || status === 404 ) {
                     $ionicPopup.alert({ title:    'Mensaje de Error',
-                                        template: 'Error de Conección'});
+                                        template: 'Error de conexión'});
                 }
             }).finally(function() {
                 $scope.$broadcast('scroll.refreshComplete');

@@ -58,7 +58,10 @@ a:link {
 }
 .button-tulocalidad{
 	padding: 0px;
-	padding-right: 6px;
+	padding-right: 5px;
+}
+.button-tulocalidad a , .button-categorias button{
+  margin-right: 7px;
 }
 .button-tulocalidad-estados{
 	margin-right: 30px;
@@ -545,4 +548,8 @@ md-tabs.md-accent md-ink-bar {
 .full-image-recomendados{
   width: 100%;
   margin-bottom: -4px;
+}
+.platform-android .bar .title {
+    font-size: 19px;
+    line-height: 48px;
 }

@@ -13,6 +13,9 @@
     <ion-nav-buttons side="right">
         <div class="row button-tulocalidad">
             <div class="col button-tulocalidad">
+                <a class="button button-icon button-clear button-conf" ng-click="compartir(map.marker.latitude, map.marker.longitude, empresa[0].icon_empresa, empresa[0].direccion_empresa)">
+                    <i class="icon ion-android-share-alt"></i>
+                </a>
                 <a class="button button-icon button-clear button-conf" ng-click="openGeo( lat, long, map.marker.latitude, map.marker.longitude)" ng-href="geo:{{lat}},{{long}}?z=6&q={{map.marker.latitude}},{{map.marker.longitude}}(Treasure)">
                     <i class="icon ion-android-locate"></i>
                 </a>

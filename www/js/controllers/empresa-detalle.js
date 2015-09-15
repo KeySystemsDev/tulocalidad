@@ -1,6 +1,6 @@
 angular.module('tulocalidad.controllers')
 
-.controller('EmpresaDetalleCtrl', function($scope, $ionicHistory, $ionicPopup, $ionicScrollDelegate, $rootScope, $window, detalle_empresa) {
+.controller('EmpresaDetalleCtrl', function($scope, $ionicHistory, $ionicPopup, $ionicScrollDelegate, $rootScope, $window, $cordovaSocialSharing, detalle_empresa) {
     console.log('EmpresaDetalleCtrl');
 
     $scope.myGoBack = function() {
@@ -13,6 +13,14 @@ angular.module('tulocalidad.controllers')
 
     $scope.id_publicidad = function(id_publicidad) {
         $rootScope.id_publicidad = id_publicidad;
+    };
+
+    $scope.compartir = function(latitude, longitude, img, mensaje) {
+        $cordovaSocialSharing.share( mensaje, 
+                                     mensaje, 
+                                     $rootScope.HOST_NAME+"uploads/empresas_high/"+img, 
+                                     "https://www.google.co.ve/maps/@"+ latitude +","+ longitude +",15z?hl=es");
+
     };
 
     $scope.numLimit = 200;
