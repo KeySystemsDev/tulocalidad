@@ -15,14 +15,6 @@ angular.module('tulocalidad.controllers')
         $rootScope.id_publicidad = id_publicidad;
     };
 
-    $scope.compartir = function(latitude, longitude, img, mensaje) {
-        $cordovaSocialSharing.share( mensaje, 
-                                     mensaje, 
-                                     $rootScope.HOST_NAME+"uploads/empresas_high/"+img, 
-                                     "https://www.google.co.ve/maps/@"+ latitude +","+ longitude +",15z?hl=es");
-
-    };
-
     $scope.numLimit = 200;
     
     detalle_empresa.get({'id_empresa': $rootScope.id_empresa})
@@ -33,14 +25,14 @@ angular.module('tulocalidad.controllers')
                                 {   latitude: data.consulta.detalle[0].positionmap_empresa_latitude, 
                                     longitude:  data.consulta.detalle[0].positionmap_empresa_longitude
                                 },
-                            marker: 
+                                marker: 
                                 {   latitude: data.consulta.detalle[0].positionmap_empresa_latitude, 
                                     longitude:  data.consulta.detalle[0].positionmap_empresa_longitude
                                 }, 
-                            zoom: 17, 
-                            id: 0,
-                            options: {scrollwheel: false}
-                        };
+                                zoom: 17, 
+                                id: 0,
+                                options: {scrollwheel: false}
+                            };
                 $scope.publicidades = data.consulta.publicidades;
             }else{
                 $ionicPopup.alert({ title:    'Disculpe!',

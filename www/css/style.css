@@ -507,7 +507,7 @@ md-tabs.md-accent md-ink-bar {
   top: 6px;
   left: 8px;
 }
-.tab-recomendados h6, h5{
+.tab-recomendados h6{
   margin-top: 0px;
   margin-bottom: 0px;
   color: #721520;
@@ -527,6 +527,9 @@ md-tabs.md-accent md-ink-bar {
   color: #bfbfbf;
   font-size: 20px;
 }
+.titule-tulocalidad{
+  display: inline;
+}
 .titule-tulocalidad p{
   font-size: 19px;
   display: inline-block;
@@ -534,7 +537,7 @@ md-tabs.md-accent md-ink-bar {
   font-family: Helvetica;
 }
 .tu{
-  margin-right: -8px;
+  margin-right: -4px;
   font-weight: bold;
   font-family: Helvetica; 
 }
@@ -552,4 +555,8 @@ md-tabs.md-accent md-ink-bar {
 .platform-android .bar .title {
     font-size: 19px;
     line-height: 48px;
+}
+.button-nav-bar{
+  padding: 0px;
+  padding-right: 6px;
 }
