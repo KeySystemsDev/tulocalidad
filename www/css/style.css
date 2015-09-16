@@ -487,8 +487,9 @@ md-tabs.md-accent md-ink-bar {
   position: absolute;
 }
 .icon-custon-detalle{
-  border-radius: 5px;
-  border-color: #721520;
+  /*border-radius: 5px;
+  border-color: #721520;*/
+  background: #f6f6f6;
 }
 .publicidad-nombre-empresa{
   min-height: 58px;
